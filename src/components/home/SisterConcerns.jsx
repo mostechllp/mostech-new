@@ -25,7 +25,7 @@ const SisterConcerns = () => {
     {
       id: 2,
       title: "Mostech Business Solutions LLP",
-      desc: "Empowering businesses with custom software solutions.",
+      desc: "Empowering businesses through custom software solutions.",
       location: "Kannur, Kerala, India",
       icon: <img src="/logo.webp" alt="Mostech Business Solutions" className="sc-img-logo" />,
       logoBg: "#ffffff",

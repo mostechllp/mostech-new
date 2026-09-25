@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 /* =============================================
    CEO MESSAGE SECTION
    ============================================= */
@@ -32,8 +34,6 @@
   border-radius: 50%;
   pointer-events: none;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 /* ---- NEW CEO VISION DESIGN ---- */
 .ceo-vision-section {
