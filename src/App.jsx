@@ -20,6 +20,7 @@ import OurTeamPage from './pages/OurTeamPage';
 import AccountingPage from './pages/AccountingPage';
 import PosMachinePage from './pages/PosMachinePage';
 import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -62,6 +63,7 @@ function App() {
             <Route path="/pro-solutions" element={<PosMachinePage />} />
             <Route path="/our-team" element={<OurTeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
         </div>
