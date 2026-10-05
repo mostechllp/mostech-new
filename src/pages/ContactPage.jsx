@@ -182,8 +182,18 @@ const ContactPage = () => {
                 <div className="info-list-item">
                   <MapPin size={18} color="#0d6efd" className="info-list-icon" />
                   <span>
-                    <strong>Hilite Business Park, Calicut, India</strong><br/>
-                    <strong>KVR Tower, Caltex, Kannur, India</strong><br/>
+                    <strong>Hilite Business Park, Calicut, India</strong>
+                  </span>
+                </div>
+                <div className="info-list-item">
+                  <MapPin size={18} color="#0d6efd" className="info-list-icon" />
+                  <span>
+                    <strong>KVR Tower, Caltex, Kannur, India</strong>
+                  </span>
+                </div>
+                <div className="info-list-item">
+                  <MapPin size={18} color="#0d6efd" className="info-list-icon" />
+                  <span>
                     <strong>Al khabara, Jeddah, Saudi Arabia</strong>
                   </span>
                 </div>
@@ -193,7 +203,7 @@ const ContactPage = () => {
                 </div>
                 <div className="info-list-item">
                   <Building2 size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>Regional Support<br/>across MiddleEast, Africa, CIS, Europe & North America</span>
+                  <span>Regional Support<br/>Across MiddleEast, Africa, CIS, Europe & North America</span>
                 </div>
               </div>
             </div>
