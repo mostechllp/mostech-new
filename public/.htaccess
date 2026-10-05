@@ -1,6 +1,27 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # 301 Redirects
+  RewriteRule ^index\.php$ / [R=301,L]
+  RewriteRule ^services/mobile-app-development/?$ /mobile-app-development [R=301,L]
+  RewriteRule ^services/web-design-development/?$ /web-development [R=301,L]
+  RewriteRule ^services/digital-marketing/?$ /digital-marketing [R=301,L]
+  RewriteRule ^services-digital-marketing/?$ /digital-marketing [R=301,L]
+  RewriteRule ^services/ecommerce-development/?$ /ecommerce [R=301,L]
+  RewriteRule ^services/ecommerce/?$ /ecommerce [R=301,L]
+  RewriteRule ^services/erp-solutions/?$ /erp-solution [R=301,L]
+  RewriteRule ^services-erp-solution/?$ /erp-solution [R=301,L]
+  RewriteRule ^services/search-engine-optimization/?$ /seo [R=301,L]
+  RewriteRule ^prodcuts/erp/?$ /erp-product [R=301,L]
+  RewriteRule ^products/erp/?$ /erp-product [R=301,L]
+  RewriteRule ^products/hrms/?$ /hrms [R=301,L]
+  RewriteRule ^products/accounting-software/?$ /accounting-software [R=301,L]
+  RewriteRule ^products/whatsapp-chatbot/?$ /whatsapp-chatbot [R=301,L]
+  RewriteRule ^products/project-management/?$ /project-management [R=301,L]
+  RewriteRule ^products/task-management/?$ /task-management [R=301,L]
+  RewriteRule ^products/pro-solutions/?$ /pro-solutions [R=301,L]
+
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
