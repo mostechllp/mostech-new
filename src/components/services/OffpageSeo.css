@@ -94,6 +94,7 @@
   flex: 1;
 }
 
+.offpage-list-content h3,
 .offpage-list-content h4 {
   font-size: 0.95rem;
   font-weight: 700;

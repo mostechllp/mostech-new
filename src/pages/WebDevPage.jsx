@@ -249,7 +249,7 @@ const WebDevPage = () => {
                 platforms, we bring ideas to life with precision and purpose.
               </p>
 
-              <h4 className="web-choose-subtitle">At Mostech, every web solution is:</h4>
+              <h3 className="web-choose-subtitle">At Mostech, every web solution is:</h3>
 
               <div className="web-choose-grid">
                 {/* Card 1 */}
@@ -258,7 +258,7 @@ const WebDevPage = () => {
                     <User size={20} color="#ffffff" />
                   </div>
                   <div className="choose-card-text">
-                    <h5>User-friendly<br/>and easy to use</h5>
+                    <h4>User-friendly<br/>and easy to use</h4>
                     <p>Intuitive interfaces that deliver a seamless experience.</p>
                   </div>
                 </div>
@@ -269,7 +269,7 @@ const WebDevPage = () => {
                     <Gauge size={20} color="#ffffff" />
                   </div>
                   <div className="choose-card-text">
-                    <h5>Performance-optimized<br/>and responsive</h5>
+                    <h4>Performance-optimized<br/>and responsive</h4>
                     <p>Fast-loading, responsive websites that perform flawlessly on every device.</p>
                   </div>
                 </div>
@@ -280,7 +280,7 @@ const WebDevPage = () => {
                     <Shield size={20} color="#ffffff" />
                   </div>
                   <div className="choose-card-text">
-                    <h5>Secure, scalable,<br/>and maintainable</h5>
+                    <h4>Secure, scalable,<br/>and maintainable</h4>
                     <p>Built with clean code and best practices for long-term security and scalability.</p>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ const WebDevPage = () => {
                     <Target size={20} color="#ffffff" />
                   </div>
                   <div className="choose-card-text">
-                    <h5>Designed for real<br/>business impact</h5>
+                    <h4>Designed for real<br/>business impact</h4>
                     <p>Solutions that convert visitors, automate workflows, and drive measurable results.</p>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ const WebDevPage = () => {
               <div className="benefits-card-icon">
                 <LineChart size={28} color="#2f6bd8" />
               </div>
-              <h4>MAKES BUSINESS MORE<br/><span className="blue-text">EFFICIENT</span></h4>
+              <h3>MAKES BUSINESS MORE<br/><span className="blue-text">EFFICIENT</span></h3>
               <div className="benefits-card-line"></div>
               <p>
                 Custom web applications streamline operations, reduce manual work, and improve 
@@ -335,7 +335,7 @@ const WebDevPage = () => {
               <div className="benefits-card-icon">
                 <CheckSquare size={28} color="#2f6bd8" />
               </div>
-              <h4>MAKES DAILY WORK<br/><span className="blue-text">EASIER</span></h4>
+              <h3>MAKES DAILY WORK<br/><span className="blue-text">EASIER</span></h3>
               <div className="benefits-card-line"></div>
               <p>
                 Automate routine tasks, simplify workflows, and enable teams to focus on 
@@ -348,7 +348,7 @@ const WebDevPage = () => {
               <div className="benefits-card-icon">
                 <Banknote size={28} color="#2f6bd8" />
               </div>
-              <h4>REDUCES OPERATIONAL<br/><span className="blue-text">COSTS</span></h4>
+              <h3>REDUCES OPERATIONAL<br/><span className="blue-text">COSTS</span></h3>
               <div className="benefits-card-line"></div>
               <p>
                 By automating processes and improving efficiency, custom web apps help 
@@ -361,7 +361,7 @@ const WebDevPage = () => {
               <div className="benefits-card-icon">
                 <Users size={28} color="#2f6bd8" />
               </div>
-              <h4>IMPROVES CLIENT &<br/><span className="blue-text">BUSINESS COLLABORATION</span></h4>
+              <h3>IMPROVES CLIENT &<br/><span className="blue-text">BUSINESS COLLABORATION</span></h3>
               <div className="benefits-card-line"></div>
               <p>
                 Custom web applications enable smooth, real-time communication between 
@@ -421,7 +421,7 @@ const WebDevPage = () => {
                     <Monitor size={24} color="#2f6bd8" />
                   </div>
                   <div className="approach-card-content">
-                    <h5>User-Centric<br/>UI/UX Design</h5>
+                    <h3>User-Centric<br/>UI/UX Design</h3>
                     <p>Designing intuitive experiences that engage users and drive results.</p>
                   </div>
                 </div>
@@ -435,7 +435,7 @@ const WebDevPage = () => {
                     <Smartphone size={24} color="#2f6bd8" />
                   </div>
                   <div className="approach-card-content">
-                    <h5>Responsive &<br/>Mobile-First Development</h5>
+                    <h3>Responsive &<br/>Mobile-First Development</h3>
                     <p>Building fully responsive web applications that deliver seamless performance on every device.</p>
                   </div>
                 </div>
@@ -449,7 +449,7 @@ const WebDevPage = () => {
                     <Lock size={24} color="#2f6bd8" />
                   </div>
                   <div className="approach-card-content">
-                    <h5>Secure & Scalable<br/>Architecture</h5>
+                    <h3>Secure & Scalable<br/>Architecture</h3>
                     <p>Creating robust, future-ready solutions with security and scalability at the core.</p>
                   </div>
                 </div>
@@ -463,7 +463,7 @@ const WebDevPage = () => {
                     <Cloud size={24} color="#2f6bd8" />
                   </div>
                   <div className="approach-card-content">
-                    <h5>Cloud & Third-Party<br/>Integrations</h5>
+                    <h3>Cloud & Third-Party<br/>Integrations</h3>
                     <p>Integrating cloud services and third-party tools for smarter workflows and greater efficiency.</p>
                   </div>
                 </div>

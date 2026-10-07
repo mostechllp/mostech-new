@@ -75,6 +75,7 @@
   transform: scale(1.05);
 }
 
+.about-page .overview-feature-card h3,
 .about-page .overview-feature-card h4 {
   font-size: var(--text-h4);
   font-weight: 600;

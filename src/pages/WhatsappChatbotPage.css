@@ -190,7 +190,8 @@
   color: white;
 }
 
-.w-banner-feature h4 {
+.w-banner-feature h4,
+.w-banner-feature .w-b-title {
   color: white;
   font-size: 0.95rem;
   font-weight: 700;

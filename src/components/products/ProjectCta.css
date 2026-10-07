@@ -75,10 +75,11 @@
 .bg-green { background-color: #22c55e; }
 .bg-purple { background-color: #a855f7; }
 
-.text-blue { color: #3b82f6; }
-.text-green { color: #22c55e; }
-.text-purple { color: #a855f7; }
+.pm-cta-feature .text-blue { color: #1d4ed8; }
+.pm-cta-feature .text-green { color: #15803d; }
+.pm-cta-feature .text-purple { color: #7e22ce; }
 
+.pm-cta-feature h3,
 .pm-cta-feature h4 {
   font-size: 1rem;
   font-weight: 800;

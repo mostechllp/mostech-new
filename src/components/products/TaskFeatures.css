@@ -102,6 +102,7 @@
 .icon-blue2-light { background-color: #f0f9ff; }
 .icon-red-light { background-color: #fef2f2; }
 
+.tm-f-card h3,
 .tm-f-card h4 {
   font-size: 1.05rem;
   font-weight: 700;
@@ -124,10 +125,10 @@
   margin-top: auto;
 }
 
-/* Numbers color */
+/* Numbers color - accessible contrast >= 4.5:1 on white */
 .num-blue { color: #032b5e; }
-.num-green { color: #22c55e; }
-.num-orange { color: #f97316; }
-.num-purple { color: #8b5cf6; }
-.num-blue2 { color: #0ea5e9; }
-.num-red { color: #ef4444; }
+.num-green { color: #15803d; }
+.num-orange { color: #c2410c; }
+.num-purple { color: #6d28d9; }
+.num-blue2 { color: #0369a1; }
+.num-red { color: #b91c1c; }

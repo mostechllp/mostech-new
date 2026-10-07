@@ -492,8 +492,8 @@
 }
 
 .why-number {
-  color: #a0aec0;
-  font-weight: 500;
+  color: #0c2b7e;
+  font-weight: 700;
   font-size: 0.95rem;
 }
 
@@ -506,7 +506,7 @@
 
 .why-card-new p {
   font-size: 0.85rem;
-  color: #64748b;
+  color: #475569;
   line-height: 1.6;
   flex-grow: 1;
   margin-bottom: 1.2rem;
@@ -607,8 +607,8 @@
 }
 
 .why-number-wide {
-  color: #3b5c9b;
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 700;
   font-size: 1rem;
 }
 
@@ -743,6 +743,7 @@
   transform: scale(1.05);
 }
 
+.expert-card h3,
 .expert-card h4 {
   font-size: 0.95rem;
   font-weight: 700;

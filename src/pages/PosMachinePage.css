@@ -240,6 +240,7 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 1.5rem;
+  color: #032b5e;
 }
 
 .pro-top-badge-line {
@@ -251,7 +252,7 @@
 .pro-top-badge span {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: #032b5e;
   letter-spacing: 1.5px;
 }
 

@@ -41,9 +41,9 @@ const TaskManagementPage = () => {
                 <span style={{ whiteSpace: 'nowrap' }}>Task Into <span className="tm-text-gradient">Progress.</span></span>
               </h1>
               
-              <h3 className="tm-hero-subtitle">
+              <h2 className="tm-hero-subtitle">
                 <span className="tm-text-blue-bold">Task Management Software</span> Built for Focused, Productive Teams
-              </h3>
+              </h2>
               
               <p className="tm-hero-desc">
                 Create tasks, assign responsibilities, set priorities, track deadlines, and keep everyone focused on what matters most. Mostech Task Management gives your team one simple place to organize work and get things done.
@@ -64,7 +64,7 @@ const TaskManagementPage = () => {
                     <CheckCircle2 size={20} color="#032b5e" />
                   </div>
                   <div className="tm-feature-text">
-                    <h4>Stay Organized</h4>
+                    <h3>Stay Organized</h3>
                     <p>Keep tasks and details all in one place.</p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const TaskManagementPage = () => {
                     <Users size={20} color="#22c55e" />
                   </div>
                   <div className="tm-feature-text">
-                    <h4>Work Together</h4>
+                    <h3>Work Together</h3>
                     <p>Collaborate seamlessly with your team.</p>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const TaskManagementPage = () => {
                     <TrendingUp size={20} color="#2dd4bf" />
                   </div>
                   <div className="tm-feature-text">
-                    <h4>Get More Done</h4>
+                    <h3>Get More Done</h3>
                     <p>Track progress and achieve your goals.</p>
                   </div>
                 </div>

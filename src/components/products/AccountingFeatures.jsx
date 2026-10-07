@@ -40,7 +40,7 @@ const AccountingFeatures = () => {
               <span className="card-number">01</span>
               <h3 className="card-title">Invoicing</h3>
               <p className="card-desc">Create, send, and track professional invoices with ease.</p>
-              <button className="card-arrow-btn"><ArrowRight size={20} /></button>
+              <button className="card-arrow-btn" aria-label="Learn more about Invoicing"><ArrowRight size={20} /></button>
             </div>
             <div className="feature-card-visual bg-light-blue">
               <div className="mini-ui mini-invoice">
@@ -66,7 +66,7 @@ const AccountingFeatures = () => {
               <span className="card-number">02</span>
               <h3 className="card-title">Expense Management</h3>
               <p className="card-desc">Record and organize business expenses in one place.</p>
-              <button className="card-arrow-btn"><ArrowRight size={20} /></button>
+              <button className="card-arrow-btn" aria-label="Learn more about Expense Management"><ArrowRight size={20} /></button>
             </div>
             <div className="feature-card-visual bg-white">
               <div className="mini-ui mini-expense-list">
@@ -100,7 +100,7 @@ const AccountingFeatures = () => {
               <span className="card-number">03</span>
               <h3 className="card-title">Financial Reports</h3>
               <p className="card-desc">Get clear insights with real-time financial reports.</p>
-              <button className="card-arrow-btn"><ArrowRight size={20} /></button>
+              <button className="card-arrow-btn" aria-label="Learn more about Financial Reports"><ArrowRight size={20} /></button>
             </div>
             <div className="feature-card-visual bg-light-blue">
               <div className="mini-ui mini-chart-widget">
@@ -133,7 +133,7 @@ const AccountingFeatures = () => {
               <span className="card-number">04</span>
               <h3 className="card-title">Tax Management</h3>
               <p className="card-desc">Keep your financial records organized and ready for tax requirements.</p>
-              <button className="card-arrow-btn"><ArrowRight size={20} /></button>
+              <button className="card-arrow-btn" aria-label="Learn more about Tax Management"><ArrowRight size={20} /></button>
             </div>
             <div className="feature-card-visual bg-white">
               <div className="mini-ui mini-vat-summary">
@@ -163,7 +163,7 @@ const AccountingFeatures = () => {
               <span className="card-number">05</span>
               <h3 className="card-title">Accounts & Transactions</h3>
               <p className="card-desc">Manage income, payments, and transactions efficiently.</p>
-              <button className="card-arrow-btn"><ArrowRight size={20} /></button>
+              <button className="card-arrow-btn" aria-label="Learn more about Accounts and Transactions"><ArrowRight size={20} /></button>
             </div>
             <div className="feature-card-visual bg-light-blue">
               <div className="mini-ui mini-transactions">
@@ -198,7 +198,7 @@ const AccountingFeatures = () => {
               <span className="card-number">06</span>
               <h3 className="card-title">Business Dashboard</h3>
               <p className="card-desc">See your financial performance at a glance.</p>
-              <button className="card-arrow-btn"><ArrowRight size={20} /></button>
+              <button className="card-arrow-btn" aria-label="Learn more about Business Dashboard"><ArrowRight size={20} /></button>
             </div>
             <div className="feature-card-visual bg-white">
               <div className="mini-ui mini-donut-widget">

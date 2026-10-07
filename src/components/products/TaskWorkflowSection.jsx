@@ -53,7 +53,7 @@ const TaskWorkflowSection = () => {
               <div className="tm-w-icon-wrap icon-blue-outline">
                 <FilePlus size={24} color="#032b5e" />
               </div>
-              <h4>Create</h4>
+              <h3>Create</h3>
               <p>Create tasks<br/>in seconds.</p>
             </div>
             
@@ -63,7 +63,7 @@ const TaskWorkflowSection = () => {
               <div className="tm-w-icon-wrap icon-green-outline">
                 <UserCheck size={24} color="#22c55e" />
               </div>
-              <h4>Assign</h4>
+              <h3>Assign</h3>
               <p>Assign tasks to<br/>the right people.</p>
             </div>
             
@@ -73,7 +73,7 @@ const TaskWorkflowSection = () => {
               <div className="tm-w-icon-wrap icon-orange-outline">
                 <Flag size={24} color="#f97316" />
               </div>
-              <h4>Prioritize</h4>
+              <h3>Prioritize</h3>
               <p>Set priorities and<br/>focus on what<br/>matters most.</p>
             </div>
             
@@ -83,7 +83,7 @@ const TaskWorkflowSection = () => {
               <div className="tm-w-icon-wrap icon-purple-outline">
                 <BarChart2 size={24} color="#8b5cf6" />
               </div>
-              <h4>Track</h4>
+              <h3>Track</h3>
               <p>Monitor progress<br/>in real time.</p>
             </div>
             
@@ -93,7 +93,7 @@ const TaskWorkflowSection = () => {
               <div className="tm-w-icon-wrap icon-green2-outline">
                 <CheckCircle2 size={24} color="#10b981" />
               </div>
-              <h4>Complete</h4>
+              <h3>Complete</h3>
               <p>Finish on time and<br/>celebrate success.</p>
             </div>
           </div>

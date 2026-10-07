@@ -65,7 +65,7 @@ const WhatsappChatbotPage = () => {
             <div className="w-banner-feature feature-main">
               <div className="w-b-icon"><ShieldCheck size={28} /></div>
               <div className="w-b-text">
-                <h4>One Intelligent Assistant.</h4>
+                <div className="w-b-title">One Intelligent Assistant.</div>
                 <p>Unlimited Possibilities.</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ const WhatsappChatbotPage = () => {
             {/* Feature 2 */}
             <div className="w-banner-feature">
               <div className="w-b-text">
-                <h4>24/7 Availability</h4>
+                <div className="w-b-title">24/7 Availability</div>
                 <p>Always here for your customers</p>
               </div>
             </div>
@@ -83,7 +83,7 @@ const WhatsappChatbotPage = () => {
             {/* Feature 3 */}
             <div className="w-banner-feature">
               <div className="w-b-text">
-                <h4>Instant Responses</h4>
+                <div className="w-b-title">Instant Responses</div>
                 <p>Quick and accurate replies</p>
               </div>
             </div>
@@ -91,7 +91,7 @@ const WhatsappChatbotPage = () => {
             {/* Feature 4 */}
             <div className="w-banner-feature">
               <div className="w-b-text">
-                <h4>Stronger Engagement</h4>
+                <div className="w-b-title">Stronger Engagement</div>
                 <p>Turn conversations into loyalty</p>
               </div>
             </div>
@@ -99,7 +99,7 @@ const WhatsappChatbotPage = () => {
             {/* Feature 5 */}
             <div className="w-banner-feature">
               <div className="w-b-text">
-                <h4>Higher Conversions</h4>
+                <div className="w-b-title">Higher Conversions</div>
                 <p>More leads. More sales.</p>
               </div>
             </div>

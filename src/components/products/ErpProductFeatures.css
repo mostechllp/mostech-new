@@ -72,7 +72,11 @@
   z-index: 1;
 }
 
-.text-blue { color: #0044cc; }
+.erp-features-section .text-blue,
+.features-desc .text-blue,
+.text-blue { 
+  color: #0044cc !important; 
+}
 .text-dark { color: #1e293b; font-weight: 600; }
 .font-semibold { font-weight: 600; }
 

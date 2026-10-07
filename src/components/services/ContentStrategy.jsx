@@ -13,7 +13,7 @@ const ContentStrategy = () => {
           <div className="content-card-left">
 
 
-            <h3 className="content-card-title">CONTENT <span className="light-blue-text">STRATEGY</span></h3>
+            <h2 className="content-card-title">CONTENT <span className="light-blue-text">STRATEGY</span></h2>
             
 
 
@@ -33,7 +33,7 @@ const ContentStrategy = () => {
                   <Users size={24} color="#0f172a" strokeWidth={2} />
                 </div>
                 <div className="timeline-content">
-                  <h4>Target Audience & Search Intent Mapping</h4>
+                  <h3>Target Audience & Search Intent Mapping</h3>
                   <p>We identify your ideal audience and map their search intent to create content that truly connects.</p>
                 </div>
               </div>
@@ -45,7 +45,7 @@ const ContentStrategy = () => {
                   <FileText size={24} color="#0f172a" strokeWidth={2} />
                 </div>
                 <div className="timeline-content">
-                  <h4>High-Converting Blog & Website Copywriting</h4>
+                  <h3>High-Converting Blog & Website Copywriting</h3>
                   <p>Engaging, SEO-friendly content that informs, inspires, and converts your visitors.</p>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const ContentStrategy = () => {
                   <ShoppingCart size={24} color="#0f172a" strokeWidth={2} />
                 </div>
                 <div className="timeline-content">
-                  <h4>Product Description & Landing Page Optimization</h4>
+                  <h3>Product Description & Landing Page Optimization</h3>
                   <p>Optimized product descriptions and landing pages that boost visibility and drive more sales.</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const ContentStrategy = () => {
                   <TrendingUp size={24} color="#0f172a" strokeWidth={2} />
                 </div>
                 <div className="timeline-content">
-                  <h4>Strategic Content Placement for Maximum ROI</h4>
+                  <h3>Strategic Content Placement for Maximum ROI</h3>
                   <p>We place the right content in the right places to maximize traffic, engagement, and ROI.</p>
                 </div>
               </div>

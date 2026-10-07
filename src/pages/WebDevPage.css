@@ -596,6 +596,7 @@
   flex: 1;
 }
 
+.choose-card-text h4,
 .choose-card-text h5 {
   font-size: 0.95rem;
   font-weight: 700;
@@ -744,6 +745,7 @@
   stroke: #ffffff;
 }
 
+.benefits-card h3,
 .benefits-card h4 {
   font-size: 0.95rem;
   font-weight: 800;
@@ -755,6 +757,7 @@
   position: relative;
 }
 
+.benefits-card h3 .blue-text,
 .benefits-card h4 .blue-text {
   color: #2f6bd8;
 }
@@ -966,6 +969,7 @@
   flex-shrink: 0;
 }
 
+.approach-card-content h3,
 .approach-card-content h5 {
   font-size: 0.95rem;
   font-weight: 800;

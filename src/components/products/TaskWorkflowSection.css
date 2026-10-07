@@ -124,6 +124,7 @@
 .icon-purple-outline { border: 2px solid #f5f3ff; box-shadow: 0 5px 15px rgba(139, 92, 246, 0.1); }
 .icon-green2-outline { border: 2px solid #ecfdf5; box-shadow: 0 5px 15px rgba(16, 185, 129, 0.1); }
 
+.tm-w-step h3,
 .tm-w-step h4 {
   font-size: 0.9rem;
   font-weight: 700;

@@ -52,9 +52,9 @@ const DigitalMarketingPage = () => {
               Services in <span className="dm-title-highlight">Dubai</span>
             </h1>
 
-            <h3 className="dm-subtitle">
+            <h2 className="dm-subtitle">
               Get Noticed. Get Leads. Grow Your Business.
-            </h3>
+            </h2>
 
             <p className="dm-desc">
               We create data-driven digital marketing strategies that put your brand 
@@ -111,7 +111,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-feature-icon">
                 <img src="/seo2.png" alt="SEO" className="dm-feature-img-icon" />
               </div>
-              <h5>SEO</h5>
+              <h3>SEO</h3>
               <p>Rank Higher</p>
             </div>
 
@@ -119,7 +119,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-feature-icon">
                 <img src="/marketing.png" alt="Social Media Marketing" className="dm-feature-img-icon" />
               </div>
-              <h5>Social Media Marketing</h5>
+              <h3>Social Media Marketing</h3>
               <p>Build Your Brand</p>
             </div>
 
@@ -127,7 +127,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-feature-icon">
                 <img src="/ppc.png" alt="PPC Advertising" className="dm-feature-img-icon" />
               </div>
-              <h5>PPC Advertising</h5>
+              <h3>PPC Advertising</h3>
               <p>Reach the Right Audience</p>
             </div>
 
@@ -135,7 +135,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-feature-icon">
                 <img src="/mail.png" alt="Email Marketing" className="dm-feature-img-icon" />
               </div>
-              <h5>Email Marketing</h5>
+              <h3>Email Marketing</h3>
               <p>Turn Interest into Customers</p>
             </div>
 
@@ -143,7 +143,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-feature-icon">
                 <img src="/content marketing.png" alt="Content Marketing" className="dm-feature-img-icon" />
               </div>
-              <h5>Content Marketing</h5>
+              <h3>Content Marketing</h3>
               <p>Create Impactful Content</p>
             </div>
 
@@ -151,7 +151,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-feature-icon">
                 <img src="/maxmize roi.png" alt="Analytics & Reporting" className="dm-feature-img-icon" />
               </div>
-              <h5>Analytics & Reporting</h5>
+              <h3>Analytics & Reporting</h3>
               <p>Results You Can Measure</p>
             </div>
 
@@ -207,7 +207,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-matter-icon">
                 <Target size={24} color="#2f6bd8" />
               </div>
-              <h4>Right Time</h4>
+              <h3>Right Time</h3>
               <p>Reach your audience when they're most likely to act.</p>
             </div>
 
@@ -215,7 +215,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-matter-icon">
                 <Monitor size={24} color="#2f6bd8" />
               </div>
-              <h4>Right Platform</h4>
+              <h3>Right Platform</h3>
               <p>Be visible where your customers search, engage, and decide.</p>
             </div>
 
@@ -223,7 +223,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-matter-icon">
                 <Megaphone size={24} color="#2f6bd8" />
               </div>
-              <h4>Right Message</h4>
+              <h3>Right Message</h3>
               <p>Deliver relevant content that connects and builds trust.</p>
             </div>
 
@@ -231,7 +231,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-matter-icon">
                 <TrendingUp size={24} color="#2f6bd8" />
               </div>
-              <h4>Better Engagement</h4>
+              <h3>Better Engagement</h3>
               <p>Build meaningful interactions that turn visitors into customers.</p>
             </div>
 
@@ -239,7 +239,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-matter-icon">
                 <CircleDollarSign size={24} color="#2f6bd8" />
               </div>
-              <h4>Maximize ROI</h4>
+              <h3>Maximize ROI</h3>
               <p>Data-driven strategies that drive conversions and grow returns.</p>
             </div>
 
@@ -273,7 +273,7 @@ const DigitalMarketingPage = () => {
                 <div className="dm-service-icon-wrapper">
                   <Search size={28} color="#2f6bd8" />
                 </div>
-                <h4>Search Engine Optimization (SEO)</h4>
+                <h3>Search Engine Optimization (SEO)</h3>
                 <div className="dm-card-divider"></div>
                 <p>
                   Improve your organic rankings and drive high-quality traffic with 
@@ -288,7 +288,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-service-icon-wrapper">
                 <MousePointerClick size={28} color="#2f6bd8" />
               </div>
-              <h4>Pay-Per-Click (PPC) Advertising</h4>
+              <h3>Pay-Per-Click (PPC) Advertising</h3>
               <div className="dm-card-divider"></div>
               <p>
                 Launch high-converting ad campaigns across Google and social platforms 
@@ -302,7 +302,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-service-icon-wrapper">
                 <ThumbsUp size={28} color="#2f6bd8" />
               </div>
-              <h4>Social Media Marketing</h4>
+              <h3>Social Media Marketing</h3>
               <div className="dm-card-divider"></div>
               <p>
                 Build brand awareness and customer engagement with creative campaigns 
@@ -316,7 +316,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-service-icon-wrapper">
                 <PenTool size={28} color="#2f6bd8" />
               </div>
-              <h4>Content Marketing</h4>
+              <h3>Content Marketing</h3>
               <div className="dm-card-divider"></div>
               <p>
                 Create impactful content including blogs, landing pages, and multimedia 
@@ -330,7 +330,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-service-icon-wrapper">
                 <MapPin size={28} color="#2f6bd8" />
               </div>
-              <h4>Local SEO & Geo-Targeting</h4>
+              <h3>Local SEO & Geo-Targeting</h3>
               <div className="dm-card-divider"></div>
               <p>
                 Enhance local search visibility and connect with customers in Dubai 
@@ -344,7 +344,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-service-icon-wrapper">
                 <BarChart2 size={28} color="#2f6bd8" />
               </div>
-              <h4>Analytics & Reporting</h4>
+              <h3>Analytics & Reporting</h3>
               <div className="dm-card-divider"></div>
               <p>
                 Track performance with transparent reporting and actionable insights 
@@ -383,7 +383,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-process-icon">
                 <Search size={50} color="#2f6bd8" strokeWidth={1.5} />
               </div>
-              <h4>RESEARCH & STRATEGY</h4>
+              <h3>RESEARCH & STRATEGY</h3>
               <p>
                 We analyze your business, target audience, and competition to identify 
                 opportunities and create a data-driven marketing strategy that drives 
@@ -401,7 +401,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-process-icon">
                 <Megaphone size={50} color="#2f6bd8" strokeWidth={1.5} />
               </div>
-              <h4>CAMPAIGN EXECUTION</h4>
+              <h3>CAMPAIGN EXECUTION</h3>
               <p>
                 Our experts design and launch high-performing campaigns across SEO, 
                 Google Ads, social media, content marketing, and more to reach the 
@@ -419,7 +419,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-process-icon">
                 <TrendingUp size={50} color="#2f6bd8" strokeWidth={1.5} />
               </div>
-              <h4>OPTIMIZATION</h4>
+              <h3>OPTIMIZATION</h3>
               <p>
                 We continuously analyze results, optimize keywords, improve content, 
                 and enhance website performance to generate more traffic, quality 
@@ -437,7 +437,7 @@ const DigitalMarketingPage = () => {
               <div className="dm-process-icon">
                 <Mail size={50} color="#2f6bd8" strokeWidth={1.5} />
               </div>
-              <h4>REPORTING</h4>
+              <h3>REPORTING</h3>
               <p>
                 We believe in complete transparency. Our detailed reports provide 
                 in-depth insights into performance, rankings, traffic, conversions, 
@@ -485,7 +485,7 @@ const DigitalMarketingPage = () => {
                 <ShieldCheck size={28} color="#ffffff" />
               </div>
               <div className="dm-trusted-text">
-                <h5>Trusted by Businesses</h5>
+                <h3>Trusted by Businesses</h3>
                 <p>We are committed to transparency,<br/>integrity, and long-term partnerships.</p>
               </div>
             </div>
@@ -508,7 +508,7 @@ const DigitalMarketingPage = () => {
                   <Target size={32} color="#2f6bd8" strokeWidth={1.5} />
                 </div>
                 <div className="dm-choose-card-dash"></div>
-                <h6>RESULTS DRIVEN</h6>
+                <h3>RESULTS DRIVEN</h3>
                 <p>We focus on strategies that deliver real measurable results.</p>
                 <div className="dm-choose-number">01</div>
               </div>
@@ -519,7 +519,7 @@ const DigitalMarketingPage = () => {
                   <Users size={32} color="#2f6bd8" strokeWidth={1.5} />
                 </div>
                 <div className="dm-choose-card-dash"></div>
-                <h6>EXPERT TEAM</h6>
+                <h3>EXPERT TEAM</h3>
                 <p>Experienced professionals dedicated to your business growth.</p>
                 <div className="dm-choose-number">02</div>
               </div>
@@ -530,7 +530,7 @@ const DigitalMarketingPage = () => {
                   <Lightbulb size={32} color="#2f6bd8" strokeWidth={1.5} />
                 </div>
                 <div className="dm-choose-card-dash"></div>
-                <h6>CREATIVE SOLUTIONS</h6>
+                <h3>CREATIVE SOLUTIONS</h3>
                 <p>Innovative ideas crafted to make your brand stand out.</p>
                 <div className="dm-choose-number">03</div>
               </div>
@@ -541,7 +541,7 @@ const DigitalMarketingPage = () => {
                   <BarChart2 size={32} color="#2f6bd8" strokeWidth={1.5} />
                 </div>
                 <div className="dm-choose-card-dash"></div>
-                <h6>DATA FOCUSED</h6>
+                <h3>DATA FOCUSED</h3>
                 <p>We use data and insights to make smarter marketing decisions.</p>
                 <div className="dm-choose-number">04</div>
               </div>

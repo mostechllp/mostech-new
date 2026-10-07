@@ -79,7 +79,7 @@ const HrmsHero = () => {
                 <Users size={20} className="text-green-dark" />
               </div>
               <div className="float-card-content">
-                <h4 className="float-card-title">248</h4>
+                <div className="float-card-title">248</div>
                 <p className="float-card-subtitle">Employees</p>
                 <p className="float-card-trend trend-up">↑ 12.5% <span>this month</span></p>
               </div>
@@ -90,7 +90,7 @@ const HrmsHero = () => {
                 <BarChart3 size={20} className="text-white" />
               </div>
               <div className="float-card-content">
-                <h4 className="float-card-title">92%</h4>
+                <div className="float-card-title">92%</div>
                 <p className="float-card-subtitle">Attendance</p>
                 <p className="float-card-trend trend-up">↑ 8.3% <span>this month</span></p>
               </div>
@@ -101,7 +101,7 @@ const HrmsHero = () => {
                 <BarChart3 size={20} className="text-white" />
               </div>
               <div className="float-card-content">
-                <h4 className="float-card-title-sm">Workforce</h4>
+                <div className="float-card-title-sm">Workforce</div>
                 <p className="float-card-subtitle">Analytics</p>
                 <p className="float-card-meta">Real-time insights</p>
               </div>
@@ -112,7 +112,7 @@ const HrmsHero = () => {
                 <CalendarX2 size={20} className="text-white" />
               </div>
               <div className="float-card-content">
-                <h4 className="float-card-title">12</h4>
+                <div className="float-card-title">12</div>
                 <p className="float-card-subtitle">Leave Requests</p>
                 <p className="float-card-meta">Pending Approval</p>
               </div>

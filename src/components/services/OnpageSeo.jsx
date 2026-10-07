@@ -14,9 +14,9 @@ const OnpageSeo = () => {
           </div>
           
           <div className="onpage-header-content">
-            <h2 className="onpage-title">
+            <h1 className="onpage-title">
               What We Offer at <span className="blue-text">Mostech Business Solutions SEO</span>
-            </h2>
+            </h1>
             <p className="onpage-desc">
               At <strong>Mostech Business Solutions</strong>, we help businesses strengthen their online presence through strategic
               and results-driven search engine optimization services. Our experienced digital marketing team
@@ -37,7 +37,7 @@ const OnpageSeo = () => {
           <div className="onpage-card-left">
 
 
-            <h3 className="onpage-card-title">On-page SEO</h3>
+            <h2 className="onpage-card-title">On-page SEO</h2>
             
             <p className="onpage-card-desc">
               Our On-page SEO service delivers results: we optimize every aspect that

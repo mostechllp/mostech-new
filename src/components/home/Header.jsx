@@ -71,7 +71,7 @@ const Header = () => {
                   <Link to="/" onClick={toggleMobileMenu}>
                     <img src="/main logo .png" alt="Mostech Logo" className="logo-img" />
                   </Link>
-                  <button className="mobile-menu-close-btn" onClick={toggleMobileMenu}>
+                  <button className="mobile-menu-close-btn" onClick={toggleMobileMenu} aria-label="Close menu">
                     <X size={24} />
                   </button>
                 </div>
@@ -115,21 +115,25 @@ const Header = () => {
                   </a>
                 </div>
                 <div className="mobile-menu-socials">
-                  <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
-                  <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaFacebookF size={20} /></a>
-                  <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaInstagram size={20} /></a>
-                  <a href={`https://wa.me/${whatsappPhone.href.replace('+', '')}`} target="_blank" rel="noreferrer" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
+                  <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="mobile-social-icon" aria-label="LinkedIn"><FaLinkedinIn size={20} /></a>
+                  <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon" aria-label="Facebook"><FaFacebookF size={20} /></a>
+                  <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon" aria-label="Instagram"><FaInstagram size={20} /></a>
+                  <a href={`https://wa.me/${whatsappPhone.href.replace('+', '')}`} target="_blank" rel="noreferrer" className="mobile-social-icon" aria-label="WhatsApp"><FaWhatsapp size={20} /></a>
                 </div>
               </nav>
 
               <div className="social-links-outline">
-                <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="social-icon-circle"><FaLinkedinIn size={14} /></a>
-                <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaFacebookF size={14} /></a>
-                <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaInstagram size={14} /></a>
-                <a href={`https://wa.me/${whatsappPhone.href.replace('+', '')}`} target="_blank" rel="noreferrer" className="social-icon-circle"><FaWhatsapp size={16} /></a>
+                <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="social-icon-circle" aria-label="LinkedIn"><FaLinkedinIn size={14} /></a>
+                <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle" aria-label="Facebook"><FaFacebookF size={14} /></a>
+                <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle" aria-label="Instagram"><FaInstagram size={14} /></a>
+                <a href={`https://wa.me/${whatsappPhone.href.replace('+', '')}`} target="_blank" rel="noreferrer" className="social-icon-circle" aria-label="WhatsApp"><FaWhatsapp size={16} /></a>
               </div>
 
-              <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+              <button 
+                className="mobile-menu-btn" 
+                onClick={toggleMobileMenu}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>

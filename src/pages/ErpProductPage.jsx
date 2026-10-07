@@ -25,9 +25,9 @@ const ErpProductPage = () => {
               <span className="erp-product-blue-text">Switch to<br/>Smarter</span> ERP.
             </h1>
 
-            <h3 className="erp-product-subtitle-bold">
+            <h2 className="erp-product-subtitle-bold">
               Manage Your Business With<br/>One Powerful Platform.
-            </h3>
+            </h2>
 
             <p className="erp-product-desc">
               Bring HR, Finance, Inventory, Sales, Procurement,<br/>

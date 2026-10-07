@@ -13,10 +13,10 @@ const AccountingBenefits = () => {
             <span className="pos-badge-text">POS MACHINE & SOFTWARE</span>
           </div>
           
-          <h1 className="pos-hero-title">
+          <h2 className="pos-hero-title">
             Smart POS Solutions<br/>
             <span className="pos-blue-text">Built for Modern<br/>Businesses</span>
-          </h1>
+          </h2>
           
           <p className="pos-hero-desc">
             Power your sales with reliable POS hardware and intuitive software designed to manage transactions, products, inventory, and business operations from one connected system.
