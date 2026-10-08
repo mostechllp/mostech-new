@@ -346,7 +346,7 @@
 .chart-labels {
   display: flex;
   justify-content: space-between;
-  color: #94a3b8;
+  color: #475569;
   font-size: 0.6rem;
   margin-top: 2px;
 }
@@ -405,7 +405,10 @@
 }
 
 .bold { font-weight: 700; }
-.text-blue { color: #3b82f6; }
+.accounting-features-section .text-blue,
+.mini-vat-summary .text-blue { 
+  color: #0044cc !important; 
+}
 
 /* 5. Mini Transactions */
 .mini-transactions {
@@ -441,8 +444,8 @@
   white-space: nowrap;
 }
 
-.text-green { color: #16a34a; }
-.text-red { color: #dc2626; }
+.text-green { color: #15803d; }
+.text-red { color: #b91c1c; }
 
 /* 6. Mini Donut Chart */
 .mini-donut-widget {

@@ -30,7 +30,7 @@ const HrmsDashboards = () => {
               <div className="card-icon-box admin-icon-box">
                 <Shield size={24} color="#ffffff" />
               </div>
-              <h4 className="card-label admin-label">ADMIN DASHBOARD</h4>
+              <div className="card-label admin-label">ADMIN DASHBOARD</div>
               <h3 className="card-heading">Complete control over your workforce</h3>
               <p className="card-desc">Advanced tools and real-time insights to manage your organization efficiently.</p>
               
@@ -64,7 +64,7 @@ const HrmsDashboards = () => {
               <div className="card-icon-box employee-icon-box">
                 <User size={24} color="#ffffff" />
               </div>
-              <h4 className="card-label employee-label">EMPLOYEE DASHBOARD</h4>
+              <div className="card-label employee-label">EMPLOYEE DASHBOARD</div>
               <h3 className="card-heading">Everything employees need, in one place</h3>
               <p className="card-desc">A simple and intuitive dashboard designed for everyday ease.</p>
               

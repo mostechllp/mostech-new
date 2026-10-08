@@ -211,6 +211,7 @@
   box-shadow: 0 8px 16px rgba(37, 99, 235, 0.2);
 }
 
+.about-page .lifecycle-content-box h3,
 .about-page .lifecycle-content-box h4 {
   font-size: 1.05rem;
   font-weight: 600;
@@ -343,6 +344,7 @@
     opacity: 1;
   }
 
+  .about-page .lifecycle-content-box h3,
   .about-page .lifecycle-content-box h4 {
     font-size: 1.05rem;
     font-weight: 700;
@@ -391,6 +393,7 @@
     padding: var(--space-4) var(--space-4);
   }
 
+  .about-page .lifecycle-content-box h3,
   .about-page .lifecycle-content-box h4 {
     font-size: 0.98rem;
   }

@@ -45,10 +45,10 @@ const Footer = () => {
               Mostech is a Dubai-based software development and digital marketing company serving businesses across the Middle East, Africa, South Asia, Europe, the CIS, and North America. We specialize in software, web and mobile app development, SEO, digital marketing, ERP, and eCommerce solutions, delivering scalable digital solutions that streamline operations and drive business growth.
             </p>
             <div className="footer-socials">
-              <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="social-icon-link linkedin"><FaLinkedinIn size={20} /></a>
-              <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link facebook"><FaFacebookF size={20} /></a>
-              <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link instagram"><FaInstagram size={20} /></a>
-              <a href="https://wa.me/971581730112" target="_blank" rel="noreferrer" className="social-icon-link whatsapp"><FaWhatsapp size={20} /></a>
+              <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="social-icon-link linkedin" aria-label="LinkedIn"><FaLinkedinIn size={20} /></a>
+              <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link facebook" aria-label="Facebook"><FaFacebookF size={20} /></a>
+              <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link instagram" aria-label="Instagram"><FaInstagram size={20} /></a>
+              <a href="https://wa.me/971581730112" target="_blank" rel="noreferrer" className="social-icon-link whatsapp" aria-label="WhatsApp"><FaWhatsapp size={20} /></a>
             </div>
           </div>
           

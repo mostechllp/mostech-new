@@ -195,12 +195,20 @@
   font-weight: 800;
 }
 
-/* Text Colors */
-.text-navy { color: #1a56db; }
-.text-blue { color: #3b82f6; }
-.text-purple { color: #a855f7; }
-.text-orange { color: #f97316; }
-.text-teal { color: #0f172a; }
+.p-industry-card .text-navy,
+.p-icard-title.text-navy { color: #1a56db; }
+
+.p-industry-card .text-blue,
+.p-icard-title.text-blue { color: #1d4ed8; }
+
+.p-industry-card .text-purple,
+.p-icard-title.text-purple { color: #7e22ce; }
+
+.p-industry-card .text-orange,
+.p-icard-title.text-orange { color: #c2410c; }
+
+.p-industry-card .text-teal,
+.p-icard-title.text-teal { color: #0f766e; }
 
 .p-icard-img {
   width: 100%;
@@ -236,12 +244,12 @@
   background-color: white;
 }
 
-/* Tag colors */
+/* Tag colors - accessible contrast >= 4.5:1 on white */
 .tag-navy span { color: #1a56db; border-color: #bfdbfe; }
-.tag-blue span { color: #3b82f6; border-color: #bfdbfe; }
-.tag-purple span { color: #a855f7; border-color: #e9d5ff; }
-.tag-orange span { color: #f97316; border-color: #fed7aa; }
-.tag-teal span { color: #475569; border-color: #cbd5e1; }
+.tag-blue span { color: #1d4ed8; border-color: #bfdbfe; }
+.tag-purple span { color: #7e22ce; border-color: #e9d5ff; }
+.tag-orange span { color: #c2410c; border-color: #fed7aa; }
+.tag-teal span { color: #0f766e; border-color: #cbd5e1; }
 
 /* ================= Bottom Benefits Banner ================= */
 .personalized-bottom-banner {

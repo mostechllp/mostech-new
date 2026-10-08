@@ -84,7 +84,7 @@ const AboutLifecycle = () => {
                     <div className="lifecycle-content-box box-top">
                       <div className="phase-number">{phase.num}</div>
                       <div className="phase-icon">{phase.icon}</div>
-                      <h4>{phase.title}</h4>
+                      <h3>{phase.title}</h3>
                       <p>{phase.desc}</p>
                     </div>
                   )}
@@ -97,7 +97,7 @@ const AboutLifecycle = () => {
                     <div className="lifecycle-content-box box-bottom">
                       <div className="phase-number">{phase.num}</div>
                       <div className="phase-icon">{phase.icon}</div>
-                      <h4>{phase.title}</h4>
+                      <h3>{phase.title}</h3>
                       <p>{phase.desc}</p>
                     </div>
                   )}

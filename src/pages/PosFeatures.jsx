@@ -34,7 +34,7 @@ const PosFeatures = () => {
                 <span className="pos-card-divider"></span>
               </div>
               <div className="pos-card-content">
-                <h4>Fast Billing</h4>
+                <h3>Fast Billing</h3>
                 <p>Create orders and complete transactions quickly.</p>
               </div>
               <div className="pos-card-icon-wrap">
@@ -49,7 +49,7 @@ const PosFeatures = () => {
                 <span className="pos-card-divider"></span>
               </div>
               <div className="pos-card-content">
-                <h4>Inventory Management</h4>
+                <h3>Inventory Management</h3>
                 <p>Track products, stock levels, and inventory movements.</p>
               </div>
               <div className="pos-card-icon-wrap">
@@ -64,7 +64,7 @@ const PosFeatures = () => {
                 <span className="pos-card-divider"></span>
               </div>
               <div className="pos-card-content">
-                <h4>Product Management</h4>
+                <h3>Product Management</h3>
                 <p>Organize products, prices, categories, and variations.</p>
               </div>
               <div className="pos-card-icon-wrap">
@@ -89,7 +89,7 @@ const PosFeatures = () => {
                 <span className="pos-card-divider"></span>
               </div>
               <div className="pos-card-content">
-                <h4>Multiple Payments</h4>
+                <h3>Multiple Payments</h3>
                 <p>Accept different payment methods with ease.</p>
               </div>
               <div className="pos-card-icon-wrap">
@@ -104,7 +104,7 @@ const PosFeatures = () => {
                 <span className="pos-card-divider"></span>
               </div>
               <div className="pos-card-content">
-                <h4>Sales Reports</h4>
+                <h3>Sales Reports</h3>
                 <p>Understand sales, revenue, and product performance.</p>
               </div>
               <div className="pos-card-icon-wrap">
@@ -119,7 +119,7 @@ const PosFeatures = () => {
                 <span className="pos-card-divider"></span>
               </div>
               <div className="pos-card-content">
-                <h4>Customer Management</h4>
+                <h3>Customer Management</h3>
                 <p>Keep customer information and purchase history organized.</p>
               </div>
               <div className="pos-card-icon-wrap">

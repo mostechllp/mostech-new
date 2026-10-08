@@ -276,7 +276,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Shield size={24} color="#ffffff" />
               </div>
-              <h4>ADVANCED<br/>DATA SECURITY</h4>
+              <h3>ADVANCED<br/>DATA SECURITY</h3>
               <p>End-to-end security with secure coding, encrypted data, and protected API integrations.</p>
             </div>
 
@@ -285,7 +285,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Smartphone size={24} color="#ffffff" />
               </div>
-              <h4>FULL DEVICE<br/>COMPATIBILITY</h4>
+              <h3>FULL DEVICE<br/>COMPATIBILITY</h3>
               <p>Flexible and responsive layouts that adapt perfectly to all mobile devices and screen sizes.</p>
             </div>
 
@@ -294,7 +294,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Paintbrush size={24} color="#ffffff" />
               </div>
-              <h4>HIGH-IMPACT<br/>UI/UX DESIGN</h4>
+              <h3>HIGH-IMPACT<br/>UI/UX DESIGN</h3>
               <p>User-centric designs that improve engagement, retention, and overall app usability.</p>
             </div>
 
@@ -303,7 +303,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Wifi size={24} color="#ffffff" />
               </div>
-              <h4>IOT-ENABLED MOBILE<br/>APPLICATIONS</h4>
+              <h3>IOT-ENABLED MOBILE<br/>APPLICATIONS</h3>
               <p>Smart apps that connect and control IoT-enabled devices with real-time data interaction.</p>
             </div>
 
@@ -312,7 +312,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Code size={24} color="#ffffff" />
               </div>
-              <h4>CUSTOM MOBILE APP<br/>DEVELOPMENT</h4>
+              <h3>CUSTOM MOBILE APP<br/>DEVELOPMENT</h3>
               <p>Tailor-made solutions built with custom modules to meet your exact business requirements.</p>
             </div>
 
@@ -321,7 +321,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Cloud size={24} color="#ffffff" />
               </div>
-              <h4>CLOUD<br/>INTEGRATION</h4>
+              <h3>CLOUD<br/>INTEGRATION</h3>
               <p>Cloud-native applications offering better performance, reliability, scalability, and security.</p>
             </div>
 
@@ -330,7 +330,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Globe size={24} color="#ffffff" />
               </div>
-              <h4>MULTI-LANGUAGE &<br/>MULTI-CURRENCY SUPPORT</h4>
+              <h3>MULTI-LANGUAGE &<br/>MULTI-CURRENCY SUPPORT</h3>
               <p>Applications built for global audiences with localization and regional adaptability.</p>
             </div>
 
@@ -339,7 +339,7 @@ const MobileAppDevPage = () => {
               <div className="expert-icon-wrap">
                 <Rocket size={24} color="#ffffff" />
               </div>
-              <h4>SCALABLE &<br/>FUTURE-READY SOLUTIONS</h4>
+              <h3>SCALABLE &<br/>FUTURE-READY SOLUTIONS</h3>
               <p>Apps designed with flexible architecture to scale effortlessly as your business grows.</p>
             </div>
 

@@ -154,7 +154,7 @@ const ContactPage = () => {
           <div className="contact-col-right">
             
             <div className="contact-info-card">
-              <h4 className="info-card-title" style={{textTransform: 'none'}}>Headquarters - Dubai, UAE</h4>
+              <h3 className="info-card-title" style={{textTransform: 'none'}}>Headquarters - Dubai, UAE</h3>
               <div className="info-card-divider"></div>
               <div className="info-list" style={{ gap: '1.8rem' }}>
                 <div className="info-list-item">
@@ -176,7 +176,7 @@ const ContactPage = () => {
             </div>
 
             <div className="contact-info-card">
-              <h4 className="info-card-title" style={{textTransform: 'none'}}>Regional Office</h4>
+              <h3 className="info-card-title" style={{textTransform: 'none'}}>Regional Office</h3>
               <div className="info-card-divider"></div>
               <div className="info-list">
                 <div className="info-list-item">
@@ -209,13 +209,13 @@ const ContactPage = () => {
             </div>
 
             <div className="contact-info-card">
-              <h4 className="info-card-title">BUSINESS HOURS</h4>
+              <h3 className="info-card-title">BUSINESS HOURS</h3>
               <div className="info-card-divider"></div>
               {renderBusinessHours()}
             </div>
 
             <div className="contact-info-card">
-              <h4 className="info-card-title">QUICK SUPPORT</h4>
+              <h3 className="info-card-title">QUICK SUPPORT</h3>
               <div className="info-card-divider"></div>
               <div className="info-list">
                 <div className="info-list-item">

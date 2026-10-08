@@ -26,7 +26,7 @@ const TaskFeatures = () => {
             <div className="tm-f-icon-wrap icon-blue-light">
               <UserPlus size={24} color="#3b82f6" />
             </div>
-            <h4>Create & Assign Tasks</h4>
+            <h3>Create & Assign Tasks</h3>
             <p>Create tasks quickly and assign them to the right team members.</p>
             <div className="tm-f-number num-blue">01</div>
           </div>
@@ -35,7 +35,7 @@ const TaskFeatures = () => {
             <div className="tm-f-icon-wrap icon-green-light">
               <Flag size={24} color="#22c55e" />
             </div>
-            <h4>Prioritize Work</h4>
+            <h3>Prioritize Work</h3>
             <p>Organize tasks by priority so your team knows what needs attention first.</p>
             <div className="tm-f-number num-green">02</div>
           </div>
@@ -44,7 +44,7 @@ const TaskFeatures = () => {
             <div className="tm-f-icon-wrap icon-orange-light">
               <Calendar size={24} color="#f97316" />
             </div>
-            <h4>Set Deadlines</h4>
+            <h3>Set Deadlines</h3>
             <p>Add due dates and reminders to keep work moving on schedule.</p>
             <div className="tm-f-number num-orange">03</div>
           </div>
@@ -53,7 +53,7 @@ const TaskFeatures = () => {
             <div className="tm-f-icon-wrap icon-purple-light">
               <ListTodo size={24} color="#8b5cf6" />
             </div>
-            <h4>Track Task Progress</h4>
+            <h3>Track Task Progress</h3>
             <p>Monitor tasks from To Do → In Progress → Completed.</p>
             <div className="tm-f-number num-purple">04</div>
           </div>
@@ -62,7 +62,7 @@ const TaskFeatures = () => {
             <div className="tm-f-icon-wrap icon-blue2-light">
               <Users size={24} color="#0ea5e9" />
             </div>
-            <h4>Team Collaboration</h4>
+            <h3>Team Collaboration</h3>
             <p>Share updates, comments, files, and feedback without losing context.</p>
             <div className="tm-f-number num-blue2">05</div>
           </div>
@@ -71,7 +71,7 @@ const TaskFeatures = () => {
             <div className="tm-f-icon-wrap icon-red-light">
               <PieChart size={24} color="#ef4444" />
             </div>
-            <h4>Task Reports & Insights</h4>
+            <h3>Task Reports & Insights</h3>
             <p>Get a clear overview of completed, pending, and overdue tasks.</p>
             <div className="tm-f-number num-red">06</div>
           </div>

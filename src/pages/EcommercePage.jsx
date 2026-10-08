@@ -47,9 +47,9 @@ const EcommercePage = () => {
             
             <div className="ecom-title-dash"></div>
 
-            <h3 className="ecom-subtitle">
+            <h2 className="ecom-subtitle">
               End-to-End eCommerce Solutions Built for Growth
-            </h3>
+            </h2>
 
             <p className="ecom-desc">
               At <strong>MOSTECH</strong>, we design and develop unified eCommerce platforms that 

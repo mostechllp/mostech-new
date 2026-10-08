@@ -40,7 +40,7 @@
   line-height: 1.2;
 }
 
-.text-blue { color: #3b82f6; }
+.lifecycle-title .text-blue { color: #3b82f6; }
 
 .lifecycle-subtitle {
   font-size: 1.1rem;
@@ -167,29 +167,29 @@
 .step-blue-light .step-title { color: #1a56db; }
 .step-blue-light .bottom-dot { background: #1a56db; }
 
-.step-teal .step-icon-circle { border: 2px solid #ccfbf1; color: #14b8a6; }
-.step-teal .step-number { background-color: #14b8a6; }
-.step-teal .step-card { border-top-color: #14b8a6; }
-.step-teal .step-title { color: #14b8a6; }
-.step-teal .bottom-dot { background: #14b8a6; }
+.step-teal .step-icon-circle { border: 2px solid #99f6e4; color: #0f766e; }
+.step-teal .step-number { background-color: #0f766e; }
+.step-teal .step-card { border-top-color: #0f766e; }
+.step-teal .step-title { color: #0f766e; }
+.step-teal .bottom-dot { background: #0f766e; }
 
-.step-blue .step-icon-circle { border: 2px solid #bfdbfe; color: #3b82f6; }
-.step-blue .step-number { background-color: #3b82f6; }
-.step-blue .step-card { border-top-color: #3b82f6; }
-.step-blue .step-title { color: #3b82f6; }
-.step-blue .bottom-dot { background: #3b82f6; }
+.step-blue .step-icon-circle { border: 2px solid #bfdbfe; color: #1d4ed8; }
+.step-blue .step-number { background-color: #1d4ed8; }
+.step-blue .step-card { border-top-color: #1d4ed8; }
+.step-blue .step-title { color: #1d4ed8; }
+.step-blue .bottom-dot { background: #1d4ed8; }
 
-.step-purple .step-icon-circle { border: 2px solid #e9d5ff; color: #8b5cf6; }
-.step-purple .step-number { background-color: #8b5cf6; }
-.step-purple .step-card { border-top-color: #8b5cf6; }
-.step-purple .step-title { color: #8b5cf6; }
-.step-purple .bottom-dot { background: #8b5cf6; }
+.step-purple .step-icon-circle { border: 2px solid #ddd6fe; color: #6d28d9; }
+.step-purple .step-number { background-color: #6d28d9; }
+.step-purple .step-card { border-top-color: #6d28d9; }
+.step-purple .step-title { color: #6d28d9; }
+.step-purple .bottom-dot { background: #6d28d9; }
 
-.step-orange .step-icon-circle { border: 2px solid #fef08a; color: #f59e0b; }
-.step-orange .step-number { background-color: #f59e0b; }
-.step-orange .step-card { border-top-color: #f59e0b; }
-.step-orange .step-title { color: #f59e0b; }
-.step-orange .bottom-dot { background: #f59e0b; }
+.step-orange .step-icon-circle { border: 2px solid #fed7aa; color: #c2410c; }
+.step-orange .step-number { background-color: #c2410c; }
+.step-orange .step-card { border-top-color: #c2410c; }
+.step-orange .step-title { color: #c2410c; }
+.step-orange .bottom-dot { background: #c2410c; }
 
 
 /* Bottom Dot */

@@ -30,7 +30,7 @@
   letter-spacing: -1px;
 }
 
-.text-blue { color: #1a56db; }
+.hrms-cta-title .text-blue { color: #1a56db; }
 
 .cta-desc {
   font-size: 1.1rem;

@@ -17,7 +17,7 @@ const OffpageSeo = () => {
           {/* Right Column (Text) */}
           <div className="offpage-card-right">
             
-            <h3 className="offpage-title">OFF-PAGE SEO</h3>
+            <h2 className="offpage-title">OFF-PAGE SEO</h2>
 
             
             <p className="offpage-desc">
@@ -36,7 +36,7 @@ const OffpageSeo = () => {
                   <Link2 size={24} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="offpage-list-content">
-                  <h4>High-Authority Backlink Acquisition</h4>
+                  <h3>High-Authority Backlink Acquisition</h3>
                   <p>Earn quality backlinks from trusted and relevant websites to boost your rankings.</p>
                 </div>
               </div>
@@ -47,7 +47,7 @@ const OffpageSeo = () => {
                   <Megaphone size={24} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="offpage-list-content">
-                  <h4>Brand Mentions & Digital PR</h4>
+                  <h3>Brand Mentions & Digital PR</h3>
                   <p>Increase brand visibility through mentions on high-authority platforms and digital PR campaigns.</p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ const OffpageSeo = () => {
                   <ShieldCheck size={24} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="offpage-list-content">
-                  <h4>Domain Authority & Trust Growth</h4>
+                  <h3>Domain Authority & Trust Growth</h3>
                   <p>Strengthen your domain authority and build trust in the eyes of search engines.</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const OffpageSeo = () => {
                   <Users size={24} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="offpage-list-content">
-                  <h4>Strategic Online Relationship Building</h4>
+                  <h3>Strategic Online Relationship Building</h3>
                   <p>Build meaningful relationships and partnerships that drive long-term SEO success.</p>
                 </div>
               </div>

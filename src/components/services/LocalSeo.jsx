@@ -13,7 +13,7 @@ const LocalSeo = () => {
           <div className="local-card-left">
 
 
-            <h3 className="local-card-title">Local <span className="blue-text">SEO</span></h3>
+            <h2 className="local-card-title">Local <span className="blue-text">SEO</span></h2>
             
 
 
@@ -33,7 +33,7 @@ const LocalSeo = () => {
                   <Store size={22} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="timeline-content">
-                  <h4>Google Business Profile Optimization</h4>
+                  <h3>Google Business Profile Optimization</h3>
                   <p>Optimize your Google Business profile to improve visibility and attract more local customers.</p>
                 </div>
                 <div className="timeline-number">01</div>
@@ -45,7 +45,7 @@ const LocalSeo = () => {
                   <MapPin size={22} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="timeline-content">
-                  <h4>Local Maps Pack Top Ranking</h4>
+                  <h3>Local Maps Pack Top Ranking</h3>
                   <p>Rank in the Google Maps 3-pack and get discovered by customers in your area.</p>
                 </div>
                 <div className="timeline-number">02</div>
@@ -57,7 +57,7 @@ const LocalSeo = () => {
                   <Target size={22} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="timeline-content">
-                  <h4>Geo-Targeted Search Engine Visibility</h4>
+                  <h3>Geo-Targeted Search Engine Visibility</h3>
                   <p>Target specific locations to increase visibility in local search results.</p>
                 </div>
                 <div className="timeline-number">03</div>
@@ -69,7 +69,7 @@ const LocalSeo = () => {
                   <FileText size={22} color="#ffffff" strokeWidth={2.5} />
                 </div>
                 <div className="timeline-content">
-                  <h4>UAE & GCC Directory Citations</h4>
+                  <h3>UAE & GCC Directory Citations</h3>
                   <p>Build consistent business citations across trusted UAE & GCC directories.</p>
                 </div>
                 <div className="timeline-number">04</div>

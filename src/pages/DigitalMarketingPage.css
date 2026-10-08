@@ -237,6 +237,7 @@
   object-fit: contain;
 }
 
+.dm-feature-card h3,
 .dm-feature-card h5 {
   font-size: 0.85rem; /* Original font size */
   font-weight: 800;
@@ -380,6 +381,7 @@
   margin-bottom: 1.5rem;
 }
 
+.dm-matter-card h3,
 .dm-matter-card h4 {
   font-size: 1rem;
   font-weight: 800;
@@ -390,6 +392,7 @@
 }
 
 /* Small underline below card titles */
+.dm-matter-card h3::after,
 .dm-matter-card h4::after {
   content: '';
   position: absolute;
@@ -535,6 +538,7 @@
   z-index: -1;
 }
 
+.dm-service-card h3,
 .dm-service-card h4 {
   font-size: 1.15rem;
   font-weight: 800;
@@ -687,6 +691,7 @@
   justify-content: center;
 }
 
+.dm-process-card h3,
 .dm-process-card h4 {
   font-size: 0.95rem;
   font-weight: 800;
@@ -806,6 +811,7 @@
   box-shadow: 0 10px 25px rgba(0, 55, 184, 0.2);
 }
 
+.dm-trusted-text h3,
 .dm-trusted-text h5 {
   font-size: 1rem;
   font-weight: 800;
@@ -902,6 +908,7 @@
   border-radius: 2px;
 }
 
+.dm-choose-card h3,
 .dm-choose-card h6 {
   font-size: 0.9rem;
   font-weight: 800;

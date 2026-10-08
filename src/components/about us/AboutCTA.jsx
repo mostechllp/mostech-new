@@ -26,7 +26,7 @@ const AboutCTA = () => {
           </div>
 
           <div className="cta-info-card glass-panel">
-            <h4>Regional GCC Presence</h4>
+            <h3>Regional GCC Presence</h3>
             <ul className="cta-contact-list">
               <li>
                 <div className="contact-icon-wrapper">

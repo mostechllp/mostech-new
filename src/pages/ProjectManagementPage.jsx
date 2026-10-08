@@ -42,10 +42,10 @@ const ProjectManagementPage = () => {
                 Deliver Better.
               </h1>
               
-              <h3 className="pm-subtitle">
+              <h2 className="pm-subtitle">
                 Project Management Software<br/>
                 Built for <span className="pm-text-blue">Smarter, More Organized Work</span>
-              </h3>
+              </h2>
               
               <p className="pm-desc">
                 Plan projects, assign tasks, track progress, and keep your team aligned from one 

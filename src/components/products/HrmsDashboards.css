@@ -62,7 +62,7 @@
   line-height: 1.2;
 }
 
-.text-blue {
+.dashboards-title .text-blue {
   color: #1a56db;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .admin-label { color: #1a56db; }
-.employee-label { color: #3b82f6; }
+.employee-label { color: #1d4ed8; }
 
 .card-heading {
   font-size: 1.4rem; /* Smaller heading */

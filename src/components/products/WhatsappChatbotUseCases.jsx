@@ -39,7 +39,7 @@ const WhatsappChatbotUseCases = () => {
           {/* Card 1 */}
           <div className="usecase-card">
             <div className="uc-card-icon icon-navy"><ShoppingBag size={28} /></div>
-            <h4 className="uc-card-title">Product Assistant</h4>
+            <h3 className="uc-card-title">Product Assistant</h3>
             <p className="uc-card-subtitle">Help customers discover products instantly.</p>
             <div className="uc-card-divider divider-navy"></div>
             <ul className="uc-card-list list-navy">
@@ -54,7 +54,7 @@ const WhatsappChatbotUseCases = () => {
           {/* Card 2 */}
           <div className="usecase-card">
             <div className="uc-card-icon icon-blue"><MessageSquare size={28} /></div>
-            <h4 className="uc-card-title">Customer Support</h4>
+            <h3 className="uc-card-title">Customer Support</h3>
             <p className="uc-card-subtitle">Answer common customer questions automatically.</p>
             <div className="uc-card-divider divider-blue"></div>
             <ul className="uc-card-list list-blue">
@@ -68,7 +68,7 @@ const WhatsappChatbotUseCases = () => {
           {/* Card 3 */}
           <div className="usecase-card">
             <div className="uc-card-icon icon-purple"><ShoppingCart size={28} /></div>
-            <h4 className="uc-card-title">E-commerce Assistant</h4>
+            <h3 className="uc-card-title">E-commerce Assistant</h3>
             <p className="uc-card-subtitle">Connect directly with your online store.</p>
             <div className="uc-card-divider divider-purple"></div>
             <ul className="uc-card-list list-purple">
@@ -82,7 +82,7 @@ const WhatsappChatbotUseCases = () => {
           {/* Card 4 */}
           <div className="usecase-card">
             <div className="uc-card-icon icon-orange"><ClipboardList size={28} /></div>
-            <h4 className="uc-card-title">Lead Generation</h4>
+            <h3 className="uc-card-title">Lead Generation</h3>
             <p className="uc-card-subtitle">Turn conversations into potential customers.</p>
             <div className="uc-card-divider divider-orange"></div>
             <ul className="uc-card-list list-orange">
@@ -96,7 +96,7 @@ const WhatsappChatbotUseCases = () => {
           {/* Card 5 */}
           <div className="usecase-card">
             <div className="uc-card-icon icon-teal"><Zap size={28} /></div>
-            <h4 className="uc-card-title">Business Automation</h4>
+            <h3 className="uc-card-title">Business Automation</h3>
             <p className="uc-card-subtitle">Automate repetitive conversations and processes.</p>
             <div className="uc-card-divider divider-teal"></div>
             <ul className="uc-card-list list-teal">
@@ -126,7 +126,7 @@ const WhatsappChatbotUseCases = () => {
             <div className="uc-stat-item">
               <Users size={24} className="stat-icon" />
               <div className="stat-text">
-                <h5>Better Engagement</h5>
+                <h4>Better Engagement</h4>
                 <p>Build stronger relationships<br/>with every conversation.</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const WhatsappChatbotUseCases = () => {
             <div className="uc-stat-item">
               <BarChart3 size={24} className="stat-icon" />
               <div className="stat-text">
-                <h5>More Conversions</h5>
+                <h4>More Conversions</h4>
                 <p>Turn conversations<br/>into loyal customers.</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ const WhatsappChatbotUseCases = () => {
             <div className="uc-stat-item">
               <Clock size={24} className="stat-icon" />
               <div className="stat-text">
-                <h5>More Efficiency</h5>
+                <h4>More Efficiency</h4>
                 <p>Automate tasks and save<br/>valuable time.</p>
               </div>
             </div>
@@ -150,7 +150,7 @@ const WhatsappChatbotUseCases = () => {
             <div className="uc-stat-item">
               <TrendingUp size={24} className="stat-icon" />
               <div className="stat-text">
-                <h5>Higher Growth</h5>
+                <h4>Higher Growth</h4>
                 <p>More leads, more sales,<br/>more opportunities.</p>
               </div>
             </div>

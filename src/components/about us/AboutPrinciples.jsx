@@ -74,7 +74,7 @@ const AboutPrinciples = () => {
                 </div>
               </div>
               <div className="principle-card-body">
-                <h4 className="principle-card-title">{item.title}</h4>
+                <h3 className="principle-card-title">{item.title}</h3>
                 <p className="principle-card-desc">{item.desc}</p>
               </div>
             </div>

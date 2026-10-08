@@ -26,7 +26,7 @@ const AboutOverview = () => {
                   <Code2 size={20} />
                 </div>
                 <div className="feature-text">
-                  <h4>Custom Development</h4>
+                  <h3>Custom Development</h3>
                   <p>Scalable web & mobile apps</p>
                 </div>
               </div>
@@ -36,7 +36,7 @@ const AboutOverview = () => {
                   <Cloud size={20} />
                 </div>
                 <div className="feature-text">
-                  <h4>Cloud Resilience</h4>
+                  <h3>Cloud Resilience</h3>
                   <p>High-availability cloud architecture</p>
                 </div>
               </div>
@@ -46,7 +46,7 @@ const AboutOverview = () => {
                   <ShieldCheck size={20} />
                 </div>
                 <div className="feature-text">
-                  <h4>Zero-Trust Security</h4>
+                  <h3>Zero-Trust Security</h3>
                   <p>Aligned with UAE and GCC compliance</p>
                 </div>
               </div>

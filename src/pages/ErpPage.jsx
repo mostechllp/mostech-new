@@ -49,9 +49,9 @@ const ErpPage = () => {
               That <span className="erp-blue-text">Drive Growth</span>
             </h1>
 
-            <h3 className="erp-subtitle">
+            <h2 className="erp-subtitle">
               Seamless, Scalable & High-Performance ERP Solutions
-            </h3>
+            </h2>
 
             <p className="erp-desc">
               At MOSTECH, we bring the world's most advanced ERP solutions to 

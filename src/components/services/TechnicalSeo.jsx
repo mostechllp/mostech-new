@@ -13,7 +13,7 @@ const TechnicalSeo = () => {
           <div className="technical-card-left">
 
 
-            <h3 className="technical-card-title">Technical <span className="blue-text">SEO</span></h3>
+            <h2 className="technical-card-title">Technical <span className="blue-text">SEO</span></h2>
             
 
 
@@ -30,7 +30,7 @@ const TechnicalSeo = () => {
                   <Gauge size={24} color="#0044cc" />
                 </div>
                 <div className="list-content">
-                  <h4><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> Site Speed & Core Web Vitals Optimization</h4>
+                  <h3><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> Site Speed & Core Web Vitals Optimization</h3>
                   <p>Improve loading speed and ensure optimal performance for better rankings and user experience.</p>
                 </div>
               </li>
@@ -39,7 +39,7 @@ const TechnicalSeo = () => {
                   <Smartphone size={24} color="#0044cc" />
                 </div>
                 <div className="list-content">
-                  <h4><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> Mobile Responsiveness & Usability Audit</h4>
+                  <h3><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> Mobile Responsiveness & Usability Audit</h3>
                   <p>Ensure a seamless experience across all devices with a mobile-friendly and user-focused approach.</p>
                 </div>
               </li>
@@ -48,7 +48,7 @@ const TechnicalSeo = () => {
                   <FileCode size={24} color="#0044cc" />
                 </div>
                 <div className="list-content">
-                  <h4><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> XML Sitemap & Indexation Error Fixes</h4>
+                  <h3><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> XML Sitemap & Indexation Error Fixes</h3>
                   <p>Optimize crawlability by fixing indexation issues and maintaining an error-free sitemap.</p>
                 </div>
               </li>
@@ -57,7 +57,7 @@ const TechnicalSeo = () => {
                   <Database size={24} color="#0044cc" />
                 </div>
                 <div className="list-content">
-                  <h4><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> Schema Markup & Structured Data Integration</h4>
+                  <h3><CheckCircle2 size={16} color="#0044cc" className="check-icon" /> Schema Markup & Structured Data Integration</h3>
                   <p>Add structured data to help search engines understand your content better and boost visibility.</p>
                 </div>
               </li>

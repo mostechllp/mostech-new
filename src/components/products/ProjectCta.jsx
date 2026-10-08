@@ -22,19 +22,19 @@ const ProjectCta = () => {
           <div className="pm-cta-features">
             <div className="pm-cta-feature">
               <div className="pm-cta-icon bg-blue"><Target size={24} color="#ffffff" /></div>
-              <h4 className="text-blue">Plan better.</h4>
+              <h3 className="text-blue">Plan better.</h3>
               <p>Set clear goals and stay on track.</p>
             </div>
             
             <div className="pm-cta-feature">
               <div className="pm-cta-icon bg-green"><Users size={24} color="#ffffff" /></div>
-              <h4 className="text-green">Work together.</h4>
+              <h3 className="text-green">Work together.</h3>
               <p>Collaborate seamlessly across your team.</p>
             </div>
             
             <div className="pm-cta-feature">
               <div className="pm-cta-icon bg-purple"><Rocket size={24} color="#ffffff" /></div>
-              <h4 className="text-purple">Deliver on time.</h4>
+              <h3 className="text-purple">Deliver on time.</h3>
               <p>Meet deadlines and achieve more.</p>
             </div>
           </div>

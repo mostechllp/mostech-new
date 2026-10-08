@@ -60,7 +60,7 @@ const WhatsappChatbotCTA = () => {
 
           {/* Banner Right */}
           <div className="cta-banner-right">
-            <h4 className="cta-banner-question">Ready to transform your customer conversations?</h4>
+            <p className="cta-banner-question">Ready to transform your customer conversations?</p>
             
             <Link to="/contact" className="cta-btn-primary">
               <div className="btn-icon-wrapper"><ArrowRight size={20} className="btn-icon-arrow" /></div>

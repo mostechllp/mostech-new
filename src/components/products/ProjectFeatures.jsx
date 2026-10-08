@@ -32,7 +32,7 @@ const ProjectFeatures = () => {
               <div className="pm-card-icon">
                 <Map size={24} color="#ffffff" />
               </div>
-              <h4>Project Planning</h4>
+              <h3>Project Planning</h3>
               <div className="pm-card-line"></div>
               <p>Define goals, milestones, timelines, and deliverables before work begins.</p>
             </div>
@@ -41,7 +41,7 @@ const ProjectFeatures = () => {
               <div className="pm-card-icon">
                 <ClipboardList size={24} color="#ffffff" />
               </div>
-              <h4>Task Management</h4>
+              <h3>Task Management</h3>
               <div className="pm-card-line"></div>
               <p>Create, assign, prioritize, and track tasks with clear ownership.</p>
             </div>
@@ -50,7 +50,7 @@ const ProjectFeatures = () => {
               <div className="pm-card-icon">
                 <Users size={24} color="#ffffff" />
               </div>
-              <h4>Team Collaboration</h4>
+              <h3>Team Collaboration</h3>
               <div className="pm-card-line"></div>
               <p>Keep conversations, updates, and project information connected.</p>
             </div>
@@ -59,7 +59,7 @@ const ProjectFeatures = () => {
               <div className="pm-card-icon">
                 <TrendingUp size={24} color="#ffffff" />
               </div>
-              <h4>Progress Tracking</h4>
+              <h3>Progress Tracking</h3>
               <div className="pm-card-line"></div>
               <p>Get a clear view of project status, upcoming deadlines, and completed work.</p>
             </div>
@@ -68,7 +68,7 @@ const ProjectFeatures = () => {
               <div className="pm-card-icon">
                 <Clock size={24} color="#ffffff" />
               </div>
-              <h4>Time & Deadline Management</h4>
+              <h3>Time & Deadline Management</h3>
               <div className="pm-card-line"></div>
               <p>Stay ahead of schedules with timelines, due dates, and milestone tracking.</p>
             </div>
@@ -77,7 +77,7 @@ const ProjectFeatures = () => {
               <div className="pm-card-icon">
                 <FileText size={24} color="#ffffff" />
               </div>
-              <h4>Reports & Insights</h4>
+              <h3>Reports & Insights</h3>
               <div className="pm-card-line"></div>
               <p>Understand project performance and identify areas that need attention.</p>
             </div>
