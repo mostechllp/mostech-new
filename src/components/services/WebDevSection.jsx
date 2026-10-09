@@ -50,7 +50,7 @@ const WebDevSection = () => {
                 <Target size={22} color="#3b82f6" />
               </div>
               <div className="wds-feature-text-dark">
-                <h4>User Focused</h4>
+                <h3>User Focused</h3>
                 <p>We design intuitive layouts that engage users and deliver meaningful experiences.</p>
               </div>
             </div>
@@ -60,7 +60,7 @@ const WebDevSection = () => {
                 <Shield size={22} color="#3b82f6" />
               </div>
               <div className="wds-feature-text-dark">
-                <h4>High Performance</h4>
+                <h3>High Performance</h3>
                 <p>Built with best practices for speed, SEO, and seamless performance.</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const WebDevSection = () => {
                 <Rocket size={22} color="#3b82f6" />
               </div>
               <div className="wds-feature-text-dark">
-                <h4>Future Ready</h4>
+                <h3>Future Ready</h3>
                 <p>Scalable and adaptable solutions that grow with your business.</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ const WebDevSection = () => {
                 <Headphones size={22} color="#3b82f6" />
               </div>
               <div className="wds-feature-text-dark">
-                <h4>Reliable Support</h4>
+                <h3>Reliable Support</h3>
                 <p>We provide ongoing support to keep your website secure and up-to-date.</p>
               </div>
             </div>
@@ -97,7 +97,7 @@ const WebDevSection = () => {
                 <div className="wds-card-icon-wrapper">
                   {card.icon}
                 </div>
-                <h4 className="wds-card-title-dark">{card.title}</h4>
+                <h3 className="wds-card-title-dark">{card.title}</h3>
                 <p className="wds-card-desc-dark">{card.desc}</p>
               </div>
             ))}

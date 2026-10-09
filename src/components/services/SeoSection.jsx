@@ -81,7 +81,7 @@ const SeoSection = () => {
                       <div className="seo-number-underline"></div>
                     </div>
                   </div>
-                  <h4 className="seo-card-title">{card.title}</h4>
+                  <h3 className="seo-card-title">{card.title}</h3>
                   <p className="seo-card-desc">{card.desc}</p>
                 </div>
               ))}
@@ -102,7 +102,7 @@ const SeoSection = () => {
                 {item.icon}
               </div>
               <div className="seo-banner-text">
-                <h4>{item.title}</h4>
+                <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
             </div>
