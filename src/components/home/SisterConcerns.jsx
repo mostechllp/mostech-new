@@ -25,10 +25,10 @@ const SisterConcerns = () => {
     },
     {
       id: 2,
-      title: "Mostech Business Solutions LLP",
+      title: "MOS Group Of Companies LLP",
       desc: "Empowering businesses through custom software solutions.",
       location: "Kannur, Kerala, India",
-      icon: <img src="/business.jpeg" alt="Mostech Business Solutions" className="sc-img-logo sc-img-logo-zoom" />,
+      icon: <img src="/business.jpeg" alt="MOS Group Of Companies" className="sc-img-logo sc-img-logo-zoom" />,
       logoBg: "#ffffff",
       bgImage: "/ChatGPT Image Sep 15, 2026, 01_08_36 PM.png",
       link: "https://www.mostech.in",

@@ -14,7 +14,7 @@ const AboutOverview = () => {
             </h2>
 
             <p className="overview-desc">
-              Mostech Business Solutions is a premier software development and digital marketing agency headquartered in Dubai, UAE. We specialize in digital design, enterprise software, bespoke ERP platforms, custom mobile applications, eCommerce solutions, and performance-driven digital marketing for the GCC’s fastest-growing businesses.
+              MOS Group Of Companies is a premier software development and digital marketing agency headquartered in Dubai, UAE. We specialize in digital design, enterprise software, bespoke ERP platforms, custom mobile applications, eCommerce solutions, and performance-driven digital marketing for the GCC’s fastest-growing businesses.
             </p>
             <p className="overview-desc">
               We operate at the intersection of technology, creativity, and human-centric design. Our approach combines scalable development, modern digital strategies, and agile methodologies to deliver secure, reliable, and impactful solutions. Scale your digital presence and business today.

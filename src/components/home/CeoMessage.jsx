@@ -34,7 +34,7 @@ const CeoMessage = () => {
               <div className="ceo-profile-details">
                 <div className="ceo-name">Ayoob K A</div>
                 <p className="ceo-role">Chairman</p>
-                <p className="ceo-company">Mostech Business Solutions</p>
+                <p className="ceo-company">MOS Group Of Companies</p>
               </div>
             </div>
           </div>

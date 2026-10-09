@@ -13,10 +13,10 @@ const NotFoundPage = () => {
   return (
     <main className="notfound-page">
       <Helmet>
-        <title>404 – Page Not Found | Mostech Business Solutions</title>
+        <title>404 – Page Not Found | MOS Group Of Companies</title>
         <meta 
           name="description" 
-          content="404 – Page Not Found. Return to Mostech Business Solutions homepage." 
+          content="404 – Page Not Found. Return to MOS Group Of Companies homepage." 
         />
         <meta name="robots" content="noindex, nofollow" />
         <meta name="prerender-status-code" content="404" />

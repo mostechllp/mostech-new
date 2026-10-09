@@ -36,7 +36,7 @@ function DynamicCanonical() {
   const { pathname } = useLocation();
   const canonicalPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
   const canonicalUrl = `https://mostech.ae${canonicalPath}`;
-  
+
   return (
     <Helmet>
       <link rel="canonical" href={canonicalUrl} />
@@ -46,7 +46,7 @@ function DynamicCanonical() {
 
 function DynamicBreadcrumb() {
   const { pathname } = useLocation();
-  
+
   if (pathname === '/') return null;
 
   const breadcrumbNames = {
@@ -73,18 +73,18 @@ function DynamicBreadcrumb() {
   const itemUrl = `https://mostech.ae${canonicalPath}`;
 
   const schema = {
-    "@context": "https://schema.org/", 
-    "@type": "BreadcrumbList", 
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
     "itemListElement": [{
-      "@type": "ListItem", 
-      "position": 1, 
+      "@type": "ListItem",
+      "position": 1,
       "name": "Home",
-      "item": "https://mostech.ae/"  
-    },{
-      "@type": "ListItem", 
-      "position": 2, 
+      "item": "https://mostech.ae/"
+    }, {
+      "@type": "ListItem",
+      "position": 2,
       "name": pageName,
-      "item": itemUrl  
+      "item": itemUrl
     }]
   };
 
@@ -106,20 +106,22 @@ function App() {
           <Helmet>
             <title>Leading software company in dubai</title>
             <meta name="description" content="Mostech is a leading Dubai software company delivering web development, mobile apps, and digital marketing across the UAE & GCC. Trusted by 500+ clients." />
-            <meta name="keywords" content="Mostech Business Solutions | The Best Software Company in Dubai, Digital Marketing Agency in Dubai, UAE." />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-              "@context": "https://schema.org/",
-              "@type": "WebSite",
-              "name": "MOSTECH",
-              "url": "https://mostech.ae/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "{search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }) }} />
+            <meta name="keywords" content="MOS Group Of Companies | The Best Software Company in Dubai, Digital Marketing Agency in Dubai, UAE." />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org/",
+                "@type": "WebSite",
+                "name": "MOSTECH",
+                "url": "https://mostech.ae/",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "{search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              })
+            }} />
           </Helmet>
-          
+
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -140,7 +142,7 @@ function App() {
             <Route path="/products/pro-solutions" element={<PosMachinePage />} />
             <Route path="/our-team" element={<OurTeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            
+
             {/* Redirects from short/old URLs to the new exact URLs */}
             <Route path="/mobile-app-development" element={<Navigate to="/services/mobile-app-development" replace />} />
             <Route path="/web-development" element={<Navigate to="/services/web-design-development" replace />} />
@@ -159,7 +161,7 @@ function App() {
             <Route path="/task-management" element={<Navigate to="/products/task-management" replace />} />
             <Route path="/pro-solutions" element={<Navigate to="/products/pro-solutions" replace />} />
             <Route path="/index.php" element={<Navigate to="/" replace />} />
-            
+
             {/* Legacy redirects */}
             <Route path="/about.php" element={<Navigate to="/about" replace />} />
             <Route path="/hybrid-application-development.php" element={<Navigate to="/services/mobile-app-development" replace />} />
