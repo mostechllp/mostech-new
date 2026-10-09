@@ -121,7 +121,7 @@ const HeroSection = () => {
                 <div className="hero-stat-icon">
                   <stat.icon size={22} />
                 </div>
-                <h3>{stat.value}</h3>
+                <div className="hero-stat-value">{stat.value}</div>
                 <p>{stat.label}</p>
                 <div className="hero-stat-line"></div>
               </div>

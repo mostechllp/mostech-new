@@ -631,6 +631,7 @@
 
 .erp-banner-left {
   background-color: #0f172a;
+  color: #ffffff;
   padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
@@ -638,6 +639,10 @@
   flex: 1.2;
   position: relative;
   overflow: hidden;
+}
+
+.erp-banner-left .erp-blue-text {
+  color: #60a5fa;
 }
 
 .erp-banner-icon-bg {
@@ -662,7 +667,7 @@
 }
 
 .erp-banner-text {
-  color: #cbd5e1;
+  color: #e2e8f0;
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0;

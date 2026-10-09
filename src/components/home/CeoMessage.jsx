@@ -32,7 +32,7 @@ const CeoMessage = () => {
                 <img src="/ceoceo.png" alt="Ayoob K A - CEO" />
               </div>
               <div className="ceo-profile-details">
-                <h4 className="ceo-name">Ayoob K A</h4>
+                <div className="ceo-name">Ayoob K A</div>
                 <p className="ceo-role">Chairman</p>
                 <p className="ceo-company">Mostech Business Solutions</p>
               </div>

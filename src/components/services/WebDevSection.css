@@ -84,6 +84,7 @@
   box-shadow: inset 0 0 15px rgba(13, 110, 253, 0.1);
 }
 
+.wds-feature-text-dark h3,
 .wds-feature-text-dark h4 {
   font-size: 1.1rem;
   font-weight: 600;
