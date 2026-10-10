@@ -465,7 +465,7 @@ const DigitalMarketingPage = () => {
             <div className="dm-title-underline"></div>
 
             <p>
-              Mostech Business Solutions offers you full digital marketing services 
+              MOS Group Of Companies offers you full digital marketing services 
               that will make your business stand out by creating awareness, attracting 
               quality leads and making sure that your business grows sustainably. We 
               have experts in data-based approaches, creative ideas, and marketing 

@@ -24,7 +24,7 @@ const founderMilestones = [
   {
     step: '02',
     year: '2021',
-    label: 'Global Expansion',
+    label: 'GCC Expansion',
     location: 'Dubai, UAE',
     color: '#0891b2',
     colorSoft: 'rgba(8,145,178,0.06)',
@@ -43,7 +43,7 @@ const founderMilestones = [
   {
     step: '03',
     year: '2023',
-    label: 'Regional Reach',
+    label: 'MEA Expansion',
     location: 'Middle East',
     color: '#7c3aed',
     colorSoft: 'rgba(124,58,237,0.06)',
@@ -131,7 +131,7 @@ const AboutCeoMessage = () => {
               We commenced operations in 2018 with a focused collective of software engineers committed to building robust and efficient software components. Coming from a rigorous institutional banking background, I understood early on that corporate success is tied to <strong>zero-error code, fast go-to-market velocity, bulletproof continuity</strong>, and software that creates measurable business value.
             </p>
             <p>
-              As we have expanded across the region and beyond, our mission has remained the same: to orchestrate, refine, and deploy digital infrastructure. Today, we have successfully <strong className="text-blue">delivered over 1,000 systems</strong>. It is an honor to partner with forward-thinking enterprises, deliver profound engineering, and walk together through the ongoing, and truly exciting, journey that is the digital ecosystem. Thank you.
+              As we have expanded across the region and beyond, our mission has remained the same: to orchestrate, refine, and deploy digital infrastructure. Today, we have successfully <strong>delivered over 1,000 systems</strong>. It is an honor to partner with forward-thinking enterprises, deliver profound engineering, and walk together through the ongoing, and truly exciting, journey that is the digital ecosystem. Thank you.
             </p>
           </div>
           

@@ -41,7 +41,7 @@ const DigitalSolutions = () => {
             <div className="digital-divider"></div>
             
             <p className="digital-desc">
-              At Mostech Business Solutions, we simplify business operations through smart technology, strategic digital marketing, and impactful branding. We design and develop software solutions that help businesses <span className="digital-gradient-text" style={{fontWeight: 700}}>work smarter</span>, <span className="digital-gradient-text" style={{fontWeight: 700}}>grow faster</span>, and stay competitive.
+              At MOS Group Of Companies, we simplify business operations through smart technology, strategic digital marketing, and impactful branding. We design and develop software solutions that help businesses <span className="digital-gradient-text" style={{fontWeight: 700}}>work smarter</span>, <span className="digital-gradient-text" style={{fontWeight: 700}}>grow faster</span>, and stay competitive.
             </p>
             
             <div className="digital-right-features">

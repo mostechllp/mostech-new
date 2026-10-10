@@ -15,10 +15,10 @@ const OnpageSeo = () => {
           
           <div className="onpage-header-content">
             <h1 className="onpage-title">
-              What We Offer at <span className="blue-text">Mostech Business Solutions SEO</span>
+              What We Offer at <span className="blue-text">MOS Group Of Companies SEO</span>
             </h1>
             <p className="onpage-desc">
-              At <strong>Mostech Business Solutions</strong>, we help businesses strengthen their online presence through strategic
+              At <strong>MOS Group Of Companies</strong>, we help businesses strengthen their online presence through strategic
               and results-driven search engine optimization services. Our experienced digital marketing team
               develops customized SEO strategies that improve website visibility, attract qualified organic traffic,
               and generate valuable leads.
