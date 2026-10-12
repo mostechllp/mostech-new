@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import { Send, MapPin, Phone, Mail, Clock, MessageSquare, Building2, Globe2, HeadphonesIcon } from 'lucide-react';
 import './ContactPage.css';
 
+import GlobalPresenceMap from '../components/GlobalPresenceMap';
+
 const ContactPage = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
@@ -238,23 +240,8 @@ const ContactPage = () => {
         </div>
         
 
-      {/* Map Section */}
-      <section className="contact-map-section">
-        <div className="container">
-          <div className="map-wrapper">
-            <iframe 
-              src="https://maps.google.com/maps?q=Mostech%20Business%20Solutions,%20Business%20Bay,%20Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mostech Business Solutions Location Map"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+      {/* Global Presence Map Section */}
+      <GlobalPresenceMap />
     </main>
   );
 };
