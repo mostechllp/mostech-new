@@ -1,48 +1,34 @@
 import React, { useState } from 'react';
 import { regionsData, pinTypes } from '../data/mapData';
-import { Building2, Globe, MapPin, Phone, Mail, Sparkles } from 'lucide-react';
+import { Building2, Globe, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import './GlobalPresenceMap.css';
 import mapPinImg from '../assets/map/map-pin.png'; // High-contrast solid-fill branded pin
 
-// Multiple map pin positions per region — calibrated against each 3D map image
+// Map pin position per region — calibrated accurately to the user-specified office locations
 const regionMapPins = {
-  // UAE: landmass runs left:15%→85%, top:28%→75% — 3D angled, Dubai top-right, Abu Dhabi left
+  // UAE: Business Bay, Dubai, United Arab Emirates
   uae: [
-    { pinId: 'uae-hq', top: '36%', left: '56%', title: 'Mostech Global Headquarters', city: 'Business Bay, Dubai' },
-    { pinId: 'uae-abudhabi', top: '48%', left: '32%', title: 'Abu Dhabi Regional Hub', city: 'Abu Dhabi, UAE' },
-    { pinId: 'uae-dhafra', top: '63%', left: '35%', title: 'Al Dhafra Regional Hub', city: 'Al Dhafra, UAE' },
-    { pinId: 'uae-alain', top: '56%', left: '68%', title: 'Al Ain Regional Hub', city: 'Al Ain, UAE' },
-    { pinId: 'uae-sharjah', top: '36%', left: '76%', title: 'Sharjah Regional Hub', city: 'Sharjah, UAE' },
-    { pinId: 'uae-rak', top: '23%', left: '84%', title: 'Ras Al Khaimah Hub', city: 'Ras Al Khaimah, UAE' },
+    { pinId: 'uae-dubai', top: '29%', left: '73%', title: 'Dubai Head Office', city: 'Business Bay, Dubai' },
   ],
-  // Africa: continent fills image; Cairo=NE, Lagos=W, Nairobi=E, Jo'burg=S, Casablanca=NW
-  africa: [
-    { pinId: 'africa-egypt', top: '20%', left: '56%', title: 'Cairo Hub', city: 'Cairo, Egypt' },
-    { pinId: 'africa-kenya', top: '53%', left: '58%', title: 'Nairobi Hub', city: 'Nairobi, Kenya' },
-    { pinId: 'africa-ng', top: '42%', left: '33%', title: 'Lagos Hub', city: 'Lagos, Nigeria' },
-    { pinId: 'africa-sa', top: '75%', left: '50%', title: 'Johannesburg Hub', city: 'Johannesburg, South Africa' },
-    { pinId: 'africa-ma', top: '17%', left: '30%', title: 'Casablanca Hub', city: 'Casablanca, Morocco' },
-  ],
-  // Kerala: tall diagonal strip from top-left → bottom-right
+  // India: Hilite Business Tower, Calicut, Keralam, India
   kerala: [
-    { pinId: 'india-calicut', top: '30%', left: '54%', title: 'HiLite Business Park R&D', city: 'Calicut, Kerala' },
-    { pinId: 'india-kannur', top: '18%', left: '50%', title: 'KVR Tower Development Center', city: 'Kannur, Kerala' },
-    { pinId: 'india-kochi', top: '55%', left: '60%', title: 'Kochi Tech Zone', city: 'Kochi, Kerala' },
-    { pinId: 'india-blr', top: '43%', left: '63%', title: 'Bengaluru Tech Desk', city: 'Bengaluru, India' },
-    { pinId: 'india-mumbai', top: '22%', left: '42%', title: 'Mumbai Commercial Desk', city: 'Mumbai, India' },
+    { pinId: 'india-calicut', top: '82%', left: '35%', title: 'Hilite Business Tower', city: 'Calicut, Keralam, India' },
   ],
-  // Europe: UK=left, Scandinavia=top, Germany=center-north, France=west-center, Rotterdam=NW
-  europe: [
-    { pinId: 'uk-london', top: '36%', left: '22%', title: 'London Client Desk', city: 'London, United Kingdom' },
-    { pinId: 'europe-germany', top: '32%', left: '46%', title: 'Berlin Client Desk', city: 'Berlin, Germany' },
-    { pinId: 'europe-netherlands', top: '28%', left: '40%', title: 'Amsterdam Tech Desk', city: 'Amsterdam, Netherlands' },
-    { pinId: 'europe-france', top: '43%', left: '33%', title: 'Paris Client Desk', city: 'Paris, France' },
+  // Qatar: Lusail, Doha, State of Qatar
+  qatar: [
+    { pinId: 'qatar-lusail', top: '42%', left: '64%', title: 'Lusail Global Service Area', city: 'Lusail, Doha' },
   ],
-  // CIS: wide map, Russia=top, Central Asia=bottom-center, Baku=southwest
-  cis: [
-    { pinId: 'cis-almaty', top: '66%', left: '62%', title: 'Almaty Hub', city: 'Almaty, Kazakhstan' },
-    { pinId: 'cis-tashkent', top: '70%', left: '52%', title: 'Tashkent Hub', city: 'Tashkent, Uzbekistan' },
-    { pinId: 'cis-baku', top: '58%', left: '34%', title: 'Baku Hub', city: 'Baku, Azerbaijan' },
+  // Saudi: Jeddah, Meccah Province, Kingdom of Saudi Arabia
+  saudi: [
+    { pinId: 'saudi-jeddah', top: '60%', left: '28%', title: 'Jeddah Global Service Area', city: 'Jeddah, Meccah Province' },
+  ],
+  // Oman: Seeb, Muscat, Sultanate of Oman
+  oman: [
+    { pinId: 'oman-seeb', top: '34%', left: '76%', title: 'Muscat Global Service Area', city: 'Seeb, Muscat' },
+  ],
+  // UK: Tech City, East London, United Kingdom
+  uk: [
+    { pinId: 'uk-london', top: '75%', left: '73%', title: 'London Global Service Area', city: 'Tech City, East London' },
   ],
 };
 
@@ -55,8 +41,7 @@ const GlobalPresenceMap = () => {
   const mapPins = regionMapPins[activeRegionId] || [];
 
   return (
-    <section className="global-presence-section">
-      <div className="container">
+    <div className="global-presence-showcase">
         {/* Region Tabs */}
         <div className="gp-tabs-wrapper">
           <div className="gp-tabs">
@@ -88,46 +73,65 @@ const GlobalPresenceMap = () => {
             {/* 3D Map Visual Display */}
             <div className="gp-visual-container">
               <div className="gp-image-card">
-                <div className="gp-image-badge">
-                  <Sparkles size={13} />
-                  <span>{activeRegion.badge || 'Regional Presence'}</span>
-                </div>
+                <div
+                  className="gp-map-image-wrap"
+                  onClick={() => setActiveCardId(null)}
+                >
+                  <div className="gp-map-stage">
+                    <img
+                      key={activeRegion.id}
+                      src={activeRegion.image}
+                      alt={`${activeRegion.label} Map`}
+                      className="gp-map-3d-img"
+                      loading="lazy"
+                    />
 
-                <div className="gp-map-image-wrap" style={{ position: 'relative' }}>
-                  <img
-                    key={activeRegion.id}
-                    src={activeRegion.image}
-                    alt={`${activeRegion.label} Map`}
-                    className="gp-map-3d-img"
-                    loading="lazy"
-                  />
-
-                  {/* Multiple branded map pins overlay */}
-                  {mapPins.map((mp, idx) => (
-                    <div
-                      key={mp.pinId || idx}
-                      className="gp-custom-map-pin"
-                      style={{
-                        top: mp.top,
-                        left: mp.left,
-                        animationDelay: `${idx * 0.3}s`,
-                      }}
-                    >
-                      <img src={mapPinImg} alt="Mostech Location Pin" className="gp-pin-img" />
-                      <div className="gp-pin-shadow" />
-                    </div>
-                  ))}
+                    {/* Location map pin overlay */}
+                    {mapPins.map((mp, idx) => {
+                      const isPinActive = activeCardId === mp.pinId;
+                      const topNum = parseFloat(mp.top) || 50;
+                      const leftNum = parseFloat(mp.left) || 50;
+                      const vClass = topNum < 42 ? 'pos-bottom' : 'pos-top';
+                      const hClass = leftNum > 60 ? 'align-right' : leftNum < 38 ? 'align-left' : 'align-center';
+                      return (
+                        <div
+                          key={mp.pinId || idx}
+                          className={`gp-custom-map-pin ${isPinActive ? 'active-pin' : ''}`}
+                          style={{
+                            top: mp.top,
+                            left: mp.left,
+                            animationDelay: `${idx * 0.3}s`,
+                          }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveCardId(isPinActive ? null : mp.pinId);
+                          }}
+                        >
+                          <img src={mapPinImg} alt="Mostech Location Pin" className="gp-pin-img" />
+                          <div className="gp-pin-shadow" />
+                          <div className={`gp-pin-tooltip ${vClass} ${hClass}`}>
+                            <div className="gp-pin-tooltip-title">{mp.title}</div>
+                            <div className="gp-pin-tooltip-addr">
+                              <MapPin size={12} />
+                              <span>{mp.city}</span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Regional Facilities & Offices */}
+            {/* Regional Facilities & Offices / Global Service Areas */}
             <div className="gp-facilities-column">
               <div className="gp-facilities-header">
-                <h4>Regional Facilities & Offices</h4>
-                <span className="gp-facilities-count">
-                  {activeRegion.facilities?.length || 0} locations
-                </span>
+                <h4>
+                  {['uk', 'saudi', 'oman', 'qatar'].includes(activeRegion.id)
+                    ? 'Global Service Areas'
+                    : (activeRegion.id === 'uae' ? 'Headquarters & Facilities' : 'Regional Facilities & Offices')}
+                </h4>
               </div>
 
               <div className="gp-facilities-list">
@@ -185,13 +189,35 @@ const GlobalPresenceMap = () => {
                     </div>
                   );
                 })}
+                {/* Embedded Business Hours Card */}
+                <div className="gp-extra-cards-container">
+                  <div className="gp-extra-card">
+                    <div className="gp-extra-card-title">
+                      <Clock size={15} className="gp-extra-title-icon" />
+                      <span>BUSINESS HOURS</span>
+                    </div>
+                    <div className="gp-extra-hours">
+                      <div className="gp-hours-group">
+                        <span className="gp-hours-day-label">Monday - Saturday</span>
+                        <strong className="gp-hours-time-val">09:00 AM - 06:00 PM</strong>
+                      </div>
+                      <div className="gp-hours-sunday-line">
+                        <span className="gp-hours-day-label">Sunday:</span>
+                        <span className="gp-hours-closed-val">Closed</span>
+                      </div>
+                      <div className="gp-support-pill-row">
+                        <span className="gp-pulse-dot" />
+                        <span>24 x 7 Support</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-      </div>
-    </section>
+    </div>
   );
 };
 

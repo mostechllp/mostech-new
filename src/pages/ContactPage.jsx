@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Send, MapPin, Phone, Mail, Clock, MessageSquare, Building2, Globe2, HeadphonesIcon } from 'lucide-react';
+import { Send } from 'lucide-react';
 import './ContactPage.css';
 
 import GlobalPresenceMap from '../components/GlobalPresenceMap';
@@ -8,65 +8,6 @@ import GlobalPresenceMap from '../components/GlobalPresenceMap';
 const ContactPage = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
-  const [country, setCountry] = useState('AE');
-
-  useEffect(() => {
-    fetch('https://ipapi.co/json/')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.country_code) {
-          setCountry(data.country_code);
-        }
-      })
-      .catch((err) => console.error('Error fetching location:', err));
-  }, []);
-
-  const renderBusinessHours = () => {
-    if (country === 'IN') {
-      return (
-        <div className="info-list">
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">📅</div>
-            <span><strong>Monday - Friday</strong><br/>9:00 AM - 6:00 PM</span>
-          </div>
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">📅</div>
-            <span><strong>Saturday</strong><br/>9:00 AM - 1:00 PM</span>
-          </div>
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">❌</div>
-            <span><strong>Sunday</strong><br/>Closed</span>
-          </div>
-        </div>
-      );
-    } else if (country === 'SA') {
-      return (
-        <div className="info-list">
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">📅</div>
-            <span><strong>Saturday - Thursday</strong><br/>9:00 AM - 5:00 PM</span>
-          </div>
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">❌</div>
-            <span><strong>Friday</strong><br/>Closed</span>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="info-list">
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">📅</div>
-            <span><strong>Monday - Friday</strong><br/>9:00 AM - 5:00 PM</span>
-          </div>
-          <div className="info-list-item">
-            <div className="info-list-icon-cal">❌</div>
-            <span><strong>Saturday & Sunday</strong><br/>Closed</span>
-          </div>
-        </div>
-      );
-    }
-  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -75,10 +16,10 @@ const ContactPage = () => {
     // Make sure to replace these with your actual EmailJS credentials
     emailjs.sendForm('service_6vdumow', 'template_r37cvxg', form.current, '-G08WgHo8YaudEBwv')
       .then((result) => {
-          setStatus('success');
-          form.current.reset();
+        setStatus('success');
+        form.current.reset();
       }, (error) => {
-          setStatus('error');
+        setStatus('error');
       });
   };
 
@@ -91,12 +32,12 @@ const ContactPage = () => {
               <span className="cb-badge-line"></span>
               CONTACT US
             </div>
-            
+
             <h1 className="cb-title">
-              Let's Build Your Next<br/>
+              Let's Build Your Next<br />
               <span className="cb-highlight">Big Idea</span>
             </h1>
-            
+
             <p className="cb-subtitle">
               Have a project in mind? Get in touch with our team and let's turn your vision into powerful digital solutions. We'll get back to you within 24 business hours.
             </p>
@@ -107,141 +48,60 @@ const ContactPage = () => {
         </div>
       </section>
 
-        <div className="container contact-container">
-          {/* Center Column: Form */}
-          <div className="contact-col-center">
-            <div className="contact-form-card">
-              <h2>Send Us a <span className="contact-form-blue">Message</span></h2>
-              <p className="contact-form-subtitle">
-                Fill out the form below and our team will get back to you within 24 business hours.
-              </p>
-              
-              <form ref={form} className="contact-form" onSubmit={sendEmail}>
-                {status === 'success' && <div style={{color: '#16a34a', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#f0fdf4', borderRadius: '8px', border: '1px solid #bbf7d0'}}>✅ Your message has been sent successfully!</div>}
-                {status === 'error' && <div style={{color: '#dc2626', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#fef2f2', borderRadius: '8px', border: '1px solid #fecaca'}}>❌ Failed to send message. Please verify your EmailJS credentials.</div>}
-                
-                <div className="form-group">
-                  <label>Your Name *</label>
-                  <div className="input-wrapper">
-                    <input type="text" name="user_name" placeholder="Enter your name" required />
+      {/* Unified Section: Map (left) + Form (right) + 2 Cards (bottom) */}
+      <section className="contact-main-section">
+        <div className="contact-main-container">
+          {/* Top Row: Left Side Map, Right Side Contact Form */}
+          <div className="contact-top-row">
+            <div className="contact-map-col">
+              <GlobalPresenceMap />
+            </div>
+
+            <div className="contact-form-col">
+              <div className="contact-form-card">
+                <h2>Send Us a <span className="contact-form-blue">Message</span></h2>
+                <p className="contact-form-subtitle">
+                  Fill out the form below and our team will get back to you within 24 business hours.
+                </p>
+
+                <form ref={form} className="contact-form" onSubmit={sendEmail}>
+                  {status === 'success' && <div style={{ color: '#16a34a', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#f0fdf4', borderRadius: '8px', border: '1px solid #bbf7d0' }}>✅ Your message has been sent successfully!</div>}
+                  {status === 'error' && <div style={{ color: '#dc2626', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#fef2f2', borderRadius: '8px', border: '1px solid #fecaca' }}>❌ Failed to send message. Please verify your EmailJS credentials.</div>}
+
+                  <div className="form-group">
+                    <label>Your Name *</label>
+                    <div className="input-wrapper">
+                      <input type="text" name="user_name" placeholder="Enter your name" required />
+                    </div>
                   </div>
-                </div>
-                
-                <div className="form-group">
-                  <label>Your Email Address *</label>
-                  <div className="input-wrapper">
-                    <input type="email" name="user_email" placeholder="Enter your email address" required />
+
+                  <div className="form-group">
+                    <label>Your Email Address *</label>
+                    <div className="input-wrapper">
+                      <input type="email" name="user_email" placeholder="Enter your email address" required />
+                    </div>
                   </div>
-                </div>
-                
-                <div className="form-group">
-                  <label>Message *</label>
-                  <div className="input-wrapper textarea-wrapper">
-                    <textarea name="message" placeholder="Enter your message..." rows="4" required></textarea>
+
+                  <div className="form-group">
+                    <label>Message *</label>
+                    <div className="input-wrapper textarea-wrapper">
+                      <textarea name="message" placeholder="Enter your message..." rows="4" required></textarea>
+                    </div>
                   </div>
-                </div>
-                
-                <button type="submit" className="contact-submit-btn" disabled={status === 'sending'} style={{ opacity: status === 'sending' ? 0.7 : 1 }}>
-                  {status === 'sending' ? 'Sending...' : <><Send size={18} /> Send Message <span style={{marginLeft: '8px'}}>→</span></>}
-                </button>
-                
-                <div className="contact-form-footer">
-                  <span className="lock-icon">🔒</span> Your information is safe with us. We respect your privacy.
-                </div>
-              </form>
+
+                  <button type="submit" className="contact-submit-btn" disabled={status === 'sending'} style={{ opacity: status === 'sending' ? 0.7 : 1 }}>
+                    {status === 'sending' ? 'Sending...' : <><Send size={18} /> Send Message <span style={{ marginLeft: '8px' }}>→</span></>}
+                  </button>
+
+                  <div className="contact-form-footer">
+                    <span className="lock-icon">🔒</span> Your information is safe with us. We respect your privacy.
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-
-          {/* Right Column: Info Cards */}
-          <div className="contact-col-right">
-            
-            <div className="contact-info-card">
-              <h3 className="info-card-title" style={{textTransform: 'none'}}>Headquarters - Dubai, UAE</h3>
-              <div className="info-card-divider"></div>
-              <div className="info-list" style={{ gap: '1.8rem' }}>
-                <div className="info-list-item">
-                  <MapPin size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>
-                    <strong>Bay Square Business Tower</strong><br/>
-                    Business Bay, Dubai, UAE
-                  </span>
-                </div>
-                <div className="info-list-item">
-                  <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>+971585792020</strong></span>
-                </div>
-                <div className="info-list-item">
-                  <Mail size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>info@mostech.ae</strong></span>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-info-card">
-              <h3 className="info-card-title" style={{textTransform: 'none'}}>Regional Office</h3>
-              <div className="info-card-divider"></div>
-              <div className="info-list">
-                <div className="info-list-item">
-                  <MapPin size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>
-                    <strong>Hilite Business Park, Calicut, India</strong>
-                  </span>
-                </div>
-                <div className="info-list-item">
-                  <MapPin size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>
-                    <strong>KVR Tower, Caltex, Kannur, India</strong>
-                  </span>
-                </div>
-                <div className="info-list-item">
-                  <MapPin size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>
-                    <strong>Al khabara, Jeddah, Saudi Arabia</strong>
-                  </span>
-                </div>
-                <div className="info-list-item">
-                  <Mail size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>support@mostech.ae</strong></span>
-                </div>
-                <div className="info-list-item">
-                  <Building2 size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>Regional Support<br/>Across MiddleEast, Africa, CIS, Europe & North America</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-info-card">
-              <h3 className="info-card-title">BUSINESS HOURS</h3>
-              <div className="info-card-divider"></div>
-              {renderBusinessHours()}
-            </div>
-
-            <div className="contact-info-card">
-              <h3 className="info-card-title">QUICK SUPPORT</h3>
-              <div className="info-card-divider"></div>
-              <div className="info-list">
-                <div className="info-list-item">
-                  <MessageSquare size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>Have a question?</strong><br/>Our team is ready<br/>to assist you.</span>
-                </div>
-                <div className="info-list-item">
-                  <Send size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>Drop us an email</strong><br/>support@mostech.ae</span>
-                </div>
-                <div className="info-list-item">
-                  <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>Call us anytime</strong><br/>+971 585792020</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
-        
-
-      {/* Global Presence Map Section */}
-      <GlobalPresenceMap />
+      </section>
     </main>
   );
 };

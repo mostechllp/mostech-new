@@ -1,8 +1,9 @@
 import dubaiUaeImg from '../assets/map/dubai&uae.png';
-import africaImg from '../assets/map/africa.png';
-import keralaImg from '../assets/map/kerela.png';
-import europeUkImg from '../assets/map/europe&uk.png';
-import cisImg from '../assets/map/cls.png';
+import indiaImg from '../assets/map/india.png';
+import ukImg from '../assets/map/uk.png';
+import saudiImg from '../assets/map/saudi.png';
+import omanImg from '../assets/map/Oman.png';
+import qatarImg from '../assets/map/Qatar.png';
 
 export const pinTypes = {
   office: {
@@ -13,12 +14,18 @@ export const pinTypes = {
   },
   regional: {
     label: 'Regional Office',
-    color: '#10b981',
-    bg: '#ecfdf5',
-    border: '#a7f3d0'
+    color: '#0d6efd',
+    bg: '#eff6ff',
+    border: '#bfdbfe'
   },
   support: {
     label: 'Global Support Desk',
+    color: '#0284c7',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
+  },
+  service: {
+    label: 'Global Service Area',
     color: '#0284c7',
     bg: '#f0f9ff',
     border: '#bae6fd'
@@ -28,27 +35,74 @@ export const pinTypes = {
 export const regionsData = [
   {
     id: 'uae',
-    label: 'Dubai & UAE',
-    subtitle: 'Middle East Regional Hub & Global Headquarters',
+    label: 'UAE',
+    subtitle: 'Head Office & Regional Operations Hub',
     image: dubaiUaeImg,
-    badge: 'Middle East Hub',
+    badge: 'Corporate Headquarters',
     facilities: [
       {
-        id: 'uae-hq',
+        id: 'uae-dubai',
         type: 'office',
-        badge: 'Corporate Headquarters',
-        title: 'Mostech Global Headquarters',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 585792020',
+        badge: 'Head Office',
+        title: 'Dubai Head Office',
+        address: 'Business Bay, Dubai, United Arab Emirates',
+        phone: '+971 58 579 2020',
         email: 'info@mostech.ae',
-        city: 'Dubai, UAE'
-      },
+        city: 'Business Bay, Dubai'
+      }
+    ]
+  },
+  {
+    id: 'kerala',
+    label: 'India',
+    subtitle: 'R&D Center & Regional Operations Hub',
+    image: indiaImg,
+    badge: 'R&D & Engineering Hub',
+    facilities: [
       {
-        id: 'uae-ksa',
+        id: 'india-calicut',
         type: 'regional',
-        badge: 'Regional Office',
-        title: 'Middle East Regional Office',
-        address: 'Al Khabara, Jeddah, Saudi Arabia',
+        badge: 'R&D & Tech Center',
+        title: 'Mostech India Development Center',
+        address: 'Hilite Business Tower, Calicut, Keralam, India',
+        phone: '+91 8547557283',
+        email: 'info@mostech.in',
+        city: 'Calicut, Keralam'
+      }
+    ]
+  },
+  {
+    id: 'qatar',
+    label: 'Qatar',
+    subtitle: 'Enterprise Solutions & Global Service Area',
+    image: qatarImg,
+    badge: 'Global Service Area',
+    facilities: [
+      {
+        id: 'qatar-lusail',
+        type: 'service',
+        badge: 'Global Service Area',
+        title: 'Qatar Global Service Area',
+        address: 'Lusail, Doha, State of Qatar',
+        phone: '+974 5054 7557',
+        email: 'support@mostech.ae',
+        city: 'Lusail, Doha'
+      }
+    ]
+  },
+  {
+    id: 'saudi',
+    label: 'Saudi Arabia',
+    subtitle: 'Middle East Commercial & Global Service Area',
+    image: saudiImg,
+    badge: 'Global Service Area',
+    facilities: [
+      {
+        id: 'saudi-jeddah',
+        type: 'service',
+        badge: 'Global Service Area',
+        title: 'Saudi Arabia Global Service Area',
+        address: 'Jeddah, Meccah Province, Kingdom of Saudi Arabia',
         phone: '+966 53 574 4308',
         email: 'support@mostech.ae',
         city: 'Jeddah, Saudi Arabia'
@@ -56,118 +110,40 @@ export const regionsData = [
     ]
   },
   {
-    id: 'kerala',
-    label: 'India (Kerala)',
-    subtitle: 'R&D Center & Regional Operations Hubs',
-    image: keralaImg,
-    badge: 'R&D & Engineering Hub',
+    id: 'oman',
+    label: 'Oman',
+    subtitle: 'Sultanate of Oman Global Service Area',
+    image: omanImg,
+    badge: 'Global Service Area',
     facilities: [
       {
-        id: 'india-calicut',
-        type: 'regional',
-        badge: 'Regional Office',
-        title: 'HiLite Business Park Office',
-        address: 'HiLite Business Park, Thondayad Bypass, Calicut, Kerala, India',
-        phone: '+91 8547557283',
-        email: 'india@mostech.ae',
-        city: 'Calicut, Kerala'
-      },
-      {
-        id: 'india-kannur',
-        type: 'regional',
-        badge: 'Regional Office',
-        title: 'KVR Tower Regional Office',
-        address: 'KVR Tower, Caltex, Kannur, Kerala, India',
-        phone: '+91 8547557283',
+        id: 'oman-seeb',
+        type: 'service',
+        badge: 'Global Service Area',
+        title: 'Oman Global Service Area',
+        address: 'Seeb, Muscat, Sultanate of Oman',
+        phone: '+971 58 579 2020',
         email: 'support@mostech.ae',
-        city: 'Kannur, Kerala'
+        city: 'Seeb, Muscat'
       }
     ]
   },
   {
-    id: 'europe',
-    label: 'Europe & UK',
-    subtitle: 'Strategic Corporate & Tech Partnership Presence',
-    image: europeUkImg,
-    badge: 'European Enterprise Hub',
+    id: 'uk',
+    label: 'UK',
+    subtitle: 'Strategic Technology & Global Service Area',
+    image: ukImg,
+    badge: 'Global Service Area',
     facilities: [
       {
-        id: 'europe-hq',
-        type: 'office',
-        badge: 'Global Headquarters',
-        title: 'Mostech Global Headquarters',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 585792020',
-        email: 'info@mostech.ae',
-        city: 'Dubai, UAE'
-      },
-      {
-        id: 'europe-support',
-        type: 'support',
-        badge: 'International Client Desk',
-        title: 'Europe & UK Client Services',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 581730112',
+        id: 'uk-london',
+        type: 'service',
+        badge: 'Global Service Area',
+        title: 'UK Global Service Area',
+        address: 'Tech City, East London, United Kingdom',
+        phone: '+44 7466 523243',
         email: 'support@mostech.ae',
-        city: 'Global Delivery'
-      }
-    ]
-  },
-  {
-    id: 'africa',
-    label: 'Africa',
-    subtitle: 'Expanding Tech Infrastructure & Client Support',
-    image: africaImg,
-    badge: 'Pan-Africa Network',
-    facilities: [
-      {
-        id: 'africa-hq',
-        type: 'office',
-        badge: 'Global Headquarters',
-        title: 'Mostech Global Headquarters',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 585792020',
-        email: 'info@mostech.ae',
-        city: 'Dubai, UAE'
-      },
-      {
-        id: 'africa-support',
-        type: 'support',
-        badge: 'Pan-Africa Client Desk',
-        title: 'Africa Regional Support Services',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 581730112',
-        email: 'support@mostech.ae',
-        city: 'Global Delivery'
-      }
-    ]
-  },
-  {
-    id: 'cis',
-    label: 'CIS',
-    subtitle: 'Regional Trade Hubs & Strategic Distribution Channels',
-    image: cisImg,
-    badge: 'CIS Regional Network',
-    facilities: [
-      {
-        id: 'cis-hq',
-        type: 'office',
-        badge: 'Global Headquarters',
-        title: 'Mostech Global Headquarters',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 585792020',
-        email: 'info@mostech.ae',
-        city: 'Dubai, UAE'
-      },
-      {
-        id: 'cis-support',
-        type: 'support',
-        badge: 'CIS Client Desk',
-        title: 'CIS Regional Support Services',
-        address: 'Bay Square Business Tower, Business Bay, Dubai, UAE',
-        phone: '+971 581730112',
-        email: 'support@mostech.ae',
-        city: 'Global Delivery'
+        city: 'East London, UK'
       }
     ]
   }
