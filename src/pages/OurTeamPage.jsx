@@ -120,7 +120,7 @@ const OurTeamPage = () => {
           </div>
 
           <h2 className="team-heading" style={{ marginTop: '40px' }}>W SQUAD - WEB TEAM</h2>
-          <div className="team-grid">
+          <div className="team-grid w-squad-grid">
 
             <div className="team-member">
               <div className="member-image-wrapper">
@@ -140,7 +140,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" className="zoomed-image" />
+                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" />
               </div>
               <h3>Albin Alosious</h3>
               <p>Web Developer</p>
@@ -148,7 +148,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/rojin.png" alt="Rojin" className="zoomed-image" />
+                <ProfileImage src="/our team/rojin.png" alt="Rojin" />
               </div>
               <h3>Rojin</h3>
               <p>Junior Web Developer</p>
@@ -207,10 +207,10 @@ const OurTeamPage = () => {
           </div>
 
           <h2 className="team-heading" style={{ marginTop: '40px' }}>D SQUAD - DIGITAL MARKETING TEAM</h2>
-          <div className="team-grid">
+          <div className="team-grid d-squad-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" className="zoomed-image" />
+                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" />
               </div>
               <h3>Aswathi Unnikrishnan</h3>
               <p>Senior SEO Specialist</p>

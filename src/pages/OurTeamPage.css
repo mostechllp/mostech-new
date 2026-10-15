@@ -224,3 +224,13 @@
   transform: scale(1.25);
   object-position: center 30%;
 }
+
+/* D SQUAD - Consistent Face Scale & Eye-line Alignment */
+.d-squad-grid .member-image-wrapper img,
+.w-squad-grid .member-image-wrapper img {
+  object-fit: cover;
+  object-position: center center;
+  transform: none;
+}
+
+
