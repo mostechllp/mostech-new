@@ -10,7 +10,7 @@ const SeoWhyChooseUs = () => {
 
           <h2 className="seo-wcu-title">Why Choose <span className="dark-blue">Us?</span></h2>
           <p className="seo-wcu-desc">
-            Partner with <strong>Mostech Business Solutions</strong> and take your business to the next level with innovative technology 
+            Partner with <strong>MOS Group Of Companies</strong> and take your business to the next level with innovative technology 
             solutions and expert <span className="highlight-link">SEO Services in UAE</span>. We help businesses strengthen their online presence, drive qualified 
             traffic, and achieve long-term digital success through customized, results-driven strategies.
           </p>

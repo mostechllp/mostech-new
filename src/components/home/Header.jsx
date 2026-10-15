@@ -26,10 +26,11 @@ const Header = () => {
     { code: 'AE', label: 'UAE:', phone: '+971 58 579 2020', href: '+971585792020' },
     { code: 'IN', label: 'INDIA:', phone: '+91 8547557283', href: '+918547557283' },
     { code: 'SA', label: 'KSA:', phone: '+966 53 574 4308', href: '+966535744308' },
-    { code: 'QA', label: 'QATAR:', phone: '+974 5054 7557', href: '+97450547557' }
+    { code: 'QA', label: 'QATAR:', phone: '+974 5054 7557', href: '+97450547557' },
+    { code: 'GB', label: 'UK:', phone: '+44 7466 523243', href: '+447466523243' }
   ];
 
-  const matchedPhone = phoneNumbers.find(p => p.code === countryCode);
+  const matchedPhone = phoneNumbers.find(p => p.code === countryCode || (p.code === 'GB' && countryCode === 'UK'));
   const displayPhone = matchedPhone ? matchedPhone : phoneNumbers[0];
   const whatsappPhone = displayPhone;
 

@@ -51,7 +51,7 @@ const MobileAppDevPage = () => {
             <div className="mobile-title-line"></div>
             
             <p className="mobile-description">
-              At Mostech Business Solutions, we build innovative mobile applications that help 
+              At MOS Group Of Companies, we build innovative mobile applications that help 
               businesses connect with customers, improve operations, and accelerate digital 
               growth. Our expert team develops secure, scalable, and high-performance 
               Android, iOS, and cross-platform apps tailored to your unique business needs.
@@ -367,7 +367,7 @@ const MobileAppDevPage = () => {
               With a well-developed mobile application, a business can maintain its competitiveness while at the same time ensuring a great experience for its users.
             </p>
             <p>
-              <span className="text-highlight-blue">Mostech Business Solutions</span> provides mobile app development services for various platforms, including Android, iOS, 
+              <span className="text-highlight-blue">MOS Group Of Companies</span> provides mobile app development services for various platforms, including Android, iOS, 
               and cross-platform applications built using the latest technology such as Flutter.
             </p>
           </div>

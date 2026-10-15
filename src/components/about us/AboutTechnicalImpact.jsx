@@ -43,7 +43,7 @@ const AboutTechnicalImpact = () => {
         <div className="impact-header animate-on-scroll">
           <div className="section-eyebrow">By The Numbers</div>
           <h2 className="impact-title">
-            Quantified Technical Impact <span className="text-blue">Across the Middle East</span>
+            Quantified Technical Impact <span className="text-blue">Across the Globe</span>
           </h2>
           <p className="impact-subtitle">
             Playing an active role for high-growth start-ups to established corporate enterprises.
