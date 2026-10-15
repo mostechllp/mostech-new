@@ -188,6 +188,22 @@ const OurTeamPage = () => {
               <h3>Salman Faris</h3>
               <p>Video Editor</p>
             </div>
+
+            <div className="team-member">
+              <div className="member-image-wrapper">
+                <ProfileImage src="/our team/aswanth.jpeg" alt="Aswanth M" />
+              </div>
+              <h3>Aswanth M</h3>
+              <p>Video Editor</p>
+            </div>
+
+            <div className="team-member">
+              <div className="member-image-wrapper">
+                <ProfileImage src="/our team/Ijlan.jpeg" alt="Ijlan" />
+              </div>
+              <h3>Ijlan</h3>
+              <p>Junior Modeler and Animator</p>
+            </div>
           </div>
 
           <h2 className="team-heading" style={{ marginTop: '40px' }}>D SQUAD - DIGITAL MARKETING TEAM</h2>

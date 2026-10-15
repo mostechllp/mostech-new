@@ -62,6 +62,7 @@ const Footer = () => {
               <li><Link to="/seo"><ChevronRight size={14} /> SEO Services</Link></li>
               <li><Link to="/ecommerce"><ChevronRight size={14} /> Ecommerce</Link></li>
               <li><Link to="/erp-product"><ChevronRight size={14} /> ERP Solutions</Link></li>
+              <li><Link to="/our-team"><ChevronRight size={14} /> Our Team</Link></li>
             </ul>
           </div>
           

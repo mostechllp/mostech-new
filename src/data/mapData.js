@@ -1,6 +1,6 @@
 import dubaiUaeImg from '../assets/map/dubai&uae.png';
 import indiaImg from '../assets/map/india.png';
-import ukImg from '../assets/map/uk.png';
+import ukImg from '../assets/map/Uk.png';
 import saudiImg from '../assets/map/saudi.png';
 import omanImg from '../assets/map/Oman.png';
 import qatarImg from '../assets/map/Qatar.png';

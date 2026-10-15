@@ -63,6 +63,7 @@ function DynamicBreadcrumb() {
     '/products/project-management': 'Smart Projects. Stronger Results.',
     '/products/task-management': 'Turn Every Task Into Progress.',
     '/products/pro-solutions': 'STREAMLINE • ORGANIZE • STAY AHEAD',
+    '/our-team': 'Our Team',
     '/contact': 'CONTACT US'
   };
 
