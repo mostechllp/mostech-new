@@ -1,197 +1,228 @@
-import React, { useEffect, useRef } from 'react';
-import * as d3 from 'd3';
-import * as topojson from 'topojson-client';
+import React, { useState } from 'react';
 import './GlobalPresence.css';
+import worldMapImg from '../../assets/map/Embossed Navy World Map.png';
+import mapPinImg from '../../assets/map/map-pin.png';
+
+const HUB_COORD = { x: 973, y: 508 };
+
+// Destination pins matching reference layout (radiating from UAE Hub)
+const DESTINATIONS = [
+  {
+    id: 'north_america',
+    name: 'North America',
+    country: 'United States',
+    label: 'United States & Canada',
+    badgePos: 'bottom',
+    px: 330,
+    py: 420,
+    arch: 150,
+    top: '41.02%',
+    left: '21.48%',
+    tooltipPos: 'top-center',
+  },
+  {
+    id: 'south_america',
+    name: 'South America',
+    country: 'Brazil',
+    label: 'Latin America Network',
+    badgePos: 'bottom',
+    px: 500,
+    py: 710,
+    arch: 110,
+    top: '69.34%',
+    left: '32.55%',
+    tooltipPos: 'top-left',
+  },
+  {
+    id: 'europe',
+    name: 'Europe & UK',
+    country: 'United Kingdom',
+    label: 'London & European Hub',
+    badgePos: 'top',
+    px: 728,
+    py: 345,
+    arch: 100,
+    top: '33.69%',
+    left: '47.40%',
+    tooltipPos: 'top-left',
+  },
+  {
+    id: 'africa',
+    name: 'Africa',
+    country: 'South Africa',
+    label: 'South Africa & Kenya',
+    badgePos: 'bottom',
+    px: 840,
+    py: 800,
+    arch: 80,
+    top: '78.13%',
+    left: '54.69%',
+    tooltipPos: 'top-center',
+  },
+  {
+    id: 'south_asia',
+    name: 'South Asia',
+    country: 'India',
+    label: 'India (R&D & Tech Center)',
+    badgePos: 'bottom',
+    px: 1082,
+    py: 540,
+    arch: 55,
+    top: '52.73%',
+    left: '70.44%',
+    tooltipPos: 'top-center',
+  },
+  {
+    id: 'east_asia',
+    name: 'East Asia & APAC',
+    country: 'Japan',
+    label: 'Asia-Pacific Regional Market',
+    badgePos: 'top',
+    px: 1330,
+    py: 450,
+    arch: 120,
+    top: '43.95%',
+    left: '86.59%',
+    tooltipPos: 'top-left',
+  },
+  {
+    id: 'australia',
+    name: 'Australia',
+    country: 'Australia',
+    label: 'Sydney & Oceania',
+    badgePos: 'bottom',
+    px: 1340,
+    py: 775,
+    arch: 95,
+    top: '75.68%',
+    left: '87.24%',
+    tooltipPos: 'top-center',
+  },
+];
+
+// Central Global Hub Pin
+const HUB_PIN = {
+  id: 'uae',
+  name: 'Dubai, UAE',
+  country: 'Dubai, UAE',
+  label: 'Global HQ & Operations',
+  badgePos: 'top',
+  px: 973,
+  py: 508,
+  top: '49.61%',
+  left: '63.35%',
+  tooltipPos: 'top-right',
+  isHub: true,
+};
+
+const ALL_PINS = [HUB_PIN, ...DESTINATIONS];
+
+function getArcD(target) {
+  const mx = (HUB_COORD.x + target.px) / 2;
+  const my = (HUB_COORD.y + target.py) / 2 - target.arch;
+  return `M ${HUB_COORD.x} ${HUB_COORD.y} Q ${mx} ${my} ${target.px} ${target.py}`;
+}
 
 const GlobalPresence = () => {
-  const svgRef = useRef(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    
-    // clear previous if any
-    d3.select(svgRef.current).selectAll('*').remove();
-    
-    const renderMap = async () => {
-      const width = 1180, height = 560;
-      const svg = d3.select(svgRef.current);
-      
-      const targetList = [
-        {id:398,name:'Kazakhstan',    pt:[71.47,51.16]},
-        {id:804,name:'Ukraine',       pt:[30.52,50.45]},
-        {id:616,name:'Poland',        pt:[21.01,52.23]},
-        {id:112,name:'Belarus',       pt:[27.57,53.90]},
-        {id:860,name:'Uzbekistan',    pt:[69.24,41.30]},
-        {id:356,name:'India',         pt:[77.20,28.60]},
-        {id:144,name:'Sri Lanka',     pt:[79.85,6.93]},
-        {id:586,name:'Pakistan',      pt:[73.05,33.68]},
-        {id:524,name:'Nepal',         pt:[85.32,27.72]},
-        {id:360,name:'Indonesia',     pt:[106.85,-6.20]},
-        {id:764,name:'Thailand',      pt:[100.50,13.75]},
-        {id:608,name:'Philippines',   pt:[120.98,14.60]},
-        {id:36 ,name:'Australia',     pt:[149.13,-35.28]},
-        {id:554,name:'New Zealand',   pt:[174.78,-41.29]},
-        {id:231,name:'Ethiopia',      pt:[38.74,9.03]},
-        {id:716,name:'Zimbabwe',      pt:[31.05,-17.83]},
-        {id:404,name:'Kenya',         pt:[36.82,-1.29]},
-        {id:710,name:'South Africa',  pt:[28.19,-25.75]},
-        {id:818,name:'Egypt',         pt:[31.24,30.04]},
-        {id:834,name:'Tanzania',      pt:[35.75,-6.16]},
-        {id:372,name:'Ireland',       pt:[-6.26,53.35]},
-        {id:826,name:'United Kingdom',pt:[-0.13,51.51]},
-        {id:840,name:'United States', pt:[-77.04,38.90]},
-        {id:124,name:'Canada',        pt:[-75.70,45.42]},
-        {id:643,name:'Russia',        pt:[37.62,55.75]},
-        {id:682,name:'KSA',           pt:[46.7, 24.7]},
-        {id:512,name:'Oman',          pt:[58.4, 23.6]},
-        {id:634,name:'Qatar',         pt:[51.5, 25.3]},
-        {id:48, name:'Bahrain',       pt:[50.5, 26.2]},
-        {id:414,name:'Kuwait',        pt:[47.9, 29.3]},
-        {id:760,name:'Syria',         pt:[38.9, 34.8]},
-        {id:422,name:'Lebanon',       pt:[35.8, 33.8]}
-      ];
-      const targetById = new Map(targetList.map(t => [t.id, t]));
-      const HUB_ID = 784; // UAE
-      const HUB_PT = [55.27, 25.20]; // Dubai
-
-      try {
-        const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-        const countries = topojson.feature(world, world.objects.countries);
-        countries.features = countries.features.filter(d => +d.id !== 10); // drop Antarctica
-
-        const projection = d3.geoNaturalEarth1().fitExtent([[40,15],[width-40,height-15]], countries);
-        const path = d3.geoPath(projection);
-
-        svg.append('g').selectAll('path')
-          .data(countries.features)
-          .join('path')
-          .attr('class', d => {
-            const id = +d.id;
-            if(id === HUB_ID) return 'land hub-country';
-            if(targetById.has(id)) return 'land on';
-            return 'land';
-          })
-          .attr('d', path);
-
-        const g = svg.append('g');
-        const hubXY = projection(HUB_PT);
-
-        // ---- label collision avoidance ----
-        const placedRects = [];
-        function rectsOverlap(a,b,pad){
-          return !(a.x2+pad < b.x1 || a.x1-pad > b.x2 || a.y2+pad < b.y1 || a.y1-pad > b.y2);
-        }
-        function placeLabel(x0, y0, text){
-          const w = text.length * 5.3 + 6;
-          const h = 12;
-          const preferLeft = x0 > width - 140;
-          const baseDx = preferLeft ? -8 : 8;
-          const baseDy = y0 < 42 ? 14 : -6;
-
-          const candidateDys = [baseDy];
-          for(let k=1; k<10; k++){
-            candidateDys.push(baseDy + k*7);
-            candidateDys.push(baseDy - k*7);
-          }
-
-          let chosen = null;
-          for(const dy of candidateDys){
-            const x1 = preferLeft ? x0 + baseDx - w : x0 + baseDx;
-            const rect = { x1, y1:y0+dy-h+3, x2:x1+w, y2:y0+dy+3 };
-            if(!placedRects.some(r => rectsOverlap(rect, r, 2))){
-              chosen = { dx:baseDx, dy, rect, anchorEnd:preferLeft };
-              break;
-            }
-          }
-          if(!chosen){
-            const x1 = preferLeft ? x0 + baseDx - w : x0 + baseDx;
-            chosen = { dx:baseDx, dy:baseDy, rect:{x1,y1:y0+baseDy-h+3,x2:x1+w,y2:y0+baseDy+3}, anchorEnd:preferLeft };
-          }
-          placedRects.push(chosen.rect);
-          return chosen;
-        }
-
-        placedRects.push({ x1:hubXY[0]-4, y1:hubXY[1]-22, x2:hubXY[0]+70, y2:hubXY[1]+4 });
-
-        targetList.forEach(t => {
-          const p = projection(t.pt);
-          if(!p) return;
-          const mx = (hubXY[0]+p[0])/2;
-          const dx = p[0]-hubXY[0], dy = p[1]-hubXY[1];
-          const dist = Math.sqrt(dx*dx+dy*dy);
-          const arch = Math.min(dist*0.28, 110);
-          const my = (hubXY[1]+p[1])/2 - arch;
-          g.append('path')
-            .attr('class','arc')
-            .attr('d', `M${hubXY[0]},${hubXY[1]} Q${mx},${my} ${p[0]},${p[1]}`);
-        });
-
-        targetList.forEach(t => {
-          const p = projection(t.pt);
-          if(!p) return;
-          const dg = g.append('g');
-          dg.append('circle').attr('class','dot-outer').attr('cx',p[0]).attr('cy',p[1]).attr('r',6);
-          dg.append('circle').attr('class','dot').attr('cx',p[0]).attr('cy',p[1]).attr('r',2.4);
-
-          const lp = placeLabel(p[0], p[1], t.name);
-          dg.append('text')
-            .attr('class','dot-label')
-            .attr('x', p[0] + lp.dx)
-            .attr('y', p[1] + lp.dy)
-            .attr('text-anchor', lp.anchorEnd ? 'end' : 'start')
-            .text(t.name);
-        });
-
-        const hubG = g.append('g');
-        hubG.append('circle').attr('class','hub-ring').attr('cx',hubXY[0]).attr('cy',hubXY[1]).attr('r',5);
-        hubG.append('circle').attr('class','hub-dot').attr('cx',hubXY[0]).attr('cy',hubXY[1]).attr('r',4.5);
-        hubG.append('text')
-          .attr('class','hub-label')
-          .attr('x', hubXY[0] + 9)
-          .attr('y', hubXY[1] - 8)
-          .text('Dubai, UAE');
-          
-      } catch (err) {
-        console.error("Map load error", err);
-      }
-    };
-    
-    renderMap();
-  }, []);
+  const [activePin, setActivePin] = useState(null);
 
   return (
     <section className="global-presence-section">
       <div className="slide container">
+        <div className="gp-columns-layout">
 
-        <div className="gp-header">
-          <div className="gp-header-bar"></div>
-          <div className="gp-header-text">
-            <div className="gp-eyebrow-title">Our</div>
-            <div className="gp-eyebrow-title">Global Footprint</div>
+          {/* Left Column: Title & Description */}
+          <div className="gp-col-content">
+            <div className="gp-header">
+              <div className="gp-header-bar"></div>
+              <div className="gp-header-text">
+                <span className="gp-eyebrow-title">Our</span>
+                <span className="gp-eyebrow-title">Global Footprint</span>
+              </div>
+            </div>
+
+            <p className="gp-lede">
+              <b>Mostech</b> serves businesses across <b>the Middle East, Africa, South Asia, Europe, the CIS, and North America, operating from Dubai, UAE.</b>
+            </p>
+            <p className="gp-lede gp-lede-sub">
+              With a strong regional presence and a robust marketing network, we deliver innovative digital solutions to clients in more than 25 countries, enabling sustainable growth and long-term business success across global markets.
+            </p>
           </div>
+
+          {/* Right Column: World Map */}
+          <div className="gp-col-map">
+            <div className="gp-map-stage">
+              <img
+                src={worldMapImg}
+                alt="Mostech Global Footprint 3D Map"
+                className="gp-map-img"
+                loading="lazy"
+              />
+
+              {/* Animated Electric Blue Connection Arc Lines */}
+              <svg
+                className="gp-map-arcs-svg"
+                viewBox="0 0 1536 1024"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                {/* Glowing Concentric Hub Rings in UAE */}
+                <circle cx={HUB_COORD.x} cy={HUB_COORD.y} r={18} className="gp-hub-ring-outer" />
+                <circle cx={HUB_COORD.x} cy={HUB_COORD.y} r={10} className="gp-hub-ring-mid" />
+                <circle cx={HUB_COORD.x} cy={HUB_COORD.y} r={4.5} className="gp-hub-center-dot" />
+
+                {DESTINATIONS.map((dest, index) => (
+                  <g
+                    key={`arc-${dest.id}`}
+                    className={`gp-arc-group ${activePin === dest.id ? 'is-active' : ''}`}
+                  >
+                    {/* Underlying Electric Blue Route Track */}
+                    <path
+                      d={getArcD(dest)}
+                      className="gp-arc-track"
+                    />
+                    {/* Glowing Electric Blue Light Beam (Ease-in Ease-out Come-and-Go) */}
+                    <path
+                      d={getArcD(dest)}
+                      pathLength="100"
+                      className="gp-arc-beam"
+                      style={{ animationDelay: `${(index % 4) * 0.55}s` }}
+                    />
+                  </g>
+                ))}
+              </svg>
+
+              {ALL_PINS.map((pin) => (
+                <div
+                  key={pin.id}
+                  className={`gp-world-pin gp-pin-${pin.id} ${pin.isHub ? 'gp-hub-pin' : ''} ${activePin === pin.id ? 'is-active' : ''}`}
+                  style={{ top: pin.top, left: pin.left }}
+                  onMouseEnter={() => setActivePin(pin.id)}
+                  onMouseLeave={() => setActivePin(null)}
+                  onClick={() => setActivePin(activePin === pin.id ? null : pin.id)}
+                  aria-label={`${pin.country} location`}
+                >
+                  <div className="gp-world-pin-anchor">
+                    <img src={mapPinImg} alt={`${pin.name} pin`} className="gp-world-pin-img" />
+                    <span className="gp-world-pin-aura"></span>
+                  </div>
+
+                  {/* Visible Country Name Label */}
+                  <div className={`gp-pin-name-badge ${pin.badgePos || 'bottom'}`}>
+                    <span className="gp-badge-dot"></span>
+                    <span className="gp-badge-text">{pin.country}</span>
+                  </div>
+
+                  <div className={`gp-world-pin-tooltip ${pin.tooltipPos}`}>
+                    <strong className="gp-world-pin-country">{pin.name}</strong>
+                    <span className="gp-world-pin-city">{pin.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-
-        <p className="gp-lede">
-          <b>Mostech</b> serves businesses across <b>the Middle East, Africa, South Asia, Europe, the CIS, and North America, operating from Dubai, UAE.</b>
-          With a strong regional presence and a robust marketing network, we deliver innovative digital solutions to clients in more than 25 countries, enabling sustainable growth and long-term business success across global markets. 
-        </p>
-
-        <div className="gp-body-row">
-          <div className="gp-map-wrap">
-            <svg id="map-svg" ref={svgRef} viewBox="0 0 1180 560" preserveAspectRatio="xMidYMid meet"></svg>
-          </div>
-
-          <div className="gp-legend">
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-hub)'}}></span><span className="gp-legend-label">HQ - Dubai, UAE</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">South Asia</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Middle East</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">North America</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Europe &amp; UK</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">CIS</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Africa</span></div>
-          </div>
-        </div>
-
       </div>
     </section>
   );

@@ -14,26 +14,50 @@
   background-color: #ffffff;
   font-family: 'Inter', sans-serif;
   color: var(--body-text);
-  padding-bottom: 1rem;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .global-presence-section .slide {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 40px 40px;
 }
 
-/* ---- Header ---- */
+/* ---- 2-Column Section Layout: Left Text, Right Map ---- */
+.gp-columns-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.35fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.gp-col-map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gp-col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ---- Header (Right Column) ---- */
 .gp-header {
   display: flex;
   align-items: stretch;
-  gap: 28px;
-  margin-bottom: 34px;
+  gap: 22px;
+  margin-bottom: 24px;
 }
 
 .gp-header-bar {
-  width: 12px;
-  flex: 0 0 12px;
+  width: 10px;
+  flex: 0 0 10px;
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
   border-radius: 2px;
 }
@@ -48,138 +72,460 @@
 .gp-eyebrow-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  font-size: 52px;
-  line-height: 1.05;
+  font-size: 46px;
+  line-height: 1.08;
   color: var(--navy);
   letter-spacing: 0.5px;
 }
 
 .gp-lede {
-  max-width: 1180px;
-  font-size: 19px;
-  line-height: 1.6;
-  text-align: justify;
+  font-size: 16.5px;
+  line-height: 1.7;
   color: var(--body-text);
-  margin-bottom: 46px;
+  margin-bottom: 16px;
 }
 
-.gp-lede b { 
-  color: var(--navy); 
+.gp-lede-sub {
+  margin-bottom: 0;
+  color: #475569;
 }
 
-/* ---- Body: map + legend ---- */
-.gp-body-row {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.gp-map-wrap {
-  flex: 1 1 75%;
-  min-width: 0;
-}
-
-#map-svg { 
-  width: 100%; 
-  height: auto; 
-  display: block; 
-}
-
-.gp-legend {
-  flex: 0 0 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  padding-left: 8px;
-}
-
-.gp-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.gp-legend-swatch {
-  width: 34px;
-  height: 22px;
-  border-radius: 4px;
-  flex: 0 0 34px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.gp-legend-label {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-/* ---- Map styling ---- */
-.land { fill: var(--land); stroke: var(--land-line); stroke-width: 0.6; transition: fill 0.3s; }
-.land.on { fill: var(--land-on); stroke: #2563eb; }
-.land.hub-country { fill: var(--land-hub); stroke: #1e40af; }
-
-.land:hover {
-  fill: #cbd5e1;
-}
-.land.on:hover {
-  fill: #2563eb;
-}
-
-.arc {
-  fill: none; stroke: var(--skyline); stroke-width: 1.5;
-  stroke-linecap: round; opacity: 0.8;
-  stroke-dasharray: 4 6; animation: flow 22s linear infinite;
-}
-
-@keyframes flow { to { stroke-dashoffset: -400; } }
-
-.dot-outer { fill: var(--skyline); opacity: 0.3; }
-.dot { fill: #ffffff; stroke: var(--land-hub); stroke-width: 1.5; }
-.dot-label {
-  font-family: 'Inter', sans-serif; 
-  font-size: 10.5px; 
-  font-weight: 600;
-  fill: var(--ink); 
-  pointer-events: none;
-  paint-order: stroke; 
-  stroke: #ffffff; 
-  stroke-width: 3px; 
-  stroke-linejoin: round;
-}
-
-.hub-ring {
-  fill: none; stroke: var(--land-hub); stroke-width: 1.5;
-  transform-origin: center; transform-box: fill-box;
-  animation: pulse 2.6s ease-out infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.4); opacity: 0.9; }
-  100% { transform: scale(2.6); opacity: 0; }
-}
-
-.hub-dot { fill: #ef4444; stroke: #ffffff; stroke-width: 1.5; }
-.hub-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11.5px; 
+.gp-lede b {
+  color: var(--navy);
   font-weight: 700;
-  fill: #ef4444;
-  paint-order: stroke; 
-  stroke: #ffffff; 
-  stroke-width: 4px; 
-  stroke-linejoin: round;
 }
 
-@media (max-width: 900px) {
-  .global-presence-section { overflow-x: hidden; }
-  .gp-body-row { flex-direction: column; }
-  .gp-legend { flex: 1 1 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;}
-  .gp-main-title { font-size: 2.2rem; }
-  #map-svg {
-    transform: scale(1.6);
-    margin: 45px 0;
+/* ---- Map Stage ---- */
+.gp-map-stage {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.gp-map-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 15px 35px rgba(2, 12, 76, 0.08));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ---- Electric Blue Connection Arcs SVG ---- */
+.gp-map-arcs-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Radiant Blue Concentric Hub in UAE */
+.gp-hub-ring-outer {
+  fill: none;
+  stroke: rgba(56, 189, 248, 0.45);
+  stroke-width: 1.5;
+  transform-origin: 973px 508px;
+  animation: hubBluePulse 2.6s ease-out infinite;
+}
+
+.gp-hub-ring-mid {
+  fill: rgba(56, 189, 248, 0.25);
+  stroke: #38bdf8;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.9));
+}
+
+.gp-hub-center-dot {
+  fill: #ffffff;
+  stroke: #0284c7;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px #38bdf8);
+}
+
+@keyframes hubBluePulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
   }
 }
+
+/* Blue Parabolic Guide Track */
+.gp-arc-track {
+  fill: none;
+  stroke: rgba(96, 165, 250, 0.55);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 3px rgba(56, 189, 248, 0.45));
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+/* Blue Luminous Pulse Beam with Ease-In Ease-Out Come-and-Go */
+.gp-arc-beam {
+  fill: none;
+  stroke: #67e8f9;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-dasharray: 45 100;
+  stroke-dashoffset: 45;
+  animation: blueArcComeAndGo 3.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px #38bdf8) drop-shadow(0 0 14px rgba(14, 165, 233, 0.85));
+  opacity: 0;
+  transition: opacity 0.3s ease, stroke-width 0.3s ease, filter 0.3s ease;
+}
+
+@keyframes blueArcComeAndGo {
+  0% {
+    stroke-dashoffset: 45;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: -30;
+    opacity: 1;
+  }
+  80% {
+    stroke-dashoffset: -100;
+    opacity: 0.85;
+  }
+  95%,
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0;
+  }
+}
+
+/* Active Hover Glow on Arcs */
+.gp-arc-group.is-active .gp-arc-track {
+  stroke: #38bdf8;
+  stroke-width: 2.8;
+}
+
+.gp-arc-group.is-active .gp-arc-beam {
+  stroke: #ffffff;
+  stroke-width: 4.5;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 0;
+  opacity: 1;
+  animation: none;
+  filter: drop-shadow(0 0 8px #38bdf8) drop-shadow(0 0 18px #0284c7);
+}
+
+/* ---- Map Pins ---- */
+.gp-world-pin {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  transform: translate(-50%, -96%);
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0s;
+  line-height: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gp-world-pin:hover,
+.gp-world-pin.is-active {
+  z-index: 35;
+  transform: translate(-50%, -104%) scale(1.15);
+}
+
+.gp-world-pin-anchor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gp-world-pin-img {
+  width: 28px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(2, 12, 76, 0.45));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Blue aura puddle under each pin */
+.gp-world-pin-aura {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, rgba(37, 99, 235, 0.35) 45%, transparent 75%);
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.95));
+  pointer-events: none;
+  animation: pinAuraGaze 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes pinAuraGaze {
+  0% {
+    transform: translate(-50%, 50%) scale(0.85);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, 50%) scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* Hub pin special prominence */
+.gp-hub-pin {
+  z-index: 25;
+}
+
+.gp-hub-pin .gp-world-pin-aura {
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.95) 0%, rgba(37, 99, 235, 0.5) 45%, transparent 75%);
+}
+
+/* ---- Visible Country Name Labels (No Border, No Background) ---- */
+.gp-pin-name-badge {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.gp-pin-name-badge.bottom {
+  top: 100%;
+  margin-top: 3px;
+}
+
+.gp-pin-name-badge.top {
+  bottom: 100%;
+  margin-bottom: 3px;
+}
+
+.gp-badge-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0284c7;
+  box-shadow: 0 0 5px #38bdf8;
+  flex-shrink: 0;
+}
+
+.gp-badge-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #020c4c;
+  letter-spacing: 0.25px;
+  /* Crisp white outline for maximum legibility on both dark land and white ocean */
+  text-shadow:
+    -1.2px -1.2px 0 #ffffff,
+     1.2px -1.2px 0 #ffffff,
+    -1.2px  1.2px 0 #ffffff,
+     1.2px  1.2px 0 #ffffff,
+     0px -1.2px 0 #ffffff,
+     0px  1.2px 0 #ffffff,
+    -1.2px  0px 0 #ffffff,
+     1.2px  0px 0 #ffffff,
+     0 0 5px #ffffff;
+}
+
+/* Hub Pin Label Highlight */
+.gp-hub-pin .gp-pin-name-badge {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.gp-hub-pin .gp-badge-text {
+  color: #0284c7;
+  font-weight: 800;
+  text-shadow:
+    -1.5px -1.5px 0 #ffffff,
+     1.5px -1.5px 0 #ffffff,
+    -1.5px  1.5px 0 #ffffff,
+     1.5px  1.5px 0 #ffffff,
+     0px -1.5px 0 #ffffff,
+     0px  1.5px 0 #ffffff,
+    -1.5px  0px 0 #ffffff,
+     1.5px  0px 0 #ffffff,
+     0 0 8px #ffffff;
+}
+
+.gp-hub-pin .gp-badge-dot {
+  background: #0284c7;
+  box-shadow: 0 0 8px #0284c7;
+}
+
+/* Pin Hover/Active state label */
+.gp-world-pin:hover .gp-pin-name-badge,
+.gp-world-pin.is-active .gp-pin-name-badge {
+  transform: translateX(-50%) scale(1.12);
+}
+
+.gp-world-pin:hover .gp-badge-text,
+.gp-world-pin.is-active .gp-badge-text {
+  color: #0284c7;
+}
+
+/* ---- Tooltips ---- */
+.gp-world-pin-tooltip {
+  position: absolute;
+  background: #ffffff;
+  color: var(--ink);
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  line-height: 1.3;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(2, 12, 76, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 50;
+}
+
+.gp-world-pin:hover .gp-world-pin-tooltip,
+.gp-world-pin.is-active .gp-world-pin-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gp-world-pin-country {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 12px;
+}
+
+.gp-world-pin-city {
+  font-size: 10.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.gp-world-pin-tooltip.top-center {
+  bottom: calc(100% + 24px);
+  left: 50%;
+  transform: translate(-50%, -4px);
+}
+
+.gp-world-pin:hover .gp-world-pin-tooltip.top-center,
+.gp-world-pin.is-active .gp-world-pin-tooltip.top-center {
+  transform: translate(-50%, -8px);
+}
+
+.gp-world-pin-tooltip.top-right {
+  bottom: calc(100% + 24px);
+  left: 20%;
+  transform: translate(0, -4px);
+}
+
+.gp-world-pin:hover .gp-world-pin-tooltip.top-right,
+.gp-world-pin.is-active .gp-world-pin-tooltip.top-right {
+  transform: translate(0, -8px);
+}
+
+.gp-world-pin-tooltip.top-left {
+  bottom: calc(100% + 24px);
+  right: 20%;
+  transform: translate(0, -4px);
+}
+
+.gp-world-pin:hover .gp-world-pin-tooltip.top-left,
+.gp-world-pin.is-active .gp-world-pin-tooltip.top-left {
+  transform: translate(0, -8px);
+}
+
+/* ---- Responsive Styles ---- */
+@media (max-width: 1024px) {
+  .gp-columns-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gp-col-content {
+    order: 1;
+  }
+
+  .gp-col-map {
+    order: 2;
+  }
+
+  .gp-eyebrow-title {
+    font-size: 38px;
+  }
+
+  .gp-lede {
+    font-size: 16px;
+  }
+
+  .gp-world-pin-img {
+    width: 24px;
+  }
+
+  .gp-badge-text {
+    font-size: 9.5px;
+  }
+}
+
 @media (max-width: 600px) {
-  .gp-legend { grid-template-columns: 1fr; }
+  .gp-eyebrow-title {
+    font-size: 32px;
+  }
+
+  .gp-lede {
+    font-size: 15px;
+  }
+
+  .gp-world-pin-img {
+    width: 20px;
+  }
+
+  .gp-world-pin-aura {
+    width: 10px;
+    height: 10px;
+  }
+
+  .gp-pin-name-badge {
+    padding: 0;
+    gap: 3px;
+  }
+
+  .gp-badge-text {
+    font-size: 8.5px;
+  }
+
+  .gp-badge-dot {
+    width: 4px;
+    height: 4px;
+  }
+
+  .gp-world-pin-tooltip {
+    font-size: 9.5px;
+    padding: 4px 7px;
+  }
 }
