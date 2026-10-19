@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutPageHero.css';
 import { ArrowRight, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutHeroBg from '../../assets/about.png';
+import aboutHeroBg from '../../assets/about.webp';
 
 const AboutPageHero = () => {
   return (

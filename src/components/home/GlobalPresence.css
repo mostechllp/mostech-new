@@ -28,9 +28,9 @@
 /* ---- 2-Column Section Layout: Left Text, Right Map ---- */
 .gp-columns-layout {
   display: grid;
-  grid-template-columns: 0.95fr 1.35fr;
+  grid-template-columns: 1.05fr 1.25fr;
   align-items: center;
-  gap: 56px;
+  gap: 44px;
 }
 
 .gp-col-map {
@@ -95,8 +95,80 @@
   font-weight: 700;
 }
 
+/* ---- Region Legend: First row 4, Second row 3 ---- */
+.gp-region-legend {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 16px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.gp-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 4px 6px;
+  margin-left: -6px;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.gp-legend-item:hover {
+  background: #f1f5f9;
+}
+
+.gp-legend-item.is-active {
+  background: #eff6ff;
+}
+
+.gp-legend-swatch {
+  width: 22px;
+  height: 13px;
+  border-radius: 4px;
+  background: #2563eb;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gp-legend-swatch.swatch-hq {
+  background: #020c4c;
+  box-shadow: 0 1px 3px rgba(2, 12, 76, 0.35);
+}
+
+.gp-legend-item:hover .gp-legend-swatch.swatch-hq,
+.gp-legend-item.is-active .gp-legend-swatch.swatch-hq {
+  box-shadow: 0 0 8px rgba(11, 72, 135, 0.8);
+}
+
+.gp-legend-item:hover .gp-legend-swatch,
+.gp-legend-item.is-active .gp-legend-swatch {
+  transform: scale(1.08);
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.55);
+}
+
+.gp-legend-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+}
+
+.gp-legend-item:hover .gp-legend-name,
+.gp-legend-item.is-active .gp-legend-name {
+  color: #0284c7;
+}
+
 /* ---- Map Stage ---- */
-.gp-map-stage {
+.gph-map-stage {
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -125,27 +197,27 @@
   z-index: 5;
 }
 
-/* Radiant Blue Concentric Hub in UAE */
+/* Dark Blue Concentric Hub in UAE */
 .gp-hub-ring-outer {
   fill: none;
-  stroke: rgba(56, 189, 248, 0.45);
+  stroke: rgba(11, 72, 135, 0.55);
   stroke-width: 1.5;
-  transform-origin: 973px 508px;
+  transform-origin: 983px 510px;
   animation: hubBluePulse 2.6s ease-out infinite;
 }
 
 .gp-hub-ring-mid {
-  fill: rgba(56, 189, 248, 0.25);
-  stroke: #38bdf8;
+  fill: rgba(2, 12, 76, 0.25);
+  stroke: #0b4887;
   stroke-width: 2;
-  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.9));
+  filter: drop-shadow(0 0 8px rgba(11, 72, 135, 0.85));
 }
 
 .gp-hub-center-dot {
-  fill: #ffffff;
-  stroke: #0284c7;
+  fill: #020c4c;
+  stroke: #0b4887;
   stroke-width: 2;
-  filter: drop-shadow(0 0 6px #38bdf8);
+  filter: drop-shadow(0 0 6px #0b4887);
 }
 
 @keyframes hubBluePulse {
@@ -153,6 +225,7 @@
     transform: scale(0.5);
     opacity: 0.95;
   }
+
   100% {
     transform: scale(2.4);
     opacity: 0;
@@ -188,17 +261,21 @@
     stroke-dashoffset: 45;
     opacity: 0;
   }
+
   15% {
     opacity: 1;
   }
+
   50% {
     stroke-dashoffset: -30;
     opacity: 1;
   }
+
   80% {
     stroke-dashoffset: -100;
     opacity: 0.85;
   }
+
   95%,
   100% {
     stroke-dashoffset: -100;
@@ -222,164 +299,238 @@
   filter: drop-shadow(0 0 8px #38bdf8) drop-shadow(0 0 18px #0284c7);
 }
 
-/* ---- Map Pins ---- */
+/* ---- Single Location Points on Map ---- */
 .gp-world-pin {
   position: absolute;
   z-index: 10;
   cursor: pointer;
-  transform: translate(-50%, -96%);
-  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0s;
+  transform: translate(-50%, -50%);
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease, filter 0.3s ease;
   line-height: normal;
   -webkit-tap-highlight-color: transparent;
 }
 
 .gp-world-pin:hover,
 .gp-world-pin.is-active {
-  z-index: 35;
-  transform: translate(-50%, -104%) scale(1.15);
+  z-index: 45;
+  transform: translate(-50%, -50%) scale(1.18);
 }
 
+.gp-world-pin.is-dimmed {
+  opacity: 0.22;
+  filter: grayscale(0.7);
+  pointer-events: none;
+}
+
+.gp-world-pin.is-highlighted {
+  opacity: 1;
+  z-index: 38;
+}
+
+.gp-world-pin.is-highlighted .gp-badge-text {
+  color: #0284c7;
+  font-weight: 800;
+}
+
+.gp-world-pin.is-highlighted .gp-point-dot {
+  transform: scale(1.5);
+  background: #ffffff;
+  box-shadow: 0 0 6px #38bdf8, 0 0 12px #0284c7;
+}
+
+/* Single Point Anchor Container */
 .gp-world-pin-anchor {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
 }
 
-.gp-world-pin-img {
-  width: 28px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 4px 8px rgba(2, 12, 76, 0.45));
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-/* Blue aura puddle under each pin */
-.gp-world-pin-aura {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 14px;
-  height: 14px;
+/* Luminous Location Point Dot */
+.gp-point-dot {
+  width: 4.5px;
+  height: 4.5px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, rgba(37, 99, 235, 0.35) 45%, transparent 75%);
-  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.95));
-  pointer-events: none;
-  animation: pinAuraGaze 2.4s ease-in-out infinite alternate;
+  background: #38bdf8;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 3px #0284c7, 0 0 7px rgba(56, 189, 248, 0.75);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  z-index: 2;
 }
 
-@keyframes pinAuraGaze {
+/* Radiant Beacon Pulse Ring */
+.gp-point-pulse {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.65);
+  animation: pointPulse 2.4s infinite ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes pointPulse {
   0% {
-    transform: translate(-50%, 50%) scale(0.85);
-    opacity: 0.7;
+    transform: scale(0.5);
+    opacity: 0.95;
   }
+
   100% {
-    transform: translate(-50%, 50%) scale(1.3);
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Point Hover Active Expansion */
+.gp-world-pin:hover .gp-point-dot,
+.gp-world-pin.is-active .gp-point-dot {
+  transform: scale(1.6);
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 10px #38bdf8, 0 0 20px #0284c7;
+}
+
+/* Global Center Point Highlight (Dubai, UAE) */
+.gp-hub-pin {
+  z-index: 35;
+}
+
+.gp-point-dot.gp-hub-dot {
+  width: 9.5px;
+  height: 9.5px;
+  background: #020c4c;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 8px #0b4887, 0 0 16px rgba(2, 12, 76, 0.85);
+}
+
+.gp-point-pulse.gp-hub-pulse {
+  width: 18px;
+  height: 18px;
+  border-color: rgba(11, 72, 135, 0.85);
+  animation: hubPointPulse 2s infinite ease-out;
+}
+
+@keyframes hubPointPulse {
+  0% {
+    transform: scale(0.5);
     opacity: 1;
   }
+
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
 }
 
-/* Hub pin special prominence */
-.gp-hub-pin {
-  z-index: 25;
+.gp-world-pin:hover .gp-point-dot.gp-hub-dot,
+.gp-world-pin.is-active .gp-point-dot.gp-hub-dot {
+  transform: scale(1.6);
+  background: #020c4c;
+  border-color: #0b4887;
+  box-shadow: 0 0 12px #0b4887, 0 0 24px rgba(2, 12, 76, 0.95);
 }
 
-.gp-hub-pin .gp-world-pin-aura {
-  width: 22px;
-  height: 22px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.95) 0%, rgba(37, 99, 235, 0.5) 45%, transparent 75%);
-}
-
-/* ---- Visible Country Name Labels (No Border, No Background) ---- */
+/* ---- Visible Country Name Labels (Single point beside/above text) ---- */
 .gp-pin-name-badge {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0;
   padding: 0;
   background: transparent;
   border: none;
   box-shadow: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  white-space: nowrap;
+  white-space: nowrap !important;
+  max-width: none !important;
+  overflow: visible !important;
   pointer-events: none;
+  z-index: 25;
   transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
+/* Precise positioning relative to the centered point */
 .gp-pin-name-badge.bottom {
-  top: 100%;
-  margin-top: 3px;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .gp-pin-name-badge.top {
-  bottom: 100%;
-  margin-bottom: 3px;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.gp-badge-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #0284c7;
-  box-shadow: 0 0 5px #38bdf8;
-  flex-shrink: 0;
+.gp-pin-name-badge.left {
+  right: calc(100% + 6px);
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+.gp-pin-name-badge.right {
+  left: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .gp-badge-text {
   font-family: 'Inter', sans-serif;
-  font-size: 10.5px;
+  font-size: 8px;
   font-weight: 700;
   color: #020c4c;
-  letter-spacing: 0.25px;
-  /* Crisp white outline for maximum legibility on both dark land and white ocean */
+  letter-spacing: 0.15px;
+  white-space: nowrap !important;
+  max-width: none !important;
+  /* Ultra-crisp solid white halo for 100% legibility on both dark land and ocean */
   text-shadow:
     -1.2px -1.2px 0 #ffffff,
-     1.2px -1.2px 0 #ffffff,
-    -1.2px  1.2px 0 #ffffff,
-     1.2px  1.2px 0 #ffffff,
-     0px -1.2px 0 #ffffff,
-     0px  1.2px 0 #ffffff,
-    -1.2px  0px 0 #ffffff,
-     1.2px  0px 0 #ffffff,
-     0 0 5px #ffffff;
-}
-
-/* Hub Pin Label Highlight */
-.gp-hub-pin .gp-pin-name-badge {
-  background: transparent;
-  border: none;
-  box-shadow: none;
+    1.2px -1.2px 0 #ffffff,
+    -1.2px 1.2px 0 #ffffff,
+    1.2px 1.2px 0 #ffffff,
+    0px -1.2px 0 #ffffff,
+    0px 1.2px 0 #ffffff,
+    -1.2px 0px 0 #ffffff,
+    1.2px 0px 0 #ffffff,
+    0 0 4px #ffffff,
+    0 0 6px #ffffff;
 }
 
 .gp-hub-pin .gp-badge-text {
-  color: #0284c7;
+  color: #020c4c;
   font-weight: 800;
-  text-shadow:
-    -1.5px -1.5px 0 #ffffff,
-     1.5px -1.5px 0 #ffffff,
-    -1.5px  1.5px 0 #ffffff,
-     1.5px  1.5px 0 #ffffff,
-     0px -1.5px 0 #ffffff,
-     0px  1.5px 0 #ffffff,
-    -1.5px  0px 0 #ffffff,
-     1.5px  0px 0 #ffffff,
-     0 0 8px #ffffff;
+  font-size: 8.5px;
 }
 
-.gp-hub-pin .gp-badge-dot {
-  background: #0284c7;
-  box-shadow: 0 0 8px #0284c7;
+.gp-hub-pin:hover .gp-badge-text,
+.gp-hub-pin.is-active .gp-badge-text {
+  color: #020c4c;
 }
 
 /* Pin Hover/Active state label */
-.gp-world-pin:hover .gp-pin-name-badge,
-.gp-world-pin.is-active .gp-pin-name-badge {
+.gp-world-pin:hover .gp-pin-name-badge.bottom,
+.gp-world-pin.is-active .gp-pin-name-badge.bottom {
   transform: translateX(-50%) scale(1.12);
+}
+
+.gp-world-pin:hover .gp-pin-name-badge.top,
+.gp-world-pin.is-active .gp-pin-name-badge.top {
+  transform: translateX(-50%) scale(1.12);
+}
+
+.gp-world-pin:hover .gp-pin-name-badge.left,
+.gp-world-pin.is-active .gp-pin-name-badge.left {
+  transform: translateY(-50%) scale(1.12);
+}
+
+.gp-world-pin:hover .gp-pin-name-badge.right,
+.gp-world-pin.is-active .gp-pin-name-badge.right {
+  transform: translateY(-50%) scale(1.12);
 }
 
 .gp-world-pin:hover .gp-badge-text,
@@ -387,78 +538,7 @@
   color: #0284c7;
 }
 
-/* ---- Tooltips ---- */
-.gp-world-pin-tooltip {
-  position: absolute;
-  background: #ffffff;
-  color: var(--ink);
-  padding: 6px 11px;
-  border-radius: 6px;
-  font-size: 11.5px;
-  line-height: 1.3;
-  white-space: nowrap;
-  box-shadow: 0 8px 24px rgba(2, 12, 76, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 50;
-}
 
-.gp-world-pin:hover .gp-world-pin-tooltip,
-.gp-world-pin.is-active .gp-world-pin-tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-.gp-world-pin-country {
-  font-weight: 700;
-  color: var(--navy);
-  font-size: 12px;
-}
-
-.gp-world-pin-city {
-  font-size: 10.5px;
-  color: #64748b;
-  font-weight: 500;
-}
-
-.gp-world-pin-tooltip.top-center {
-  bottom: calc(100% + 24px);
-  left: 50%;
-  transform: translate(-50%, -4px);
-}
-
-.gp-world-pin:hover .gp-world-pin-tooltip.top-center,
-.gp-world-pin.is-active .gp-world-pin-tooltip.top-center {
-  transform: translate(-50%, -8px);
-}
-
-.gp-world-pin-tooltip.top-right {
-  bottom: calc(100% + 24px);
-  left: 20%;
-  transform: translate(0, -4px);
-}
-
-.gp-world-pin:hover .gp-world-pin-tooltip.top-right,
-.gp-world-pin.is-active .gp-world-pin-tooltip.top-right {
-  transform: translate(0, -8px);
-}
-
-.gp-world-pin-tooltip.top-left {
-  bottom: calc(100% + 24px);
-  right: 20%;
-  transform: translate(0, -4px);
-}
-
-.gp-world-pin:hover .gp-world-pin-tooltip.top-left,
-.gp-world-pin.is-active .gp-world-pin-tooltip.top-left {
-  transform: translate(0, -8px);
-}
 
 /* ---- Responsive Styles ---- */
 @media (max-width: 1024px) {
@@ -473,6 +553,15 @@
 
   .gp-col-map {
     order: 2;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .gph-map-stage {
+    max-width: 100%;
+    width: 100%;
   }
 
   .gp-eyebrow-title {
@@ -483,49 +572,166 @@
     font-size: 16px;
   }
 
-  .gp-world-pin-img {
-    width: 24px;
+  .gp-point-dot {
+    width: 4px;
+    height: 4px;
   }
 
   .gp-badge-text {
-    font-size: 9.5px;
+    font-size: 7.2px;
   }
 }
 
 @media (max-width: 600px) {
+  .global-presence-section .slide {
+    padding: 24px 16px;
+  }
+
+  .gp-col-map {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 4px;
+  }
+
   .gp-eyebrow-title {
     font-size: 32px;
   }
 
   .gp-lede {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
-  .gp-world-pin-img {
-    width: 20px;
+  .gp-region-legend {
+    margin-top: 18px;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 16px;
+    row-gap: 8px;
   }
 
-  .gp-world-pin-aura {
-    width: 10px;
-    height: 10px;
+  .gp-legend-name {
+    font-size: 13px;
+  }
+
+  .gp-legend-swatch {
+    width: 22px;
+    height: 13px;
+  }
+
+  .gp-point-dot {
+    width: 3.5px;
+    height: 3.5px;
+  }
+
+  .gp-point-pulse {
+    width: 7.5px;
+    height: 7.5px;
+  }
+
+  .gp-point-dot.gp-hub-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .gp-point-pulse.gp-hub-pulse {
+    width: 15px;
+    height: 15px;
   }
 
   .gp-pin-name-badge {
     padding: 0;
-    gap: 3px;
+  }
+
+  .gp-pin-name-badge.bottom {
+    top: calc(100% + 2.5px);
+  }
+
+  .gp-pin-name-badge.top {
+    bottom: calc(100% + 2.5px);
+  }
+
+  .gp-pin-name-badge.left {
+    right: calc(100% + 3.5px);
+  }
+
+  .gp-pin-name-badge.right {
+    left: calc(100% + 3.5px);
   }
 
   .gp-badge-text {
-    font-size: 8.5px;
+    font-size: 5px;
+    letter-spacing: 0.05px;
+    text-shadow:
+      -0.8px -0.8px 0 #ffffff,
+      0.8px -0.8px 0 #ffffff,
+      -0.8px 0.8px 0 #ffffff,
+      0.8px 0.8px 0 #ffffff,
+      0 0 2px #ffffff;
   }
 
-  .gp-badge-dot {
-    width: 4px;
-    height: 4px;
+  .gp-hub-pin .gp-badge-text {
+    font-size: 6.2px;
   }
 
-  .gp-world-pin-tooltip {
-    font-size: 9.5px;
-    padding: 4px 7px;
+  .gp-world-pin:hover .gp-badge-text,
+  .gp-world-pin.is-active .gp-badge-text {
+    font-size: 7px;
+  }
+
+  .gp-world-pin:hover .gp-hub-pin .gp-badge-text,
+  .gp-world-pin.is-active .gp-hub-pin .gp-badge-text {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .gp-badge-text {
+    font-size: 4.2px;
+    letter-spacing: 0;
+    text-shadow:
+      -0.6px -0.6px 0 #ffffff,
+      0.6px -0.6px 0 #ffffff,
+      -0.6px 0.6px 0 #ffffff,
+      0.6px 0.6px 0 #ffffff,
+      0 0 1.5px #ffffff;
+  }
+
+  .gp-hub-pin .gp-badge-text {
+    font-size: 5.2px;
+  }
+
+  .gp-point-dot {
+    width: 3px;
+    height: 3px;
+  }
+
+  .gp-point-pulse {
+    width: 6px;
+    height: 6px;
+  }
+
+  .gp-point-dot.gp-hub-dot {
+    width: 6.5px;
+    height: 6.5px;
+  }
+
+  .gp-point-pulse.gp-hub-pulse {
+    width: 13px;
+    height: 13px;
+  }
+
+  .gp-pin-name-badge.bottom {
+    top: calc(100% + 2px);
+  }
+
+  .gp-pin-name-badge.top {
+    bottom: calc(100% + 2px);
+  }
+
+  .gp-pin-name-badge.left {
+    right: calc(100% + 3px);
+  }
+
+  .gp-pin-name-badge.right {
+    left: calc(100% + 3px);
   }
 }

@@ -26,7 +26,8 @@
 
 .global-presence-showcase {
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -86,7 +87,10 @@
   border: 1px solid #e2e8f0;
   margin-bottom: 0;
   position: relative;
-  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -135,6 +139,10 @@
   gap: 1.25rem;
   align-items: stretch;
   flex: 1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1100px) {
@@ -148,6 +156,19 @@
 .gp-visual-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.gp-facilities-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .gp-image-card {
@@ -162,6 +183,11 @@
   justify-content: center;
   overflow: hidden;
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  touch-action: pan-y;
 }
 
 .gp-image-card::before {
@@ -200,6 +226,8 @@
 
 .gp-map-image-wrap {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   height: 100%;
   flex: 1;
   display: flex;
@@ -209,6 +237,7 @@
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  touch-action: pan-y;
 }
 
 .gp-map-stage {
@@ -217,6 +246,20 @@
   line-height: 0;
   max-width: 100%;
   max-height: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Regional Optical Vertical Alignment */
+.stage-saudi {
+  transform: translateY(-10px);
+}
+
+.stage-kerala {
+  transform: translateY(-8px);
+}
+
+.gp-map-image-wrap.region-saudi {
+  padding-bottom: 0.9rem;
 }
 
 .gp-map-3d-img {
@@ -229,6 +272,7 @@
   filter: drop-shadow(0 20px 28px rgba(6, 27, 70, 0.25));
   user-select: none;
   pointer-events: none;
+  -webkit-user-drag: none;
   /* Prevents touch/click blocking on mobile */
 }
 
@@ -346,6 +390,10 @@
   padding: 0.95rem 1.1rem;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .gp-facility-card:hover {
@@ -367,7 +415,8 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 0.6rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .facility-badge {
@@ -392,10 +441,10 @@
   color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  white-space: nowrap;
   line-height: 1.2;
-  flex-shrink: 0;
+  flex-shrink: 1;
   text-align: right;
+  word-break: break-word;
 }
 
 .facility-title {
@@ -648,9 +697,28 @@
 /* ================= RESPONSIVE DESIGN ================= */
 
 @media (max-width: 1024px) {
+  .global-presence-showcase {
+    height: auto;
+  }
+
+  .gp-map-card {
+    height: auto;
+    flex: none;
+    overflow-x: hidden;
+  }
+
   .gp-content-grid {
     grid-template-columns: 1fr;
     gap: 1.8rem;
+    align-items: start;
+    flex: none;
+    height: auto;
+  }
+
+  .gp-facilities-list {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .gp-stats-grid {
@@ -658,18 +726,33 @@
   }
 
   .gp-map-3d-img {
-    max-height: 420px;
+    max-height: 400px;
   }
 }
 
 @media (max-width: 768px) {
   .global-presence-section {
     padding: 2.5rem 0 3.5rem 0;
+    overflow-x: hidden;
+  }
+
+  .global-presence-showcase {
+    height: auto;
   }
 
   .gp-map-card {
     padding: 1.25rem 1rem;
     border-radius: 18px;
+    height: auto;
+    flex: none;
+    overflow-x: hidden;
+  }
+
+  .gp-content-grid {
+    align-items: start;
+    flex: none;
+    height: auto;
+    gap: 1.25rem;
   }
 
   .gp-tab-btn {
@@ -686,17 +769,53 @@
   }
 
   .gp-image-card {
-    padding: 1rem 0.75rem;
+    padding: 1rem 0.75rem 1.15rem 0.75rem;
+    height: auto;
+    touch-action: pan-y;
   }
 
   .gp-map-image-wrap {
-    padding: 0.5rem 0;
+    padding: 0.45rem 0.25rem 0.65rem 0.25rem;
+    height: auto;
+    touch-action: pan-y;
+  }
+
+  .gp-map-image-wrap.region-saudi {
+    padding-top: 0.25rem;
+    padding-bottom: 1.15rem;
+  }
+
+  .stage-saudi {
+    transform: translateY(-12px);
+  }
+
+  .stage-kerala {
+    transform: translateY(-8px);
   }
 
   .gp-map-3d-img {
-    max-height: 380px;
+    max-height: 360px;
     max-width: 100%;
     width: auto;
+    filter: drop-shadow(0 14px 22px rgba(6, 27, 70, 0.22));
+    -webkit-user-drag: none;
+  }
+
+  .gp-facilities-list {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .facility-top-row {
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .facility-city {
+    text-align: left;
+    white-space: normal;
   }
 
   .gp-pin-img {
@@ -734,15 +853,17 @@
   .gp-tabs {
     border-radius: 16px;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 6px;
     gap: 6px;
   }
 
   .gp-tab-btn {
     flex: 1 1 calc(33.333% - 6px);
-    min-width: 80px;
-    padding: 8px 10px;
-    font-size: 0.78rem;
+    min-width: 75px;
+    padding: 8px 6px;
+    font-size: 0.75rem;
     justify-content: center;
   }
 
@@ -750,24 +871,56 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .gp-map-card {
-    padding: 1.1rem 0.95rem;
+    padding: 1.1rem 0.85rem;
     border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .gp-image-card {
-    padding: 0.85rem 0.6rem;
+    padding: 0.85rem 0.5rem;
     border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    touch-action: pan-y;
   }
 
   .gp-map-image-wrap {
-    padding: 0.35rem 0;
+    padding: 0.25rem 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    touch-action: pan-y;
+  }
+
+  .gp-map-image-wrap.region-saudi {
+    padding-top: 0.2rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .stage-saudi {
+    transform: translateY(-13px);
+  }
+
+  .stage-kerala {
+    transform: translateY(-9px);
   }
 
   .gp-map-3d-img {
-    max-height: 340px;
+    max-height: 300px;
+    max-width: 100%;
+    width: auto;
+    filter: drop-shadow(0 12px 18px rgba(6, 27, 70, 0.2));
+    -webkit-user-drag: none;
   }
 
   .gp-facilities-header h4 {
@@ -775,26 +928,49 @@
   }
 
   .gp-facilities-list {
-    padding-right: 6px;
+    padding-right: 0;
     gap: 10px;
+    max-height: none;
+    overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .gp-facility-card {
-    padding: 0.95rem 1rem;
+    padding: 0.85rem 0.9rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .facility-top-row {
-    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px 8px;
     margin-bottom: 0.45rem;
+    width: 100%;
   }
 
   .facility-badge {
     font-size: 0.72rem;
     padding: 3px 8px;
+    flex-shrink: 0;
   }
 
   .facility-city {
     font-size: 0.72rem;
+    white-space: normal;
+    text-align: left;
+    flex: 1 1 auto;
+  }
+
+  .gp-extra-card {
+    padding: 0.85rem 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 

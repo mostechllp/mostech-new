@@ -1,9 +1,9 @@
-import dubaiUaeImg from '../assets/map/dubai&uae.png';
-import indiaImg from '../assets/map/india.png';
-import ukImg from '../assets/map/Uk.png';
-import saudiImg from '../assets/map/saudi.png';
-import omanImg from '../assets/map/Oman.png';
-import qatarImg from '../assets/map/Qatar.png';
+import dubaiUaeImg from '../assets/map/dubai&uae.webp';
+import indiaImg from '../assets/map/india.webp';
+import ukImg from '../assets/map/Uk.webp';
+import saudiImg from '../assets/map/saudi.webp';
+import omanImg from '../assets/map/Oman.webp';
+import qatarImg from '../assets/map/Qatar.webp';
 
 export const pinTypes = {
   office: {
