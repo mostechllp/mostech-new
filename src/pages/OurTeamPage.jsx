@@ -150,7 +150,8 @@ const OurTeamPage = () => {
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/rojin.png" alt="Rojin" />
               </div>
-              <h3>Rojin</h3>
+              <h3>Rojin Roy
+</h3>
               <p>Junior Web Developer</p>
             </div>
           </div>
@@ -169,7 +170,7 @@ const OurTeamPage = () => {
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/harinadanp.png" alt="Harinandan P" />
               </div>
-              <h3>Harinandan P</h3>
+              <h3>P Harinandanan</h3>
               <p>Graphical Designer</p>
             </div>
             
@@ -177,7 +178,7 @@ const OurTeamPage = () => {
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/syam.png" alt="Syam" />
               </div>
-              <h3>Syam</h3>
+              <h3>Syam K V</h3>
               <p>Graphical Designer</p>
             </div>
             
@@ -220,7 +221,7 @@ const OurTeamPage = () => {
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/musliha.png" alt="Musliha" />
               </div>
-              <h3>Musliha</h3>
+              <h3>Musliha Fathima</h3>
               <p>Performance Marketer</p>
             </div>
             
@@ -228,7 +229,7 @@ const OurTeamPage = () => {
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/misriya.png" alt="Misriya" />
               </div>
-              <h3>Misriya</h3>
+              <h3>Nafeesath Misriya Haris</h3>
               <p>Digital Marketing Cordinator</p>
             </div>
           </div>
