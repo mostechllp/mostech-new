@@ -61,13 +61,13 @@ const OurTeamPage = () => {
               <h3>Safreena Salam</h3>
               <p>Operations Head</p>
             </div>
-            <div className="team-member">
+            {/* <div className="team-member">
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/fazhil.png" alt="Fasil TP" />
               </div>
               <h3>Fasil TP</h3>
               <p>Sales Manager</p>
-            </div>
+            </div> */}
             <div className="team-member">
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/sanjay.png" alt="Sanjay Bhaskar" />
