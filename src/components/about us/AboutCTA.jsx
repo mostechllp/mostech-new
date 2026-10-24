@@ -43,7 +43,7 @@ const AboutCTA = () => {
                 </div>
                 <div className="contact-details">
                   <span className="contact-label">HQ Office (UAE):</span>
-                  <span className="contact-value">Bay Square Business Tower<br/>Business Bay, Dubai, United Arab Emirates</span>
+                  <span className="contact-value">Business Bay, Dubai, United Arab Emirates</span>
                 </div>
               </li>
               <li>

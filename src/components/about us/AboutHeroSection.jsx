@@ -13,8 +13,8 @@ const AboutHeroSection = () => {
             <span>WHO WE ARE</span>
           </div>
           <h1 className="about-title-new">
-            Mostech Business<br />
-            <span className="text-blue">Solutions Dubai</span>
+            MOS Group<br />
+            <span className="text-blue">Of Companies Dubai</span>
           </h1>
           <p className="about-desc-new">
             We build smart digital solutions that help businesses operate better, move faster, and grow stronger.

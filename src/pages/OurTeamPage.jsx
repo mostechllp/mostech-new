@@ -61,13 +61,13 @@ const OurTeamPage = () => {
               <h3>Safreena Salam</h3>
               <p>Operations Head</p>
             </div>
-            <div className="team-member">
+            {/* <div className="team-member">
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/fazhil.png" alt="Fasil TP" />
               </div>
               <h3>Fasil TP</h3>
               <p>Sales Manager</p>
-            </div>
+            </div> */}
             <div className="team-member">
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/sanjay.png" alt="Sanjay Bhaskar" />
@@ -120,7 +120,7 @@ const OurTeamPage = () => {
           </div>
 
           <h2 className="team-heading" style={{ marginTop: '40px' }}>W SQUAD - WEB TEAM</h2>
-          <div className="team-grid">
+          <div className="team-grid w-squad-grid">
 
             <div className="team-member">
               <div className="member-image-wrapper">
@@ -140,7 +140,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" className="zoomed-image" />
+                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" />
               </div>
               <h3>Albin Alosious</h3>
               <p>Web Developer</p>
@@ -148,7 +148,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/rojin.png" alt="Rojin" className="zoomed-image" />
+                <ProfileImage src="/our team/rojin.png" alt="Rojin" />
               </div>
               <h3>Rojin</h3>
               <p>Junior Web Developer</p>
@@ -188,13 +188,29 @@ const OurTeamPage = () => {
               <h3>Salman Faris</h3>
               <p>Video Editor</p>
             </div>
+
+            <div className="team-member">
+              <div className="member-image-wrapper">
+                <ProfileImage src="/our team/aswanth.jpeg" alt="Aswanth M" />
+              </div>
+              <h3>Aswanth M</h3>
+              <p>Video Editor</p>
+            </div>
+
+            <div className="team-member">
+              <div className="member-image-wrapper">
+                <ProfileImage src="/our team/Ijlan.jpeg" alt="Ijlan" />
+              </div>
+              <h3>Ijlan</h3>
+              <p>Junior Modeler and Animator</p>
+            </div>
           </div>
 
           <h2 className="team-heading" style={{ marginTop: '40px' }}>D SQUAD - DIGITAL MARKETING TEAM</h2>
-          <div className="team-grid">
+          <div className="team-grid d-squad-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" className="zoomed-image" />
+                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" />
               </div>
               <h3>Aswathi Unnikrishnan</h3>
               <p>Senior SEO Specialist</p>

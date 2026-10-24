@@ -22,15 +22,16 @@ const Footer = () => {
     { code: 'AE', label: 'UAE:', phone: '+971 585792020', href: '+971585792020' },
     { code: 'IN', label: 'INDIA:', phone: '+91 8547557283', href: '+918547557283' },
     { code: 'SA', label: 'KSA:', phone: '+966 53 574 4308', href: '+966535744308' },
-    { code: 'QA', label: 'QATAR:', phone: '+974 5054 7557', href: '+97450547557' }
+    { code: 'QA', label: 'QATAR:', phone: '+974 5054 7557', href: '+97450547557' },
+    { code: 'GB', label: 'UK:', phone: '+44 7466 523243', href: '+447466523243' }
   ];
 
-  const matchedPhone = phoneNumbers.find(p => p.code === countryCode);
+  const matchedPhone = phoneNumbers.find(p => p.code === countryCode || (p.code === 'GB' && countryCode === 'UK'));
   let displayPhones = [...phoneNumbers];
   if (matchedPhone) {
     displayPhones = [
       matchedPhone,
-      ...phoneNumbers.filter(p => p.code !== countryCode)
+      ...phoneNumbers.filter(p => p.code !== matchedPhone.code)
     ];
   }
 
@@ -61,6 +62,7 @@ const Footer = () => {
               <li><Link to="/seo"><ChevronRight size={14} /> SEO Services</Link></li>
               <li><Link to="/ecommerce"><ChevronRight size={14} /> Ecommerce</Link></li>
               <li><Link to="/erp-product"><ChevronRight size={14} /> ERP Solutions</Link></li>
+              <li><Link to="/our-team"><ChevronRight size={14} /> Our Team</Link></li>
             </ul>
           </div>
           
