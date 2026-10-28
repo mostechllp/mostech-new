@@ -1,13 +1,4 @@
 import React from 'react';
-import { 
-  Link2, 
-  BarChart2, 
-  PenTool, 
-  ShoppingBag, 
-  GraduationCap, 
-  TrendingUp, 
-  ArrowRight 
-} from 'lucide-react';
 import './SisterConcerns.css';
 
 const SisterConcerns = () => {
@@ -19,18 +10,16 @@ const SisterConcerns = () => {
       location: "Dubai, UAE",
       icon: <img src="/information.jpeg" alt="Mostech Information Technology" className="sc-img-logo sc-img-logo-zoom" />,
       logoBg: "#ffffff",
-      bgImage: "/uaemostech.png",
       link: "https://www.mostech.ae",
       linkText: "www.mostech.ae"
     },
     {
       id: 2,
-      title: "MOS Group Of Companies LLP",
+      title: "Mostech Information Technology LLP",
       desc: "Empowering businesses through custom software solutions.",
       location: "Kannur, Kerala, India",
-      icon: <img src="/business.jpeg" alt="MOS Group Of Companies" className="sc-img-logo sc-img-logo-zoom" />,
+      icon: <img src="/business.jpeg" alt="Mostech Information Technology LLP" className="sc-img-logo sc-img-logo-zoom" />,
       logoBg: "#ffffff",
-      bgImage: "/ChatGPT Image Sep 15, 2026, 01_08_36 PM.png",
       link: "https://www.mostech.in",
       linkText: "www.mostech.in"
     },
@@ -40,7 +29,6 @@ const SisterConcerns = () => {
       desc: "Corporate services for your growth.",
       location: "Sharjah, UAE",
       icon: <img src="/mosbiz.webp" alt="Mosbiz Corporate Services" className="sc-img-logo" />,
-      bgImage: "/mosbiz.png",
       link: "https://www.mosbizuae.com",
       linkText: "www.mosbizuae.com"
     },
@@ -50,7 +38,6 @@ const SisterConcerns = () => {
       desc: "Learning today for a brighter tomorrow.",
       location: "Thalassery, Kerala, India",
       icon: <img src="/mosacademyfinal.png" alt="Mos Academy" className="sc-img-logo" />,
-      bgImage: "/mosacademy.png",
       link: "https://www.mosacademy.org",
       linkText: "www.mosacademy.org"
     },
@@ -60,7 +47,6 @@ const SisterConcerns = () => {
       desc: "Creative solutions for a digital world.",
       location: "Jeddah, Saudi Arabia",
       icon: <img src="/fath-logo.webp" alt="Fath Creative" className="sc-img-logo" />,
-      bgImage: "/exhibition.png",
       link: "https://www.fathcreative.com",
       linkText: "www.fathcreative.com"
     },
@@ -70,7 +56,6 @@ const SisterConcerns = () => {
       desc: "General trading for a smarter tomorrow.",
       location: "Dubai, UAE",
       icon: <img src="/mozmart.png" alt="Mosmart General Trading" className="sc-img-logo" />,
-      bgImage: "/e commerce.png",
       link: "https://www.mosmart.me",
       linkText: "www.mosmart.me"
     }
@@ -102,21 +87,9 @@ const SisterConcerns = () => {
 
         {/* Grid Section */}
         <div className="sc-grid">
-          {cards.map((card, index) => (
+          {cards.map((card) => (
             <div className="sc-card-new" key={card.id}>
               <div className="sc-card-inner">
-                {/* Background Image Layer */}
-                {card.bgImage && (
-                  <div className="sc-card-bg">
-                    <img src={card.bgImage} alt="" />
-                  </div>
-                )}
-                
-                {/* Number on Top Right */}
-                <div className="sc-card-number">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
-
                 {/* Content Layer */}
                 <div className="sc-content-layer">
                   <div className="sc-card-header">

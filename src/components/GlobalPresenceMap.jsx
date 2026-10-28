@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { regionsData, pinTypes } from '../data/mapData';
-import { Building2, Globe, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { regionsData } from '../data/mapData';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import './GlobalPresenceMap.css';
 import mapPinImg from '../assets/map/map-pin.png'; // High-contrast solid-fill branded pin
 
@@ -126,17 +126,9 @@ const GlobalPresenceMap = () => {
 
           {/* Regional Facilities & Offices / Global Service Areas */}
           <div className="gp-facilities-column">
-            <div className="gp-facilities-header">
-              <h4>
-                {['uk', 'saudi', 'oman', 'qatar'].includes(activeRegion.id)
-                  ? 'Global Service Areas'
-                  : (activeRegion.id === 'uae' ? 'Headquarters & Facilities' : 'Regional Facilities & Offices')}
-              </h4>
-            </div>
 
             <div className="gp-facilities-list">
               {activeRegion.facilities?.map((facility) => {
-                const config = pinTypes[facility.type] || pinTypes.office;
                 const isSelected = activeCardId === facility.id;
 
                 return (
@@ -145,20 +137,6 @@ const GlobalPresenceMap = () => {
                     className={`gp-facility-card ${isSelected ? 'selected' : ''}`}
                     onClick={() => setActiveCardId(isSelected ? null : facility.id)}
                   >
-                    <div className="facility-top-row">
-                      <span
-                        className="facility-badge"
-                        style={{
-                          backgroundColor: config.bg,
-                          color: config.color,
-                          borderColor: config.border
-                        }}
-                      >
-                        {facility.type === 'office' ? <Building2 size={13} /> : <Globe size={13} />}
-                        <span>{facility.badge || config.label}</span>
-                      </span>
-                      <span className="facility-city">{facility.city}</span>
-                    </div>
 
                     <h5 className="facility-title">{facility.title}</h5>
 
