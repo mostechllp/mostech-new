@@ -210,7 +210,7 @@ const OurTeamPage = () => {
           <div className="team-grid d-squad-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/Aswathi.png?v=3" alt="Aswathi Unnikrishnan" />
+                <ProfileImage src="/our team/Aswathi.png?v=4" alt="Aswathi Unnikrishnan" />
               </div>
               <h3>Aswathi Unnikrishnan</h3>
               <p>Senior SEO Specialist</p>
