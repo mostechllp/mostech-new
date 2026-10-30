@@ -100,6 +100,7 @@
   position: relative;
   border-radius: 16px;
   background-color: #ffffff;
+  border: 1px solid #e2e8f0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
   overflow: hidden;
@@ -109,6 +110,7 @@
 .sc-card-new:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
 }
 
 .sc-card-inner {
@@ -117,56 +119,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.sc-card-bg {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 55%;
-  height: 100%;
-  z-index: 1;
-}
-
-.sc-card-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transform: scale(1.06);
-}
-
-.sc-card-new:nth-child(2) .sc-card-bg {
-  right: -30px;
-}
-
-.sc-card-new:nth-child(2) .sc-card-bg img {
-  transform: scale(1.15);
-  object-position: right bottom;
-  object-fit: cover;
-}
-
-.sc-card-number {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #020c4c;
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 2px 8px;
-  border-radius: 6px;
-  backdrop-filter: blur(4px);
-  z-index: 3;
-}
-
-.sc-card-number::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #020c4c;
-  margin-top: 2px;
 }
 
 .sc-content-layer {
@@ -192,7 +144,7 @@
   border-radius: 16px;
   padding: 10px;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,7 +164,6 @@
 
 .sc-text-box {
   flex-grow: 1;
-  padding-right: 36px; /* space for the arrow circle */
 }
 
 .about-page .sc-card-title-new,
@@ -229,7 +180,7 @@
   color: #475569;
   line-height: 1.4;
   margin: 0;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .sc-card-location {

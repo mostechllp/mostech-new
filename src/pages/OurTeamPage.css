@@ -218,6 +218,12 @@
   text-transform: capitalize;
 }
 
+.team-member p.team-role-nowrap {
+  white-space: nowrap;
+  font-size: clamp(12px, 3.5vw, 14px);
+  letter-spacing: -0.2px;
+}
+
 
 
 .member-image-wrapper img.zoomed-image {
