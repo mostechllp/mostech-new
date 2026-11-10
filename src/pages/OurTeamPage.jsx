@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { User } from 'lucide-react';
 
 const ProfileImage = ({ src, alt, className }) => {
-  const [error, setError] = useState(false);
-  if (error) {
+  const [failedSrc, setFailedSrc] = useState(null);
+  if (!src || failedSrc === src) {
     return (
       <div className={`fallback-avatar ${className || ''}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', backgroundColor: '#e2e8f0', color: '#94a3b8' }}>
         <User size={64} />
       </div>
     );
   }
-  return <img src={src} alt={alt} className={className} onError={() => setError(true)} />;
+  return <img src={src} alt={alt} className={className} onError={() => setFailedSrc(src)} />;
 };
 
 import './OurTeamPage.css';
@@ -68,13 +68,6 @@ const OurTeamPage = () => {
               <h3>Fasil TP</h3>
               <p>Sales Manager</p>
             </div> */}
-            <div className="team-member">
-              <div className="member-image-wrapper">
-                <ProfileImage src="/our team/sanjay.png?v=2" alt="Sanjay Bhaskar" />
-              </div>
-              <h3>Sanjay Bhaskar</h3>
-              <p>Creative Head</p>
-            </div>
             <div className="team-member">
               <div className="member-image-wrapper">
                 <ProfileImage src="/our team/anu.png" alt="Anu Mohan" />
@@ -151,7 +144,7 @@ const OurTeamPage = () => {
                 <ProfileImage src="/our team/rojin.png" alt="Rojin" />
               </div>
               <h3>Rojin Roy
-</h3>
+              </h3>
               <p>Junior Web Developer</p>
             </div>
           </div>
@@ -223,14 +216,6 @@ const OurTeamPage = () => {
               </div>
               <h3>Musliha Fathima</h3>
               <p>Performance Marketer</p>
-            </div>
-
-            <div className="team-member">
-              <div className="member-image-wrapper">
-                <ProfileImage src="/our team/rinsha.png" alt="Rinsha Fathima V M" />
-              </div>
-              <h3>Rinsha Fathima V M</h3>
-              <p>Social Media Manager</p>
             </div>
 
             <div className="team-member">
