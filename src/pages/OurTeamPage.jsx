@@ -102,14 +102,6 @@ const OurTeamPage = () => {
               <h3>Sabeel Hashim</h3>
               <p>Business Development Manager</p>
             </div>
-
-            <div className="team-member">
-              <div className="member-image-wrapper">
-                <ProfileImage src="/our team/saffer.png" alt="Safeer CM" />
-              </div>
-              <h3>Safeer CM</h3>
-              <p>Business Development Manager</p>
-            </div>
           </div>
 
           <h2 className="team-heading" style={{ marginTop: '40px' }}>W SQUAD - WEB TEAM</h2>
