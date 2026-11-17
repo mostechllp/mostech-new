@@ -79,6 +79,9 @@
 
   # 301 Redirects
   RewriteRule ^index\.php$ / [R=301,L]
+  RewriteRule ^company-profile\.pdf$ /companyprofile.pdf [R=301,L]
+  RewriteRule ^companyprofile/?$ /companyprofile.pdf [R=301,L]
+  RewriteRule ^company-profile/?$ /companyprofile.pdf [R=301,L]
   RewriteRule ^services/mobile-app-development/?$ /mobile-app-development [R=301,L]
   RewriteRule ^services/web-design-development/?$ /web-development [R=301,L]
   RewriteRule ^services/digital-marketing/?$ /digital-marketing [R=301,L]

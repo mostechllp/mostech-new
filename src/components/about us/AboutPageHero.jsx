@@ -25,7 +25,12 @@ const AboutPageHero = () => {
             <Link to="/contact" className="btn btn-primary hero-btn">
               Talk to Our Team <MessageSquare size={15} />
             </Link>
-            <a href="/MostechCompanyProfile.pdf" download="MostechCompanyProfile.pdf" className="btn btn-outline hero-btn-outline" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="/companyprofile.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-outline hero-btn-outline"
+            >
               Download Company Profile <ArrowRight size={15} />
             </a>
           </div>

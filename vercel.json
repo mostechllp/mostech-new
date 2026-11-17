@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/companyprofile",
+      "destination": "/companyprofile.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/company-profile",
+      "destination": "/companyprofile.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/company-profile.pdf",
+      "destination": "/companyprofile.pdf",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
@@ -16,7 +33,7 @@
       ]
     },
     {
-      "source": "/(.*).(jpg|jpeg|png|webp|svg|gif|ico|woff|woff2|ttf|mp4|webm)",
+      "source": "/(.*).(jpg|jpeg|png|webp|svg|gif|ico|woff|woff2|ttf|mp4|webm|pdf)",
       "headers": [
         {
           "key": "Cache-Control",
