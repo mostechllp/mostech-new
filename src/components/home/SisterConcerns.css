@@ -104,7 +104,8 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
   overflow: hidden;
-  height: 220px;
+  min-height: 220px;
+  height: 100%;
 }
 
 .sc-card-new:hover {

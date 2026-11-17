@@ -17,7 +17,7 @@ const SisterConcerns = () => {
       id: 2,
       title: "Mostech Information Technology LLP",
       desc: "Empowering businesses through custom software solutions.",
-      location: "Kannur, Kerala, India",
+      location: "Hilite Business Park, Kozhikode, Kerala, India",
       icon: <img src="/business.jpeg" alt="Mostech Information Technology LLP" className="sc-img-logo sc-img-logo-zoom" />,
       logoBg: "#ffffff",
       link: "https://www.mostech.in",
